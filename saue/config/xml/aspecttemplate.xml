@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aspecttemplates>
+	<aspectemplate1>
+		<aspect name="validation" execution="pre"/>
+		<aspect name="salvamodelos" execution="post"/>
+	</aspectemplate1>
+	<aspectemplate2>
+		<aspect name="validation" execution="pre"/>
+	</aspectemplate2>
+</aspecttemplates>

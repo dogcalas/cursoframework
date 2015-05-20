@@ -1,0 +1,11 @@
+{ActProceso:'Activar',
+DesacProceso:'Desactivar',
+GenTrazasProceso:'Generar trazas de proceso',
+ValProcess:'Validar',
+Definirconexion:'Definir conexión',
+crearvevento:'Crear evento',
+lbBtnCancelar:'Cancelar',
+lbBtnAplicar:'Aplicar',
+lbBtnAceptar:'Aceptar'
+}
+

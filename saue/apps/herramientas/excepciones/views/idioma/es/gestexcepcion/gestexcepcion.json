@@ -1,0 +1,18 @@
+{
+lbMsgCampoObligatorio:'Campo obligatorio.',
+lbBtnAdicionar:'Adicionar',
+lbBtnModificar:'Modificar',
+lbBtnEliminar:'Eliminar',
+lbBtnProbar:'Probar excepci&oacute;n',
+lbBtnBuscar:'Buscar',
+lbTitAdicionarExce:'Adicionar excepci&oacute;n',
+lbTitModificarExce:'Modificar excepci&oacute;n',
+lbBtnCancelar:'Cancelar',
+lbBtnAplicar:'Aplicar',
+lbBtnAceptar:'Aceptar',
+lbMsgErrorEnCamops:'Por favor verifique, existen campos con valores incorrectos.',
+lbMsgErrorBuscar:'Debe seleccionar al menos un criterio de b&uacute;nsqueda.',
+lbTitMsgNingunresultadoparamostrar:'Resultados {0} - {1} de {2}',
+lbTitMsgResultados:'Ning&uacute;n resultado para mostrar.',
+lbMsgValorIncorrecto:'Valor incorrecto.'
+}

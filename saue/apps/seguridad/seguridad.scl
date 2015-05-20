@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<bundle>
+<data version="1.2" />
+<services>
+	<service id="seguridadInterface" interface="services/SeguridadSeguridadInterface.php" impl="services/seguridadServices.php"/>
+</services>
+</bundle>

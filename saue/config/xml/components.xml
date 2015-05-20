@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component_package>
+    <cmp2 id="2" text="Seguridad" leaf="1" path="/seguridad" component="1" abrev="Seguridad"/>
+    <cmp101 id="101" text="Estructura y composición" leaf="1" path="/metadatos" component="1" abrev="Estructura"/>
+    <cmp1001 id="1001" text="Traza" leaf="1" path="/traza" component="1" abrev="tza"/>
+    <cmp10001 id="10001" text="Herramientas" leaf="" path="/herramientas" component="" abrev="herr"/>
+    <cmp30280 id="30280" text="saue" leaf="1" path="/saue" component="" abrev="saue"/>
+<cmp30282 id="30282" text="roles" leaf="1" path="/roles" component="" abrev="roles"/><cmp30286 id="30286" text="Directorio" leaf="1" path="/dir" component="1" abrev="dir"/></component_package>

@@ -1,0 +1,12 @@
+/*** Fichero con la configuraci�n del estilo del portal ***/
+.bannerPortal{width:100%;height:125px;background-color:#4D660F;background-repeat:repeat;}
+.cedruxT{float:left;background-image:url("../../images/portal/saue-logo.png");width:100%;height:50px;margin-top:20px;margin-left:25px;background-repeat: no-repeat;}
+/*.cedruxL{float:left;background-image:url("../../images/portal/logo.png");width:50px;height:50px;margin-top:13px;margin-left:15px}*/
+.bottomBar{height:25px;margin-top:75px;background-color:#f3f3f3;background-image:url(../../images/portal/toolB.png);background-repeat:repeat-x;-moz-border-radius:8px 8px 0px 0px}
+.toolBar{border-color:#999;border-style:solid;border-width:0 0 1px 0;display:block;padding:2px;background-image:url(../../images/portal/toolB.png);background-repeat:repeat-x; -moz-border-radius:0px 0px 8px 8px}
+#eastPanel{background-image:url(../../images/portal/back.png);background-repeat:repeat-x;height:100%}
+#westPanel{background-image:url(../../images/portal/back.png);background-repeat:repeat-x;height:100%}
+#barraMenu{border-color:#000;font-family:"Comic Sans MS", cursive /*;margin-left:35px;margin-right:35px*/}
+.tEntidad{white-space:nowrap;font:bold 12px tahoma,arial,helvetica,sans-serif;padding-left:10px;letter-spacing:2px;color:#333333;zoom:1;}
+#center{width: 900px;height:600px;background-image:url(../../images/portal/center.png)}
+#centerE{width: 800px;height:400px;background-image:url(../../images/portal/centerE.png)}

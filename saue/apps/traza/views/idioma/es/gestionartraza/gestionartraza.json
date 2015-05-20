@@ -1,0 +1,12 @@
+{
+	lbBtnExportar:'Exportar',
+	lbBtnAyuda:'Ayuda',
+	lbBtnAvanzada:'Búsqueda Avanzada',
+	lbDfDesde:'Desde',
+	lbDfHasta:'Hasta',
+	lbCbCategoria:'Categoría',
+	lbCbTipoTraza:'Tipo',
+	confMaskMsg:'Por favor espere ...',
+	loadMaskMsg:'Cargando...',
+	msgExportado:'Exportado'
+}

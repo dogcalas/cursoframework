@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<validador>
+  <GestusuarioController>
+    <modificarusuarioAction>
+      <precondition>
+        <validator name="erksvs" class="UsuarioValidator.php" method="existeValorArrayUltimo" error="EGU009">
+          <descripcion>zxcxzcxzc</descripcion>
+        </validator>
+        <validator name="erksvs" class="RolValidator.php" method="validarFuncAdministracion" error="EGU008">
+          <descripcion>cghgjgkj</descripcion>
+        </validator>
+      </precondition>
+      <param name="idpersona" type="enterospos" not_null="true" null_error="EGU011" type_error="EGU012"/>
+      <param name="version" type="enterospos" not_null="true" null_error="EGU013" type_error="EGU014"/>
+      <param name="alias" type="letras" not_null="true" null_error="EGU015" type_error="EGU016"/>
+      <param name="nombre" type="letras" not_null="true" null_error="EGU017" type_error="EGU018"/>
+      <param name="papell" type="letras" not_null="true" null_error="EGU019" type_error="EGU020"/>
+      <param name="sapell" type="letras" not_null="false" type_error="EGU021"/>
+      <param name="ididioma" type="enterospos" not_null="true" null_error="EGU022" type_error="EGU023"/>
+      <param name="idtema" type="enterospos" not_null="true" null_error="EGU024" type_error="EGU025"/>
+      <param name="idespecialidad" type="enterospos" not_null="false" type_error="EGU026"/>
+    </modificarusuarioAction>
+    <insertarusuarioAction>
+      <precondition>
+        <validator name="erksvs" class="UsuarioValidator.php" method="verificarDominio" error="EGU009">
+          <descripcion>dasfdsfgdf</descripcion>
+        </validator>
+      </precondition>
+      <param name="alias" type="letras" not_null="true" null_error="EGU015" type_error="EGU016"/>
+      <param name="nombre" type="letras" not_null="true" null_error="EGU017" type_error="EGU018"/>
+      <param name="papell" type="letras" not_null="true" null_error="EGU019" type_error="EGU020"/>
+      <param name="sapell" type="letras" not_null="false" type_error="EGU021"/>
+      <param name="ididioma" type="enterospos" not_null="true" null_error="EGU022" type_error="EGU023"/>
+      <param name="idtema" type="enterospos" not_null="true" null_error="EGU024" type_error="EGU025"/>
+      <param name="idespecialidad" type="enterospos" not_null="false" type_error="EGU026"/>
+    </insertarusuarioAction>
+    <eliminarusuarioAction>
+      <param name="idpersona" type="enterospos" not_null="true" null_error="EGU011" type_error="EGU012"/>
+    </eliminarusuarioAction>
+  </GestusuarioController>
+  <DatosreconocimientoController.php>
+    <cargardatos>
+      <param name="zxc" type="ireal" not_null="true" null_error="CONT006" type_error="CONT007"/>
+      <param name="otraRene" type="fechacontr" not_null="true" null_error="SEG009" type_error="S001"/>
+      <precondition>
+        <validator name="rererererer" class="RolValidator.php" method="validarFuncAdministracion" error="CONT004">
+          <descripcion>asdasd</descripcion>
+        </validator>
+      </precondition>
+    </cargardatos>
+    <modificardatosReconocimiento>
+      <param name="zxzxzxzxzx" type="numerosletras" not_null="true" null_error="CONT007" type_error="CONT002"/>
+    </modificardatosReconocimiento>
+    <insertarclave>
+      <param name="validaClaves" type="numerosletras" not_null="true" null_error="S001" type_error="SEG001"/>
+    </insertarclave>
+  </DatosreconocimientoController.php>
+  <GestaccionController.php>
+    <mostrarMensaje>
+      <param name="unade_Accionmensaje" type="numerosguionbajo" not_null="true" null_error="SEG009" type_error="S004"/>
+      <precondition>
+        <validator name="unaparamensajeNegocio" class="RolValidator.php" method="validarFuncAdministracion" error="S003">
+          <descripcion>dasdasdsgfd</descripcion>
+        </validator>
+        <validator name="dsadsad" class="UsuarioValidator.php" method="existeValorArrayUltimo" error="SEG001">
+          <descripcion>dsad</descripcion>
+        </validator>
+      </precondition>
+    </mostrarMensaje>
+    <cargargridObjetos>
+      <precondition>
+        <validator name="asdasdMEnsaje" class="RolValidator.php" method="validarFuncAdministracion" error="SEG001">
+          <descripcion>asdasdsa</descripcion>
+        </validator>
+      </precondition>
+    </cargargridObjetos>
+  </GestaccionController.php>
+  <GestprocdinamController.php>
+    <listarprocesos>
+      <precondition>
+        <validator name="validaProceso" class="RolValidator.php" method="validarFuncAdministracion" error="SEG002">
+          <descripcion>Esta es una validación para los procesos</descripcion>
+        </validator>
+      </precondition>
+    </listarprocesos>
+  </GestprocdinamController.php>
+</validador>

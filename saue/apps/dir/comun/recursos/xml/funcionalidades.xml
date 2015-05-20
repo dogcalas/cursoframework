@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<package_component>
+  <cmp30286 id="30286" text="Directorio" leaf="1" component="1" path="/dir"><rq300483 den="GestionarPersonas" desc="" parent="30286" fecha="18/05/2015 10:29:33" abrev="gestpersona"/><rq300484 den="Gestionar Profes" desc="" parent="30286" fecha="18/05/2015 10:29:48" abrev="gestprofe"/></cmp30286>
+</package_component>

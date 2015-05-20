@@ -1,0 +1,9 @@
+{lbBtnGuardar:'Save changes',
+MsgWait:'Please, wait....',
+lbRootNodeArbolDominio:'Domains',
+lbTitMsgNingunresultadoparamostrar:'No result to show.',
+lbTitMsgResultados:'Results {0} - {1} of {2}',
+lbRol:'Domain Users',
+lbTitDenRolBuscar:'Denomination',
+lbBtnBuscar:'Search'}
+

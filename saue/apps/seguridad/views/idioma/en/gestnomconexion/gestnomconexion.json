@@ -1,0 +1,41 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+{
+lbBtnAdicionar:'Add',
+lbBtnSalvar:'Modify',
+lbBtnEliminar:'Delete',
+lbPnPanelConex:'Manage kind of conections',
+lbgridTipoConex:'Kind of conection',
+lbMsgDeseaEliminar:'Are you sure you want to delete the conection?',
+lbCampoDenom:'Denomination',
+lbMsgBlankTextDenom:'You must specify this field',
+lbMsgExpRegDenom:'Incorrect values.',
+lbDescripcion:'Description',
+lbSeleccion:'Selection',
+lbTitAddConex:'Add conection',
+lbTitModConex:'Modify conection',
+lbBtnCancelar:'Cancel',
+lbBtnAplicar:'Apply',
+lbBtnAceptar:'Accept',
+lbDisplayMsg:'Results {0} - {1} of {2}',
+lbMsgEmpty:'No result to show',
+lbTitTiposConex:'Kind of conection',
+lbMsgEmpty:'There is no registered conections',
+lbMsgComboAddFielLabel:'Kind of conection',
+lbMsgComboBlankText:'You must select a kind of conection',
+lbMsgComboEmtyText:'[-Select-]',
+lbMsgSalvar:'Setting conection ...',
+lbMsgAdicionar:'Adding...',
+lbMsgModificar:'Modifying ...',
+lbMsgEliminar:'Deleting...',
+lbMsgAddConx:'The connection was added successfully',
+lbMsgModConx:'The connection was modified successfully.',
+lbMsgDelConx:'The connection was deleted successfully.',
+waitTitle:'Please wait',
+NoModify:'You have not modified any field.',
+lbMsgErrorEnCampos:'Please check again,there is/are field(s) with invalid value(s).',
+denoRepetida:'It already exists a conection with the same denomination'
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config id="0">
+    <conn id="0conn" gestor="pgsql" usuario="sauxe"
+          password="536209092282092759 59721342271980393151 33080464958168068556" host="localhost" port="5432" bd="curso"
+          esquema="mod_seguridad,mod_estructuracomp,mod_traza,mod_nomencladores,mod_datosmaestros, mod_saue"/>
+    <connAuth id="authconn" gestor="pgsql" usuario="loginuser"
+              password="536209092282092759 59721342271980393151 33080464958168068556" host="localhost" port="5432"
+              bd="curso"/>
+  <connMSSQL id="sqlserver" gestor="mssql" usuario="abs" password="amada123" host="localhost" port="1433" bd="FINAN_ECOTEC"/>
+  <security>
+    <id>100_1</id>
+    <uri></uri>
+    <location></location>
+    <wsdl></wsdl>
+    <ttl>10800</ttl>
+  </security>
+</config>

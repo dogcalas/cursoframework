@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+   <usuario>
+		<GestusuarioController>
+			<modificarusuarioAction>
+				<rule id="2" entity="1" validvalue="modificar" error="IE001"/>
+			</modificarusuarioAction>
+			<gestusuarioAction>
+				<rule id="2" entity="1" validvalue="modificar" error="IE001"/>
+			</gestusuarioAction>
+		</GestusuarioController>
+	</usuario>
+</rules>

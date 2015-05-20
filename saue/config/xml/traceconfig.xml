@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<xml> 
+    <containers>
+        <ZendExt_Trace_Container_Action doctrine="HisAccion" enabled="0" alias="Acci&#xF3;n">
+            <atts>
+                <attribute att="referencia" type="text" method="getReference" alias="Referencia"/>
+                <attribute att="controlador" type="text" method="getController" alias="Controlador"/>
+                <attribute att="accion" type="text" method="getAction" alias="Acci&#xF3;n"/>
+                <attribute att="inicio" method="getBegin" alias="Inicio"/>
+                <attribute att="falla" type="bool" method="getFault" alias="Falla"/>
+            </atts>
+			
+            <publishers>
+                <publisher class="ZendExt_Trace_Publisher_Db" enabled="1"/>
+            </publishers>
+            <!--Publishers para aplicaciones externas al framework que no usen sus aspectos-->
+            <ext_publishers>
+                <ext_publisher class="ZendExt_Trace_Publisher_ExternalDb" enabled="1"/>
+            </ext_publishers>
+			
+            <triggers>
+                <trigger class="ZendExt_Trace_Trigger" method="someone" enabled="0"/>
+            </triggers>
+        </ZendExt_Trace_Container_Action>
+		
+        <ZendExt_Trace_Container_Data doctrine="HisDato" enabled="0" alias="Datos">		
+            <atts>
+                <attribute att="esquema" method="getSchema" alias="Esquema"/>
+                <attribute att="tabla" method="getTable" alias="Tabla"/>
+                <attribute att="idoperacion" method="getIdOperacion" alias="Operaci&#xF3;n"/>
+                <attribute att="idobjeto" method="getIdObjeto" alias="Objeto"/>
+                <attribute att="accion" method="getAction" alias="Acci&#xF3;n"/>
+            </atts>
+            <!--Publishers para aplicaciones externas al framework que no usen sus aspectos-->
+            <ext_publishers>
+                <ext_publisher class="ZendExt_Trace_Publisher_ExternalDb" enabled="1"/>
+            </ext_publishers>
+            <publishers>
+                <publisher class="ZendExt_Trace_Publisher_Db" enabled="1"/>
+            </publishers>
+			
+            <triggers>
+                <trigger class="ZendExt_Trace_Trigger" method="someone" enabled="0"/>
+            </triggers>
+        </ZendExt_Trace_Container_Data>
+		
+        <ZendExt_Trace_Container_Exception doctrine="HisExcepcion" enabled="0" alias="Excepci&#xF3;n">	
+            <atts>
+                <attribute att="codigo" method="getCode" alias="C&#xF3;digo"/>
+                <attribute att="tipo" method="getType" alias="Tipo"/>
+                <attribute att="mensaje" method="getMsg" alias="Mensaje"/>
+                <attribute att="idioma" method="getLang" alias="Idioma"/>
+                <attribute att="descripcion" method="getDescription" alias="Descripci&#xF3;n"/>
+                <attribute att="log" method="getLog" alias="Log"/>
+            </atts>
+			
+            <publishers>
+                <publisher class="ZendExt_Trace_Publisher_Db" enabled="1"/>
+            </publishers>
+			
+            <triggers>
+                <trigger class="ZendExt_Trace_Trigger" method="someone" enabled="0"/>
+            </triggers>
+        </ZendExt_Trace_Container_Exception>
+		
+        <ZendExt_Trace_Container_IoC doctrine="HisIoc" enabled="0" alias="Integraci&#xF3;n">
+            <atts>
+                <attribute att="interno" type="bool" method="getInternal" alias="&#xBF;Interno?"/>
+                <attribute att="origen" type="text" method="getSourceComponent" alias="Componente Origen"/>
+                <attribute att="destino" type="text" method="getTargetComponent" alias="Componente Destino"/>
+                <attribute att="accion" type="text" method="getAction" alias="Acci&#xF3;n"/>
+                <attribute att="metodo" method="getMethod" alias="M&#xE9;todo"/>
+                <attribute att="clase" method="getClass" alias="Clase"/>
+            </atts>
+			
+            <publishers>
+                <publisher class="ZendExt_Trace_Publisher_Db" enabled="1"/>
+            </publishers>
+			
+            <triggers>
+                <trigger class="ZendExt_Trace_Trigger" method="someone" enabled="0"/>
+            </triggers>
+        </ZendExt_Trace_Container_IoC>
+		
+        <ZendExt_Trace_Container_Performance doctrine="HisRendimiento" enabled="0" alias="Rendimiento">
+            <atts>				
+                <attribute att="referencia" type="text" method="getReference" alias="Referencia"/>
+                <attribute att="controlador" type="text" method="getController" alias="Controlador"/>
+                <attribute att="accion" type="text" method="getAction" alias="Acci&#xF3;n"/>				
+                <attribute att="tiempoejecucion" type="number" method="getExecTime" alias="Tiempo de ejecuci&#xF3;n (s)"/>
+                <attribute att="memoria" type="number" method="getMemory" alias="Memoria (MB)"/>
+            </atts>
+			
+            <publishers>
+                <publisher class="ZendExt_Trace_Publisher_Db" enabled="1"/>
+            </publishers>
+            <!--Publishers para aplicaciones externas al framework que no usen sus aspectos-->
+            <ext_publishers>
+                <ext_publisher class="ZendExt_Trace_Publisher_ExternalDb" enabled="1"/>
+            </ext_publishers>
+			
+            <triggers>
+                <trigger class="ZendExt_Trace_Trigger" method="someone" enabled="0"/>
+            </triggers>
+        </ZendExt_Trace_Container_Performance>		        
+
+    </containers>
+</xml>

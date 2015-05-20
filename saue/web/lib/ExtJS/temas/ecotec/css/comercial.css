@@ -1,0 +1,314 @@
+#comercialBody{
+
+ height:950px;
+}
+
+
+.cuerpo{
+    background:#0f0f0f;
+     background-image: url(../../images/portal/logo.png);
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    
+    display:inline-block;
+    
+    position: relative;
+    /*top: 50%; /* Buscamos el centro horizontal (relativo) del navegador */
+    left: 50%; /* Buscamos el centro vertical (relativo) del navegador */
+    width: 1000px; /* Definimos el ancho del objeto a centrar */
+    /* Definimos el alto del objeto a centrar */
+    /*margin-top: -200px; /* Restamos la mitad de la altura del objeto con un margin-top */
+    margin-left: -500px; /* Restamos la mitad de la anchura del objeto con un margin-left */
+    border-radius: 15px;
+  
+}
+
+#bodyComercial{
+visibility:hidden;
+}
+#barraMenu{
+    position: absolute;
+    left:15px;
+    top: 150px;
+}
+
+.barraTop{
+    background:black;
+    
+    display:inline-block;
+   
+    position: absolute;
+    /*top: 50%; /* Buscamos el centro horizontal (relativo) del navegador */
+    left: 50%; /* Buscamos el centro vertical (relativo) del navegador */
+    width: 1000px; /* Definimos el ancho del objeto a centrar */
+    height: 30px; /* Definimos el alto del objeto a centrar */
+    /*margin-top: -200px; /* Restamos la mitad de la altura del objeto con un margin-top */
+    margin-left: -500px; /* Restamos la mitad de la anchura del objeto con un margin-left */
+    /*border-bottom-left-radius:15px; 
+     border-bottom-right-radius:15px; */
+    z-index: 10;
+    top:0px;
+    opacity: 0.8;
+    border: 1px solid #aaa;
+	border-color: rgba(0,0,0,0.3);
+	border-bottom-color: #777;
+	border-bottom-color: rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+	-webkit-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+	box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+        
+	
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.5)), color-stop(49%, rgba(255,255,255,0.2)), color-stop(51%, rgba(0,0,0,0.05)), to(rgba(0,0,0,0.15)));
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+    
+}
+
+.pie1{
+ margin:50px;
+ float:left; 
+ color:green;
+}
+.pie2{
+ margin:50px;
+ float:left;
+ color:green;
+}
+
+.shortcut{
+margin:10px;
+color:green;
+}
+
+.shortcutext{
+margin: 15px;font-size:15px;
+color:green;
+}
+
+.pieN{
+     position: absolute;
+    left:20px;
+    bottom:10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    background: transparent;
+    width: 95%; 
+    height:200px;
+    margin-bottom: 2px;
+    border: 1px solidgreen;
+	
+	
+	
+	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+        
+	
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.05)), color-stop(49%, rgba(0,0,0,0.15)), color-stop(51%, rgba(0,0,0,0.05)), to(rgba(0,0,0,0.15)));
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15), rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15), rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15), rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15), rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: linear-gradient(top, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15), rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+
+border-radius:5px;
+}
+
+.banner{
+   
+   
+    background-image: url(../../images/portal/banner.jpg);
+    width: 100%; 
+    height: 180px;
+    margin: 2px;
+    float:top;
+    border-top-left-radius:15px; 
+     border-top-right-radius:15px;
+     border: 1px solid #aaa;
+	border-color: rgba(0,0,0,0.3);
+         border-bottom-style: solid;
+        border-bottom-width: 10px;
+	border-bottom-color: #777;
+	border-bottom-color: rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+	-webkit-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+	box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+
+#topscp {position:fixed;bottom:30px;left:10px;}
+#topscp span {width:40px;height:40px;display:block;
+background: url("images/upscp.png") no-repeat center center;}
+
+.contenido{
+   
+   
+   
+   
+    
+    height:500px;
+   
+    
+    /*
+    border-top-left-radius:15px; 
+     border-top-right-radius:15px;
+     */
+}
+.sobreContenido{
+
+height:500px;
+width:98%;
+background:black;
+opacity:.5;
+position:absolute;
+top:40px;
+visibility:hidden;
+
+}
+
+.cargando{
+position:absolute;
+top:50%;
+left:50%;
+
+
+}
+
+.piePerfil{
+    position: absolute;
+    bottom: 65px;
+    color: green;
+    font-size: 15px;
+    
+    
+}
+.perfil{
+    position: absolute;
+    left:5px;
+    top: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    background: transparent;
+    width: 170px; 
+    height: 500px;
+    margin-bottom: 2px;
+    border: 1px solid #aaa;
+	border-color: rgba(0,0,0,0.3);
+	border-bottom-color: #777;
+	border-bottom-color: rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+	-webkit-box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+	box-shadow: inset 0 0.08em 0 rgba(255,255,255,0.7), inset 0 0 0.08em rgba(255,255,255,0.5);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+        
+	
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.5)), color-stop(49%, rgba(255,255,255,0.2)), color-stop(51%, rgba(0,0,0,0.05)), to(rgba(0,0,0,0.15)));
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+	background-image: linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.2) 49%, rgba(0,0,0,0.05) 51%, rgba(0,0,0,0.15));
+    /*
+    border-top-left-radius:15px; 
+     border-top-right-radius:15px;
+     */
+}
+
+
+
+
+.ventana{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.fisheye{
+	text-align: center;
+	height: 50px;
+	position: relative;
+}
+a.fisheyeItem
+{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	width: 40px;
+	position: absolute;
+	display: block;
+	top: 0;
+}
+a.fisheyeItem2
+{
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	text-decoration: none;
+	width: 40px;
+	position: absolute;
+	display: block;
+	bottom: 0;
+}
+.fisheyeItem img
+{
+	border: none;
+	margin: 0 auto 5px auto;
+	width: 100%;
+}
+.fisheyeItem2 img
+{
+	border: none;
+	margin: 5px auto 0 auto;
+	width: 100%;
+}
+.fisheyeItem span,
+.fisheyeItem2 span
+{
+	display: none;
+	positon: absolute;
+}
+.fisheyeContainter
+{
+	background-color: transparent;
+	height: 50px;
+	width: 200px;
+	left: 500px;
+	position: absolute;
+}
+#fisheye2
+{
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+}
+
+.fishcon{
+    
+    
+    display:inline-block;
+   
+    position: absolute;
+    /*top: 50%; /* Buscamos el centro horizontal (relativo) del navegador */
+    left: 50%; /* Buscamos el centro vertical (relativo) del navegador */
+    width: 1000px; /* Definimos el ancho del objeto a centrar */
+    height: 50px; /* Definimos el alto del objeto a centrar */
+    /*margin-top: -200px; /* Restamos la mitad de la altura del objeto con un margin-top */
+    margin-left: -500px; /* Restamos la mitad de la anchura del objeto con un margin-left */
+    border-bottom-left-radius:15px; 
+     border-bottom-right-radius:15px; 
+    z-index: 11;
+    top:0px;
+    
+    
+}
+
+body{
+
+}
+

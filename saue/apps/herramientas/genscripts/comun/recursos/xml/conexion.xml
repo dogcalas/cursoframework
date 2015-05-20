@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<conexion>
+  <host>10.58.7.251</host>
+  <dbname>sauxe_v2.3</dbname>
+  <user>arqtecnologia</user>
+  <pass>54527120140550641023 80198204215669855681 7618744039142965593 30468741261367641092</pass>
+  <port>5432</port>
+</conexion>

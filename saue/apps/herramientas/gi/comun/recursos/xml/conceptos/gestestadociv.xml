@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conceptos><concepto><denominacion>gestestadociv</denominacion><plantilla>CRUD-Simple</plantilla><urlG>cargarEstadoCivil</urlG><atributos><atributo><denominacion>descripcion</denominacion><componente>TextArea</componente></atributo></atributos></concepto></conceptos>

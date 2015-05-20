@@ -1,0 +1,65 @@
+@page {
+    margin: 1cm;
+}
+
+body {
+    background-color: white;
+    font: 12px Verdana, sans-serif;
+    margin: 1cm 1cm;
+    text-align: justify;
+}
+.total{
+    font: 14px Verdana, sans-serif;
+}
+.contenido td{
+    font: 12px Verdana, sans-serif;
+}
+
+hr {
+    page-break-after: always;
+    border: 0;
+}
+
+.borde-completo{
+    border: 1px solid black;
+}
+
+.borde-inferior{
+    border-bottom: 2px solid #aaa;
+}
+
+.borde-superior{
+    border-top: 1px solid #aaa;
+}
+
+@page WordSectionV{
+    size:8.3in 11.7pt;
+    margin:.5in;
+}
+div.WordSectionV{
+    page:WordSectionV;
+}
+
+@page WordSectionH{
+    size:11.7pt 8.3in;
+    margin:.5in;
+}
+div.WordSectionH{
+    page:WordSectionH;
+}
+
+.borde-superior{
+    border-top: 1px solid #000000;
+}
+
+.encabezado {
+    font: 9px Calibri, sans-serif;
+}
+
+.rpt_body {
+    font: 8px Calibri, sans-serif;
+}
+
+.rpt_ifno {
+    font: 10px Calibri, sans-serif;
+}

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<menu>
+	<MenuItem name="Administration" id="200" src="../estudiantes/gestionarestudiantes" />
+	<MenuItem name="Employ" 	id="201" src="../estudiantes/gestionarestudiantes" />
+	<MenuItem name="Help"		id="208" src="../estudiantes/gestionarestudiantes" />
+	<MenuItem name="Recovery" 	id="207" src="../estudiantes/gestionarestudiantes" />
+	<MenuItem name="Exit" 		id="209" src="../estudiantes/gestionarestudiantes" />
+	<MenuItem name="Tools" 		id="200" src="../estudiantes/gestionarestudiantes" />
+</menu>

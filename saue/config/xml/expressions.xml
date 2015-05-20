@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<expressions>
+<enterospos>^[0-9]+$</enterospos>
+<numerosguionbajo>^[0-9]+(_[0-9]+)*$</numerosguionbajo>
+<letras>^([a-zA-ZáéíóúñüÑ]+ ?[a-zA-ZáéíóúñüÑ]*)+$</letras>
+<numerosletras>^([a-zA-Z0-9áéíóúñüÑ]+ ?[a-zA-Z0-9áéíóúñüÑ]*)+$</numerosletras>
+<textos>^([a-zA-Z0-9áéíóúñüÑ ,.]+ ?[a-zA-Z0-9áéíóúñüÑ ,.]*)+$</textos>
+<numerosslashnumeros>^[0-9]{3}(\/[0-9]{4})$</numerosslashnumeros>
+<email>^[^@ ]+@[^@ ]+.[^@ .]+$</email>
+<real>^-?^[0-9]+(.?[0-9]*)?$</real>
+<ireal>^-?[0-9]+(\.[0-9]*)?$</ireal>
+<fecha>([0-9]{1,2})/([0-9]{1,2})/([0-9]{4})</fecha>
+<fechacont>([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})</fechacont>
+<fechacontr>([0-9]{1,2})-([0-9]{1,2})-([0-9]{4})</fechacontr>
+</expressions>

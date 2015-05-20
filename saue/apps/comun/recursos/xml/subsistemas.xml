@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subsistemas>
+	<!-- <metadatos idsubsistema="1" denomsubsistema="Estructura y Composición" uri="metadatos"/>  -->
+	<portal idsubsistema="96" denomsubsistema="Portal" uri="portal"/>
+	<seguridad idsubsistema="97" denomsubsistema="Seguridad" uri="seguridad"/>
+	<traza idsubsistema="98" denomsubsistema="Traza" uri="traza"/>
+	<instalador idsubsistema="99" denomsubsistema="Instalador" uri="instalador"/>
+	<usuario idsubsistema="1" denomsubsistema="Usuario" uri="usuario"/>
+</subsistemas>

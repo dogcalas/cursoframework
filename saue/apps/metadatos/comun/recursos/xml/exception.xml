@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Excepciones>
+    <EC01>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error entrando datos.</mensaje>
+            <descripcion>Compruebe hay campos vacíos.</descripcion>
+        </es>
+    </EC01>
+    <EC02>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error entrando datos.</mensaje>
+            <descripcion>El campo debe ser numérico.</descripcion>
+        </es>
+    </EC02>
+    <EC03>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error entrando datos.</mensaje>
+            <descripcion>Error el introducir la fecha.</descripcion>
+        </es>
+    </EC03>
+    <EC04>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error entrando datos.</mensaje>
+            <descripcion>Hay campos con valores incorrectos.</descripcion>
+        </es>
+    </EC04>
+    <EC05>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al eliminar con llaver foráneas.</mensaje>
+            <descripcion>El objeto no se puede eliminar está siendo usado.</descripcion>
+        </es>
+    </EC05>
+    <EC06>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al insertar por no existir la especialidad.</mensaje>
+            <descripcion>La especialidad debe ser definido en el nomenclador.</descripcion>
+        </es>
+    </EC06>
+    <EC07>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al insertar por no existir la nivel estructural.</mensaje>
+            <descripcion>El nivel estructural debe ser definido en el nomenclador.</descripcion>
+        </es>
+    </EC07>
+    <EC08>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al insertar por no existir el dpa.</mensaje>
+            <descripcion>Localizacion de la estructura no existente.</descripcion>
+        </es>
+    </EC08>
+    <EC09>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error validando las fechas.</mensaje>
+            <descripcion>La fecha de inicio debe ser menor que la de fin.</descripcion>
+        </es>
+    </EC09>
+    <EC10>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error enviando id.</mensaje>
+            <descripcion>Id no enviado.</descripcion>
+        </es>
+    </EC10>
+    <EC11>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al seleccionar un nomenclador.</mensaje>
+            <descripcion>Estructura interna no seleccionada.</descripcion>
+        </es>
+    </EC11>
+    <EC12>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al seleccionar un nomenclador.</mensaje>
+            <descripcion>Especialidad no seleccionada.</descripcion>
+        </es>
+    </EC12>
+    <EC13>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al seleccionar un nomenclador.</mensaje>
+            <descripcion>Tipo de cifra no seleccionado.</descripcion>
+        </es>
+    </EC13>
+    <EC14>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al seleccionar un nomenclador.</mensaje>
+            <descripcion>Categoría civil no seleccionada.</descripcion>
+        </es>
+    </EC14>
+    <EC15>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al seleccionar un nomenclador.</mensaje>
+            <descripcion>Nomenclador de cargo civil no seleccionada.</descripcion>
+        </es>
+    </EC15>
+    <EC16>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al seleccionar un nomenclador.</mensaje>
+            <descripcion>Salario no seleccionado.</descripcion>
+        </es>
+    </EC16>
+    <EC17>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al seleccionar un nomenclador.</mensaje>
+            <descripcion>Grupo de complejidad no seleccionada.</descripcion>
+        </es>
+    </EC17>
+    <EC18>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al seleccionar un nomenclador.</mensaje>
+            <descripcion>Escala salarial no seleccionada.</descripcion>
+        </es>
+    </EC18>
+    <EC19>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error al seleccionar un nomenclador.</mensaje>
+            <descripcion>Clasificación no seleccionada.</descripcion>
+        </es>
+    </EC19>
+    <EC20>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>No existe grado militar en la base de datos..</mensaje>
+            <descripcion>Grado militar no seleccionada.</descripcion>
+        </es>
+    </EC20>
+    <EC21>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Nomenclador de cargo militar no seleccionado.</mensaje>
+            <descripcion>Cargo militar no seleccionado.</descripcion>
+        </es>
+    </EC21>
+    <EC22>
+        <tipo>LP</tipo>
+        <es>
+            <mensaje>Error de entrada de datos.</mensaje>
+            <descripcion>Nombre de la tabla no definido.</descripcion>
+        </es>
+    </EC22>
+</Excepciones>

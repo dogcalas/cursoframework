@@ -1,0 +1,171 @@
+@media screen and (max-width: 599px) {
+	#imglogo{
+		display: none;
+	}
+	#name{
+		margin: 5% 10% 0px 10% !important;
+		display: none !important;
+	}
+	#name_2{
+		margin: 5% 10% 0px 15% !important;
+		display: inherit !important;
+	}
+	#forma{
+		padding: 40px 0px 0px 25% !important;
+	}
+    #green_box{
+        margin-top: 100px  !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+	#imglogo{
+		opacity: 0.5;
+	}
+	#forma{
+		padding: 40px 0 0 33%;
+		color: #FFF;
+	}
+}
+
+
+*{
+	margin:0;
+	padding:0;
+	font-weight: bold;
+}
+#name{
+	margin: 8% 10% 0px 30%;
+}
+#name_2{
+	margin: 8% 10% 0px 30%;
+	display: none;
+}
+#blue_box{
+     width: 100%;
+     height: 300px;
+     background-color: #001B8C;
+ }
+#green_box{
+    width: 100%;
+    height: 25px;
+    background-color: #79bd28;
+    margin-top: -100px;
+    position: relative ;
+}
+#green_box2{
+    width: 100%;
+    height: 10px;
+    background-color: #0d9300;
+    position: relative ;
+}
+#forma{
+	position: relative;
+	padding: 40px 0 0 35%;
+	color: #FFF;
+	font-family: sans-serif;
+	font-size: 13px;
+	z-index: 100;
+}
+#imglogo{
+	position: relative;
+	margin: -280px 0 0 50% ;
+	width: 249px;
+	height: 481px;
+	background-image: url('/ecotec/resources/images/2.png');
+	z-index: 10;
+}
+
+label {
+	padding-top: 25px;	
+}
+#forma input[type=text], #forma input[type=password]{
+	margin: 10px 0 10px 0;
+	width: 200px;
+	height: 20px;
+	padding: 3px;
+	border-bottom-color: transparent;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: transparent;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: transparent;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: transparent;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #111111;
+	display: inline-block;
+	font-family: 'Open Sans Light',Verdana,Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	outline-color: #FFF;
+	outline-style: none;
+	outline-width: 0px;
+	vertical-align: middle;
+}
+.button{
+		width: 200px;
+
+}
+.button input{
+	width: 80px;
+	margin: 20px 0 10px 0;
+	float: right;
+	background-color: #60A917;
+	border-bottom-color: transparent;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: transparent;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: transparent;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: transparent;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Open Sans Light',Verdana,Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px;
+	outline-color: #FFF;
+	outline-style: none;
+	outline-width: 0px;
+	padding-bottom: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 4px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.error {
+	margin-top: 20px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	color: #FFF;
+	text-align: center;
+	font-family: Arial;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	background-color: #FF0000;
+}
+

@@ -1,0 +1,36 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+{
+waitMsg:"Saving data...",
+btnRelacionar:"Match",
+cmpArbol:"Service tree",
+gridTitle:'Assign permissons',
+msgCargando:"Charging...",
+emptyTextServidor:"Server",
+emptyTextGestor:"Manager",
+emptyTextBD:"Databases",
+emptyTextEsquema:"Schema",
+emptyTextEntidad:"Entity",
+checkBoxLabel:"Selected",
+waitTitle:'Please wait..',
+NoModify:'Please check, you have not carried out  any change.',
+menuTextSelectAllFile:'Mark all the raw fila',
+menuTextUnCheckAllFile:'Unmark all the raw',
+menuTextSelectAllColumn:'Mark all the column',
+menuTextUnCheckAllColumn:'Unmark all the column',
+combEmptyText:'[-Select-]',
+padreArbolServiciosText:'Sistems',
+labelCriterio:"Selection criteria : ",
+lbNombreColumServidor:'Server',
+lbNombreColumGestor:'Manager',
+lbNombreColumBD:'Database',
+lbNombreColumEsquema:'Scheme',
+lbNombreColumTabla:'Table',
+lbNombreColumVista:'View',
+lbNombreColumSec:'Secuence',
+lbNombreColumFun:'Function',
+lbMsgInfObjetos:'No objects were found when looking',
+lbMsgInfRelacion:'Permissions managed successfully'}

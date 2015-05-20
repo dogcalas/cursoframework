@@ -1,0 +1,42 @@
+[
+	{
+		columns:[{id:'expandir',header: 'Nombre', dataIndex: 'nombre'},
+				 {header: 'Fecha de inicio', width:100, dataIndex: 'fechaini'},
+				 {header: 'Fecha de fin', width:100, dataIndex: 'fechafin'}]
+    },{
+   		store:{
+   		  		url:'url.json',
+   		  		rdRoot:'datos',
+   		  		rdTotRec:'total',
+   		  		rdId:'nombre',
+        		rdCampos:[
+        					 {name: 'nombre'}
+        					,{name: 'fechaini'}
+        					,{name: 'fechafin'}
+        					,{name: 'idnomeav'} 
+        				 ]
+	 	}
+	 }
+]
+
+[
+	{
+		columns:[{id:'telefono',header:'telefono direccion',dataIndex:'telefono'},
+				{id:'codigo',header:'Codigo Reup',dataIndex:'codigo'},
+				{id:'codigoO',header:'Codigo ONE',dataIndex:'codigoO'},
+				{id:'nombre',header:'nombre municipio',dataIndex:'nombre'}]
+	},{
+		store:{
+				url:'construirvaloresgrid',
+				rdRoot:'datos',
+				rdTotRec:'total',
+				rdId:'telefono',
+				rdCampos:[
+							{name:'telefono'},
+							{name:'codigo'},
+							{name:'codigoO'},
+							{name:'nombre'}
+						]
+		}
+	}
+]

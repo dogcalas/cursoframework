@@ -1,0 +1,42 @@
+{lbBtnAdicionar:'Add',
+lbBtnAceptar:'Accept',
+lbBtnEliminar:'Remove',
+lbBtnModificar:'Modify',
+lbBtnAyuda:'Help',
+lbBtnCancelar:'Cancel',
+lbBtnAplicar:'Apply',
+lbBtnEntrenar:'Train',
+lbBtnBuscar:'Search',
+lbTitImSet:'Test image',
+lbDatosImagenes:'Normalize images',
+lbFLAncho:'Width',
+lbFLAlto:'High',
+lbFLNoimg:'Quantity of images',
+lbFLFormato:'Format',
+lbFLFimg:'Form of the image',
+lbTitPanelTit:'Normalize images',
+lbFLBrillo:'Brightness',
+lbFLContraste:'Contrast',
+
+lbTitDescripcion:'Description',
+
+
+
+lbFLDescripcion:'Description',
+
+lbMsgbbarI:'Results {0} - {1} de {2}',
+lbMsgbbarII:'No result to show.',
+lbMsgBlank:'This field is required.',
+lbMsgregexI:'This value is incorrect.',
+
+lbMsgFunAdicionarMsg:'Registering data...',
+lbMsgFunModificarMsg:'Modifying data...',
+lbMsgFunEliminarMsgI:'&iquest;Are you sure you want to remove it?',
+lbMsgEntrenam:'Training has successfully finished.',
+lbMsgNoImg:'There are no images for training.',
+NoModify:'Please check you have not modified any field.',
+lbMsgErrorEnCamops:'Please check, there are fields with incorrect values.',
+lbMsgInfModificar:'The data was changed successfully.',
+lbMsgNolibrary:'The recognition library not found.'
+}
+

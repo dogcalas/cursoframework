@@ -1,0 +1,40 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+{
+lbBtnAdicionar:'Adicionar',
+lbBtnSalvar:'Modificar',
+lbBtnEliminar:'Eliminar',
+lbPnPanelConex:'Gestionar tipo de conexi&oacute;n',
+lbgridTipoConex:'Tipo de conexi&oacute;n',
+lbMsgDeseaEliminar:'&iquest;Est&aacute; seguro que desea eliminar la conexi&oacute;n?',
+lbCampoDenom:'Denominaci&oacute;n',
+lbMsgBlankTextDenom:'Debe especifiar este campo',
+lbMsgExpRegDenom:'Valores incorrectos.',
+lbDescripcion:'Descripci&oacute;n',
+lbSeleccion:'Selecci&oacute;n',
+lbTitAddConex:'Adicionar conexi&oacute;n',
+lbTitModConex:'Modificar conexi&oacute;n',
+lbBtnCancelar:'Cancelar',
+lbBtnAplicar:'Aplicar',
+lbBtnAceptar:'Aceptar',
+lbTitTiposConex:'Tipos de Conexiones',
+lbMsgEmpty:'Ning&uacute;n resultado para mostrar',
+lbDisplayMsg:'Resultados {0} - {1} de {2}',
+lbMsgComboAddFielLabel:'Tipo de conexi&oacute;n',
+lbMsgComboBlankText:'Debe seleccionar un tipo de conexi&oacute;n',
+lbMsgComboEmtyText:'[-Seleccione-]',
+lbMsgSalvar:'Estableciendo conexi&oacute;n ...',
+lbMsgAdicionar:'Adicionando ...',
+lbMsgModificar:'Modificando ...',
+lbMsgEliminar:'Eliminando...',
+lbMsgAddConx:'La conexi&oacute;n fue insertada satisfactoriamente.',
+lbMsgModConx:'La conexi&oacute;n fue modificada satisfactoriamente.',
+lbMsgDelConx:'La conexi&oacute;n fue eliminada satisfactoriamente.',
+waitTitle:'Espere un momento',
+NoModify:'Usted no ha modificado ningún campo.',
+lbMsgErrorEnCampos:'Por favor verifique, existen campos con valores incorrectos.',
+denoRepetida:'Ya existe una conexi&oacute;n con la misma denominaci&oacute;n.'
+}

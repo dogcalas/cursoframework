@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excepciones>
+	<EMT001>
+		<tipo>LP</tipo>
+		<es>
+			<mensaje>Error al ejecutar una accion</mensaje>
+			<descripcion>La accion que desea realizar no es una accion valida para el sistema.</descripcion>			
+		</es>
+	</EMT001>
+	<XML001>
+		<tipo>L</tipo>
+		<es>
+			<mensaje>Error de gestion de XML</mensaje>
+			<descripcion>El XML solicitado no existe.</descripcion>
+		</es>
+	</XML001>
+	<EMT002>
+		<tipo>LP</tipo>
+		<es>
+			<mensaje>Error de acceso</mensaje>
+			<descripcion>El usuario no tiene permiso para acceder al sistema.</descripcion>
+		</es>
+	</EMT002>
+	<EMT003>
+		<tipo>LP</tipo>
+		<es>
+			<mensaje>Error de configuracion</mensaje>
+			<descripcion>El usuario no tiene asignado un tema para acceder al sistema.</descripcion>
+		</es>
+	</EMT003>
+	<EMT004>
+		<tipo>LP</tipo>
+		<es>
+			<mensaje>Error de configuracion</mensaje>
+			<descripcion>El tema asignado al usuario no existe.</descripcion>
+		</es>
+	</EMT004>
+	<EMT005>
+		<tipo>LP</tipo>
+		<es>
+			<mensaje>Error de consulta</mensaje>
+			<descripcion>No se pudieron cargar los subsistemas.</descripcion>
+		</es>
+	</EMT005>
+	<EMT006>
+		<tipo>LP</tipo>
+		<es>
+			<mensaje>Error de consulta</mensaje>
+			<descripcion>No se pudieron cargar los modulos.</descripcion>
+		</es>
+	</EMT006>
+	<EMT007>
+		<tipo>LP</tipo>
+		<es>
+			<mensaje>Error de consulta</mensaje>
+			<descripcion>No se pudieron cargar las funcionalidades.</descripcion>
+		</es>
+	</EMT007>
+	<E014>
+		<tipo>LP</tipo>
+		<es>
+			<mensaje> Error en la conexion a la Base de Datos </mensaje>
+			<descripcion>Error en la conexion a la Base de Datos. Configure correctamente la conexion en el fichero de configuracion del modulo.</descripcion>		
+		</es>
+	</E014>
+</excepciones>

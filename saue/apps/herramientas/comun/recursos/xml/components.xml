@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package_component>
+    <cmp10001 id="10001" text="Herramientas" leaf="" component="" path="/herramientas">
+        <cmp30011 id="30011" text="Generador de scripts SQL" leaf="1" path="/herramientas/genscripts" component="1" abrev="genscripts"/>
+        <cmp10002 id="10002" text="Gestionar validaciones" leaf="1" path="/herramientas/validaciones" component="1" abrev="valid"/>
+        <cmp30008 id="30008" text="Mapeador de Doctrine" leaf="1" path="/herramientas/doctrine_generator" component="1" abrev="doctrine_generator"/>
+        
+        
+        <cmp30010 id="30010" text="Configurar IoC" leaf="1" path="/herramientas/ioc" component="1" abrev="ioc"/>
+        <cmp30006 id="30006" text="Gestionar componentes" leaf="1" path="/herramientas/component" component="1" abrev="component"/>
+        <cmp30004 id="30004" text="Activador" leaf="1" path="/herramientas/activador" component="1" abrev="activador"/>        
+        <cmp30003 id="30003" text="Plataforma de integraci&#xF3;n" leaf="1" path="/herramientas/wsb" component="1" abrev="wsb"/>
+        <cmp30007 id="30007" text="Gestionar excepciones" leaf="1" path="/herramientas/excepciones" component="1" abrev="excepciones"/>
+        <cmp30005 id="30005" text="Interoperabilidad" leaf="1" path="/herramientas/interoperabilidad" component="1" abrev="interoperabilidad"/>
+        <cmp30012 id="30012" text="Generador de m&#xF3;dulos" leaf="1" path="/herramientas/gdm" component="1" abrev="gdm"/>
+    <cmp30238 id="30238" text="Expedientes t&#xE9;cnicos" leaf="1" path="/herramientas/exptecnicos" component="" abrev="exptecnicos"/></cmp10001>
+</package_component>

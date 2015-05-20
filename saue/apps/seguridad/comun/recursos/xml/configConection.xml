@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<conexiones id="0">
+  <rol seleccion="false" denominacion="Denominacion Rol" tipo="2" descripcion="Descripcion Rol"/>
+  <defecto seleccion="true" denominacion="defecto" tipo="0" descripcion="defecto"/>
+  <sistema seleccion="false" denominacion="sistema" tipo="1" descripcion="sistema"/>
+  <usuario seleccion="false" denominacion="usuario" tipo="3" descripcion="usuario"/>
+</conexiones>

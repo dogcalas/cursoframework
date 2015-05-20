@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<package_component>
+  <cmp30008 id="30008" text="doctrine generator" leaf="1" component="1" path="/herramientas/doctrine_generator"/>
+</package_component>

@@ -1,0 +1,2431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ioc>
+    <estudiante src="saue/esudiantes">
+        <cargarTipoxEstudiante reference="">
+            <inyector clase="EstudianteProxyService" metodo="loadTipoxEstudiante"/>
+            <prototipo>
+                <parametro nombre="idestudiante" tipo="numero"/>
+                <resultado tipo="letras"/>
+            </prototipo>
+        </cargarTipoxEstudiante>
+        <contarAlumnosPensumFG reference="">
+            <inyector clase="EstudianteProxyService" metodo="countAlumnosPensumFG"/>
+            <prototipo>
+                <parametro nombre="idpensum" tipo="numero"/>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarAlumnosPensumFG>
+        <cargarEstudiantexCurso reference="">
+            <inyector clase="EstudianteProxyService" metodo="loadEstudiantexCurso"/>
+            <prototipo>
+                <parametro nombre="idcurso" tipo="numero"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarEstudiantexCurso>
+        <contarEstudiantexCurso reference="">
+            <inyector clase="EstudianteProxyService" metodo="countEstudiantexCurso"/>
+            <prototipo>
+                <parametro nombre="idcurso" tipo="numero"/>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarEstudiantexCurso>
+        <universidadConvEstudiante reference="">
+            <inyector clase="EstudianteProxyService" metodo="universidadConvEstudiante"/>
+            <prototipo>
+                <parametro nombre="idalumno" tipo="numero"/>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </universidadConvEstudiante>
+        <cargarMateriasxEstudiante reference="">
+            <inyector clase="EstudianteProxyService" metodo="loadMateriasxEstudiante"/>
+            <prototipo>
+                <parametro nombre="idestudiante" tipo="numero"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarMateriasxEstudiante>
+        <cambiarestadoxFaltas reference="">
+            <inyector clase="EstudianteProxyService" metodo="cambiarxFaltas"/>
+            <prototipo>
+                <parametro nombre="idcurso" tipo="numero"/>
+                <parametro nombre="idestudiante" tipo="numero"/>
+                <parametro nombre="valor" tipo="bool"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </cambiarestadoxFaltas>
+
+    </estudiante>
+
+    <profesor src="saue/prof">
+        <cargarProfesores reference="">
+            <inyector clase="ProfesorProxyService" metodo="loadProfesores"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarProfesores>
+        <contarProfesores reference="">
+            <inyector clase="ProfesorProxyService" metodo="countProfesores"/>
+            <prototipo>
+                <parametro nombre="filtros"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarProfesores>
+        <cargarProfesoresNotIn reference="">
+            <inyector clase="ProfesorProxyService" metodo="loadProfesoresNotIn"/>
+            <prototipo>
+                <parametro nombre="ids_profesores" tipo="array"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarProfesoresNotIn>
+        <contarProfesoresNotIn reference="">
+            <inyector clase="ProfesorProxyService" metodo="countProfesoresNotIn"/>
+            <prototipo>
+                <parametro nombre="ids_profesores" tipo="array"/>
+                <parametro nombre="filtros"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarProfesoresNotIn>
+    </profesor>
+
+    <calendar src="saue/calendar">
+        <cargarPeriodo reference="">
+            <inyector clase="CalendarProxyService" metodo="loadPeriodos"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPeriodo>
+        <cargarNotaPeriodo reference="">
+            <inyector clase="CalendarProxyService" metodo="cargarNotaPeriodo"/>
+            <prototipo>
+                <parametro nombre="idperiodo" tipo="numero"/>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </cargarNotaPeriodo>
+        <cargarPeriodosAdmin reference="">
+            <inyector clase="CalendarProxyService" metodo="cargarPeriodosAdmin"/>
+            <prototipo>
+                <parametro nombre="anno" tipo="numero"/>
+                <parametro nombre="idtipoperiodo" tipo="numero" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPeriodosAdmin>
+        <cargarPeriodosAccion reference="">
+            <inyector clase="CalendarProxyService" metodo="cargarPeriodosAccion"/>
+            <prototipo>
+                <parametro nombre="anno" tipo="numero"/>
+                <parametro nombre="idaccion" tipo="numero"/>
+                <parametro nombre="rol" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPeriodosAccion>
+        <cargarPeriodoServiceAll reference="">
+            <inyector clase="CalendarProxyService" metodo="cargarPeriodoServiceAll"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPeriodoServiceAll>
+        <cargarPeriodoDoc reference="">
+            <inyector clase="CalendarProxyService" metodo="cargarPeriodo"/>
+            <prototipo>
+                <parametro nombre="idperiodo" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPeriodoDoc>
+        <cargarPeriodoAnno reference="">
+            <inyector clase="CalendarProxyService" metodo="cargarPeriodos"/>
+            <prototipo>
+                <parametro nombre="anno" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPeriodoAnno>
+        <cargarActivasPorFecha reference="">
+            <inyector clase="CalendarProxyService" metodo="loadActividadesActivas"/>
+            <prototipo>
+                <parametro nombre="idrol" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarActivasPorFecha>
+        <cargarHorarios reference="">
+            <inyector clase="CalendarProxyService" metodo="loadHorarios"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarHorarios>
+        <cargarHorariosPorPeriodo reference="">
+            <inyector clase="CalendarProxyService" metodo="loadHorariosPorPeriodo"/>
+            <prototipo>
+                <parametro nombre="idperiodo" tipo="numero"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarHorariosPorPeriodo>
+        <cargarHorarioPeriodo reference="">
+            <inyector clase="CalendarProxyService" metodo="cargarHorarioPeriodo"/>
+            <prototipo>
+                <parametro nombre="idperiodo" tipo="numero"/>
+                <parametro nombre="idhorario" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarHorarioPeriodo>
+        <cargarAulas reference="">
+            <inyector clase="CalendarProxyService" metodo="loadAulas"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarAulas>
+        <cargarAulasNotIn reference="">
+            <inyector clase="CalendarProxyService" metodo="loadAulasNotIn"/>
+            <prototipo>
+                <parametro nombre="ids_aulas" tipo="array"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarAulasNotIn>
+        <contarHorarios reference="">
+            <inyector clase="CalendarProxyService" metodo="countHorarios"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarHorarios>
+        <getAnnos reference="">
+            <inyector clase="CalendarProxyService" metodo="getAnnos"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getAnnos>
+        <getAnnosRegistro reference="">
+            <inyector clase="CalendarProxyService" metodo="getAnnosRegistro"/>
+            <prototipo>
+                <parametro nombre="idaccion" tipo="numero"/>
+                <parametro nombre="idfuncionalidad" tipo="numero"/>
+                <parametro nombre="rol" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getAnnosRegistro>
+    </calendar>
+
+    <materia src="saue/mat">
+        <contarPEMT reference="">
+            <inyector clase="MateriaProxyService" metodo="countPEMT"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarPEMT>
+        <cargarPEMT reference="">
+            <inyector clase="MateriaProxyService" metodo="loadPEMT"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="idpensum" tipo="numero"/>
+                <parametro nombre="idenfasis" tipo="numero"/>
+                <parametro nombre="idarea" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPEMT>
+        <contarMensiones reference="">
+            <inyector clase="MateriaProxyService" metodo="countMensiones"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarMensiones>
+        <cargarMensiones reference="">
+            <inyector clase="MateriaProxyService" metodo="loadMensiones"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarMensiones>
+        <contarMaterias reference="">
+            <inyector clase="MateriaProxyService" metodo="countMaterias"/>
+            <prototipo>
+                <parametro nombre="filtros" tipo="array"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarMaterias>
+        <cargarMaterias reference="">
+            <inyector clase="MateriaProxyService" metodo="loadMaterias"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarMaterias>
+        <contarAreas reference="">
+            <inyector clase="MateriaProxyService" metodo="countAreas"/>
+            <prototipo>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarAreas>
+        <cargarAreas reference="">
+            <inyector clase="MateriaProxyService" metodo="loadAreas"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarAreas>
+        <cargarAreasGenerales reference="">
+            <inyector clase="MateriaProxyService" metodo="loadAreasGenerales"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarAreasGenerales>
+        <cargarPreRequisitos reference="">
+            <inyector clase="MateriaProxyService" metodo="loadPreRequisitos"/>
+            <prototipo>
+                <parametro nombre="idmateria" tipo="numero"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPreRequisitos>
+        <countPreRequisitos reference="">
+            <inyector clase="MateriaProxyService" metodo="countPreRequisitos"/>
+            <prototipo>
+                <parametro nombre="idmateria" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </countPreRequisitos>
+        <cargarCoRequisitos reference="">
+            <inyector clase="MateriaProxyService" metodo="loadCoRequisitos"/>
+            <prototipo>
+                <parametro nombre="idmateria" tipo="numero"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCoRequisitos>
+        <countCoRequisitos reference="">
+            <inyector clase="MateriaProxyService" metodo="countCoRequisitos"/>
+            <prototipo>
+                <parametro nombre="idmateria" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </countCoRequisitos>
+        <countMateriasPorMencion reference="">
+            <inyector clase="MateriaProxyService" metodo="countMateriasPorMencion"/>
+            <prototipo>
+                <parametro nombre="idmencion" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </countMateriasPorMencion>
+        <obtenerMateria reference="">
+            <inyector clase="MateriaProxyService" metodo="obtenerMateria"/>
+            <prototipo>
+                <parametro nombre="idmateria" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </obtenerMateria>
+
+    </materia>
+
+    <curso src="saue/curso">
+        <cargarCursos>
+            <inyector clase="CursoProxyService" metodo="loadCursos"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCursos>
+        <countCursos>
+            <inyector clase="CursoProxyService" metodo="countCursos"/>
+            <prototipo>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </countCursos>
+        <cargarCursosRegistro>
+            <inyector clase="CursoProxyService" metodo="loadCursosRegistro"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <parametro nombre="idperiododocente" tipo="numero"/>
+                <parametro nombre="idalumno" tipo="numero"/>
+                <parametro nombre="idhorario" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCursosRegistro>
+        <cargarCurso>
+            <inyector clase="CursoProxyService" metodo="loadCurso"/>
+            <prototipo>
+                <parametro nombre="idcurso" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCurso>
+        <cargarCursoPeriodoHorario>
+            <inyector clase="CursoProxyService" metodo="cargarCursoPeriodoHorario"/>
+            <prototipo>
+                <parametro nombre="idperiodo" tipo="numero"/>
+                <parametro nombre="idmateria" tipo="numero"/>
+                <parametro nombre="par_curs" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCursoPeriodoHorario>
+        <cargarCursosPerActual>
+            <inyector clase="CursoProxyService" metodo="cargarCursosPerActual"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="idalumno" tipo="numero"/>
+                <parametro nombre="idperiodo" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCursosPerActual>
+    </curso>
+
+    <facultad src="saue/fac">
+        <cargarPensumAll reference="">
+            <inyector clase="FacultadProxyService" metodo="loadAllPensum"/>
+            <prototipo>
+                <parametro nombre="idcarrera" tipo="numero"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPensumAll>
+        <cargarPensum reference="">
+            <inyector clase="FacultadProxyService" metodo="loadPensum"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros" tipo="array" default="null"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPensum>
+        <cargarUltimoPensum reference="">
+            <inyector clase="FacultadProxyService" metodo="loadUltimoPensum"/>
+            <prototipo>
+                <parametro nombre="idcarrera" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarUltimoPensum>
+        <contarPensumAll reference="">
+            <inyector clase="FacultadProxyService" metodo="countAllPensum"/>
+            <prototipo>
+                <parametro nombre="idcarrera" tipo="numero"/>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarPensumAll>
+        <contarPensum reference="">
+            <inyector clase="FacultadProxyService" metodo="countPensum"/>
+            <prototipo>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarPensum>
+        <cargarCarreras reference="">
+            <inyector clase="FacultadProxyService" metodo="cargarCarreras"/>
+            <prototipo>
+                <parametro nombre="idfacultad" tipo="numero"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCarreras>
+        <countCarreras reference="">
+            <inyector clase="FacultadProxyService" metodo="countCarreras"/>
+            <prototipo>
+                <parametro nombre="idfacultad" tipo="numero"/>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </countCarreras>
+        <cargarCarrerasXFac reference="">
+            <inyector clase="FacultadProxyService" metodo="cargarCarrerasXFac"/>
+            <prototipo>
+                <parametro nombre="idfacultad" tipo="numero"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCarrerasXFac>
+        <countCarrerasXFac reference="">
+            <inyector clase="FacultadProxyService" metodo="contarCarrerasXFac"/>
+            <prototipo>
+                <parametro nombre="idfacultad" tipo="numero"/>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </countCarrerasXFac>
+        <cargarEnfasis reference="">
+            <inyector clase="FacultadProxyService" metodo="cargarEnfasis"/>
+            <prototipo>
+                <parametro nombre="idcarrera" tipo="numero"/>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarEnfasis>
+        <getDataFromEnfasis reference="">
+            <inyector clase="FacultadProxyService" metodo="getDataFromEnfasis"/>
+            <prototipo>
+                <parametro nombre="idenfasis" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getDataFromEnfasis>
+        <countEnfasis reference="">
+            <inyector clase="FacultadProxyService" metodo="countEnfasis"/>
+            <prototipo>
+                <parametro nombre="idcarrera" tipo="numero"/>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </countEnfasis>
+        <cargarPEMT reference="">
+            <inyector clase="FacultadProxyService" metodo="loadPEMT"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarPEMT>
+        <contarMensiones reference="">
+            <inyector clase="FacultadProxyService" metodo="countMensiones"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarMensiones>
+        <cargarMensiones reference="">
+            <inyector clase="FacultadProxyService" metodo="loadMensiones"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarMensiones>
+        <cargarMensionesEst reference="">
+            <inyector clase="FacultadProxyService" metodo="loadMensionesEst"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="idalumno" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarMensionesEst>
+    </facultad>
+
+    <nomencladores src="saue/nomencladores">
+        <cargarUbicacion reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadUbicacion"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarUbicacion>
+        <getPaises reference="">
+            <inyector clase="NomencladoresProxyService" metodo="getPaises"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getPaises>
+        <contarUbicacion reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countUbicacion"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarUbicacion>
+        <cargarObservacion reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadObservacion"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarObservacion>
+        <contarObservacion reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countObservacion"/>
+            <prototipo>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarObservacion>
+        <cargarEtnia reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadEtnias"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarEtnia>
+        <contarEtnia reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countEtnias"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarEtnia>
+        <cargarDiscapacidad reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadDiscapacidades"/>
+            <prototipo>
+                <parametro nombre="idtipodiscapacidad" tipo="numero"/>
+                <parametro nombre="idgradodiscapacidad" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarDiscapacidad>
+        <cargarTipoBeca reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadTipoBeca"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarTipoBeca>
+        <cargarTipoDiscapacidad reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadTipoDiscapacidad"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarTipoDiscapacidad>
+        <cargarGradoDiscapacidad reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadGradoDiscapacidad"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarGradoDiscapacidad>
+        <contarDiscapacidad reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countDiscapacidades"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarDiscapacidad>
+        <cargarTipoPasantias reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadTPasantias"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarTipoPasantias>
+        <contarTipoPasantias reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countTipoapasantias"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarTipoPasantias>
+        <cargarEmpresas reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadEmpresas"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <parametro nombre="filtros"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarEmpresas>
+        <contarEmpresas reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countEmpresas"/>
+            <prototipo>
+                <parametro nombre="filtros"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarEmpresas>
+        <contarAreasgen reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countAreasgen"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarAreasgen>
+        <contarTipoaprobado reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countTipoaprobado"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </contarTipoaprobado>
+        <cargarAreasgen reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadAreasgen"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarAreasgen>
+        <cargarTipoaprobado reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadTipoaprobado"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarTipoaprobado>
+        <cargarCanton reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadCanton"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCanton>
+        <cargarColegios reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadColegios"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarColegios>
+        <cargarEstadosCivil reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadEstadosCivil"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarEstadosCivil>
+        <cargarProvincias reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadProvincias"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarProvincias>
+        <cargarSectoresCiudad reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadSectoresCiudad"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarSectoresCiudad>
+        <cargarUniversidades reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadUniversidades"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarUniversidades>
+        <cargarIdiomas reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadIdiomas"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarIdiomas>
+        <contarCanton reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countCanton"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarCanton>
+        <contarColegios reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countColegios"/>
+            <prototipo>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarColegios>
+        <contarEstadosCivil reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countEstadosCivil"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarEstadosCivil>
+        <contarProvincias reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countProvincias"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarProvincias>
+        <contarSectoresCiudad reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countSectoresCiudad"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarSectoresCiudad>
+        <contarUniversidades reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countUniversidades"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarUniversidades>
+        <contarIdiomas reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countIdiomas"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </contarIdiomas>
+        <cargarCampus reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadCampus"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCampus>
+        <contarCategoria reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countCategoria"/>
+            <prototipo>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarCategoria>
+        <cargarCategoria reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadCategoria"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarCategoria>
+        <contarComisiones reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countComisiones"/>
+            <prototipo>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarComisiones>
+        <cargarComisiones reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadComisiones"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarComisiones>
+        <contarColectivo reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countColectivo"/>
+            <prototipo>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarColectivo>
+        <cargarColectivo reference="">
+            <inyector clase="NomencladoresProxyService" metodo="loadColectivo"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="numero"/>
+                <parametro nombre="start" tipo="numero"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarColectivo>
+        <contarCampus reference="">
+            <inyector clase="NomencladoresProxyService" metodo="countCampus"/>
+            <prototipo>
+                <resultado tipo="numero"/>
+            </prototipo>
+        </contarCampus>
+    </nomencladores>
+
+    <portal src="portal">
+        <BuscarUsuarioByAlias reference="">
+            <inyector clase="PortalProxyService"
+                      metodo="buscarUsuarioByAlias"/>
+            <prototipo>
+                <parametro nombre="alias" tipo="letras"/>
+                <resultado clase="Doctrine_Collection"/>
+            </prototipo>
+        </BuscarUsuarioByAlias>
+        <ObtenerSubsitemaURI reference="">
+            <inyector clase="PortalProxyService"
+                      metodo="ObtenerSubsitemaURI"/>
+            <prototipo>
+                <parametro nombre="uri" clase="stdClass"/>
+                <parametro nombre="identidad" tipo="enteropos"/>
+                <resultado clase="stdClass"/>
+            </prototipo>
+        </ObtenerSubsitemaURI>
+    </portal>
+
+    <seguridad src="seguridad">
+        <accesoAccion reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="accesoAccion"/>
+            <prototipo>
+                <parametro nombre="rol"/>
+                <parametro nombre="denominacion"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </accesoAccion>
+        <cambiarContrasena reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="cambiarContrasena"/>
+            <prototipo>
+                <parametro nombre="password"/>
+                <parametro nombre="idusuario"/>
+                <resultado tipo="boolean"/>
+            </prototipo>
+        </cambiarContrasena>
+        <obtenerFuncionalidadesRol reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="obtenerFuncionalidadesRol"/>
+            <prototipo>
+                <parametro nombre="idrol"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </obtenerFuncionalidadesRol>
+        <cargarsistemafunc reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="cargarsistemafunc"/>
+            <prototipo>
+                <parametro nombre="idnodo"/>
+                <parametro nombre="idsistema"/>
+                <parametro nombre="rol"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarsistemafunc>
+        <cargarAcciCompartimentacion reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="cargarAcciCompartimentacion"/>
+            <prototipo>
+                <parametro nombre="idfuncionalidad"/>
+                <parametro nombre="idrol"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarAcciCompartimentacion>
+        <obtenerEstructurasUser reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getEstructurasByUser"/>
+            <prototipo>
+                <parametro nombre="perfil"/>
+                <parametro nombre="all" tipo="bool"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </obtenerEstructurasUser>
+        <obtenerAcionesFuncionalidad reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="obtenerAcionesFuncionalidad"/>
+            <prototipo>
+                <parametro nombre="idsistema"/>
+                <parametro nombre="idrol"/>
+                <parametro nombre="idfuncionalidad"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </obtenerAcionesFuncionalidad>
+        <dameUsuarioEntidad>
+            <inyector clase="SeguridadProxyService"
+                      metodo="getEntitiesUser"/>
+            <prototipo>
+                <parametro nombre="idusuario" tipo="numeros"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </dameUsuarioEntidad>
+        <notify reference="">
+            <inyector clase="SeguridadProxyService" metodo="notificar"/>
+            <prototipo>
+                <parametro nombre="codigo" tipo="numerosletras"/>
+                <parametro nombre="data" tipo="array"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </notify>
+        <eliminarUsuario reference="">
+            <inyector clase="SeguridadProxyService" metodo="deleteUser"/>
+            <prototipo>
+                <parametro nombre="idusuario" tipo="enteropos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </eliminarUsuario>
+
+        <insertarUsuario reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="insertUser"/>
+            <prototipo>
+                <parametro nombre="nombre"/>
+                <parametro nombre="apellidos"/>
+                <parametro nombre="contrasena"/>
+                <parametro nombre="contrasenabd"/>
+                <parametro nombre="identidad"/>
+                <parametro nombre="iddominio"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </insertarUsuario>
+
+        <LoadRolesCompartimentacion reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="LoadRolesCompartimentacion"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </LoadRolesCompartimentacion>
+        <CargarTodasEstructuras reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="CargarTodasEstructuras"/>
+            <prototipo>
+                <parametro nombre="idestructura"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </CargarTodasEstructuras>
+
+        <eliminarCertificadosUsuario reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="deleteUserCertificates"/>
+            <prototipo>
+                <parametro nombre="idusuario"/>
+                <resultado tipo="void"/>
+            </prototipo>
+        </eliminarCertificadosUsuario>
+        <AutenticarUsuario reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="authenticateUser"/>
+            <prototipo>
+                <parametro nombre="usuario"/>
+                <parametro nombre="password"/>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </AutenticarUsuario>
+
+        <blockUser reference="">
+            <inyector clase="SeguridadProxyService" metodo="blockUser"/>
+            <prototipo>
+                <parametro nombre="usuario"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </blockUser>
+
+
+        <AutenticarUsuarioApi reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="authenticateUserApi"/>
+            <prototipo>
+                <parametro nombre="usuario"/>
+                <parametro nombre="password"/>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </AutenticarUsuarioApi>
+
+        <GetCertificado reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="returnCertificate"/>
+            <prototipo>
+                <parametro nombre="idusuario" tipo="enteropos"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </GetCertificado>
+
+        <GetFechaExpira reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="GetFechaExpira"/>
+            <prototipo>
+                <parametro nombre="idusuario" tipo="enteropos"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </GetFechaExpira>
+
+        <existeUsuarioRol reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="existUserRol"/>
+            <prototipo>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </existeUsuarioRol>
+
+        <dominoHastaUsuario reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="loadDomainPDO"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idestructuracomun"
+                           tipo="numerosletras"/>
+                <parametro nombre="tipo"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </dominoHastaUsuario>
+
+        <getDomainUser reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getDomainUser"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getDomainUser>
+
+        <nombreUsuario reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="nameUsersProfile"/>
+            <prototipo>
+                <parametro nombre="idusuario" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </nombreUsuario>
+
+        <datosEntAreaCargoUsuario reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getUsersDates"/>
+            <prototipo>
+                <parametro nombre="idusuario" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </datosEntAreaCargoUsuario>
+
+        <DominioModificado reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="modificateDomain"/>
+            <prototipo>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </DominioModificado>
+        <existeMasUnRol reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="existSomeRol"/>
+            <prototipo>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </existeMasUnRol>
+        <ObtenerEstructurasNoFormales>
+            <inyector clase="SeguridadProxyService"
+                      metodo="ObtenerEstructurasNoFormales"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerEstructurasNoFormales>
+        <CargarPerfil reference="">
+            <inyector clase="SeguridadProxyService" metodo="getProfile"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </CargarPerfil>
+        <ObtenerSistemas reference="">
+            <inyector clase="SeguridadProxyService" metodo="getSystems"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idestructuracomun" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerSistemas>
+        <ObtenerSistemasDesktopModulos reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getSystemsDesktopModules"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idestructuracomun" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerSistemasDesktopModulos>
+        <ObtenerModulosFuncionalidades reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getSystemsFunctions"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="id" tipo="numerosguionbajo"/>
+                <parametro nombre="idestructuracomun" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerModulosFuncionalidades>
+        <ObtenerSistemasFuncionalidadesDesktopModulos reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getSystemsFunctionsDesktopModules"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idestructuracomun" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerSistemasFuncionalidadesDesktopModulos>
+        <CargarDominio reference="">
+            <inyector clase="SeguridadProxyService" metodo="loadDomain"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idestructura" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </CargarDominio>
+        <insertarUsuarioSIGAC reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="InsertUserSIGAC"/>
+            <prototipo>
+                <parametro nombre="nombreusuario" tipo="numerosletras"/>
+                <parametro nombre="passw" tipo="numerosletras"/>
+                <parametro nombre="url"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </insertarUsuarioSIGAC>
+        <ModificarUsuarioSIGAC reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="modifyStoreSIGAC"/>
+            <prototipo>
+                <parametro nombre="viejousuario" tipo="numerosletras"/>
+                <parametro nombre="nuevousuario" tipo="numerosletras"/>
+                <parametro nombre="passw" tipo="numerosletras"/>
+                <parametro nombre="url"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ModificarUsuarioSIGAC>
+        <obtenerNombresUsuarios reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getUserNames"/>
+            <prototipo>
+                <parametro nombre="idusuarios" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </obtenerNombresUsuarios>
+        <devolverDatosSIGAC reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getStoreSIGAC"/>
+            <prototipo>
+                <parametro nombre="nombreusuario" tipo="numerosletras"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </devolverDatosSIGAC>
+        <ObtenerEstructurasPorIdOrgano reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getEntityByIdOrgano"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="valor" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerEstructurasPorIdOrgano>
+        <ObtenerUsuariosRolEntidad reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="rolAsUsersGain"/>
+            <prototipo>
+                <parametro nombre="identidad" tipo="enteropos"/>
+                <parametro nombre="idrol" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerUsuariosRolEntidad>
+        <VerificarAccesoEntidad reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="verifyAccessEntity"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idestructuracomun" tipo="enteropos"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </VerificarAccesoEntidad>
+        <ObtenerAcciones reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="loadUserActions"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idfuncionalidad" tipo="enteropos"/>
+                <parametro nombre="idestructuracomun" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerAcciones>
+        <getUsersProfile reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getUsersProfile"/>
+            <prototipo>
+                <parametro nombre="idusuario" tipo="array"/>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getUsersProfile>
+        <CambiarContrasenna reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="ChangePassword"/>
+            <prototipo>
+                <parametro nombre="usuario" tipo="numerosletras"/>
+                <parametro nombre="oldpass"/>
+                <parametro nombre="newpass"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </CambiarContrasenna>
+        <VerificarAccesoFuncionalidad reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="accessToFunctionality"/>
+            <prototipo>
+                <parametro nombre="acciones" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </VerificarAccesoFuncionalidad>
+        <getReportesAcciones reference="">
+            <inyector clase="SeguridadProxyService"
+                      metodo="getReportesAcciones"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="url" tipo="funcionalidad"/>
+                <parametro nombre="idestructuracomun" tipo="enteropos"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </getReportesAcciones>
+        <getReportByActions reference="">
+            <inyector clase="SeguridadProxyService" metodo="getReportByActions"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idaccion" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getReportByActions>
+        <cantidadRoles reference="">
+            <inyector clase="SeguridadProxyService" metodo="cantidadRoles"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </cantidadRoles>
+        <cantidadUsuarios reference="">
+            <inyector clase="SeguridadProxyService" metodo="cantidadUsuarios"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </cantidadUsuarios>
+        <ObtenerTodasFucionalidades reference="">
+            <inyector clase="SeguridadProxyService" metodo="loadUserAllFuncionalidadesActions"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idestructuracomun" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerTodasFucionalidades>
+        <loadAllFuncionalidades reference="">
+            <inyector clase="SeguridadProxyService" metodo="loadAllFuncionalidades"/>
+            <prototipo>
+                <parametro nombre="dominio" tipo="enteropos"/>
+                <parametro nombre="idpadre" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </loadAllFuncionalidades>
+        <loadAllFuncionalidad reference="">
+            <inyector clase="SeguridadProxyService" metodo="loadAllFuncionalidad"/>
+            <prototipo>
+                <parametro nombre="dominio" tipo="enteropos"/>
+                <parametro nombre="idpadre" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </loadAllFuncionalidad>
+        <loadAllSistemas reference="">
+            <inyector clase="SeguridadProxyService" metodo="loadAllSistemas"/>
+            <prototipo>
+                <parametro nombre="dominio" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </loadAllSistemas>
+        <insertarsistema reference="">
+            <inyector clase="SeguridadProxyService" metodo="insertarsistema"/>
+            <prototipo>
+                <parametro nombre="idpadre" tipo="enteropos"/>
+                <parametro nombre="denominacion"/>
+                <parametro nombre="abreviatura"/>
+                <parametro nombre="iddominio" tipo="enteropos"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </insertarsistema>
+        <modificarsistema reference="">
+            <inyector clase="SeguridadProxyService" metodo="modificarsistema"/>
+            <prototipo>
+                <parametro nombre="idpadre" tipo="enteropos"/>
+                <parametro nombre="denominacion"/>
+                <parametro nombre="abreviatura"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </modificarsistema>
+        <eliminarsistema reference="">
+            <inyector clase="SeguridadProxyService" metodo="eliminarsistema"/>
+            <prototipo>
+                <parametro nombre="idsistema" tipo="enteropos"/>
+
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </eliminarsistema>
+        <insertarfuncionalidad reference="">
+            <inyector clase="SeguridadProxyService" metodo="insertarfuncionalidad"/>
+            <prototipo>
+                <parametro nombre="idsistema" tipo="enteropos"/>
+                <parametro nombre="denominacion"/>
+                <parametro nombre="direccion"/>
+                <parametro nombre="abreviaturaH"/>
+                <parametro nombre="iddominio" tipo="enteropos"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </insertarfuncionalidad>
+        <modificarfuncionalidad reference="">
+            <inyector clase="SeguridadProxyService" metodo="modificarfuncionalidad"/>
+            <prototipo>
+                <!--  <parametro nombre="idsistema" tipo="enteropos"/>-->
+                <parametro nombre="idfuncionalidad" tipo="enteropos"/>
+                <parametro nombre="denominacion"/>
+                <parametro nombre="abreviaturaP"/>
+                <parametro nombre="abreviaturaH"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </modificarfuncionalidad>
+        <eliminarfuncionalidad reference="">
+            <inyector clase="SeguridadProxyService" metodo="eliminarfuncionalidad"/>
+            <prototipo>
+                <parametro nombre="idfuncionalidad" tipo="enteropos"/>
+
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </eliminarfuncionalidad>
+        <getFuncionalidadesPorRol reference="">
+            <inyector clase="SeguridadProxyService" metodo="FuncionalidadesPorRol"/>
+            <prototipo>
+                <parametro nombre="idrol" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getFuncionalidadesPorRol>
+        <getAccionesRolPorFuncionalidad reference="">
+            <inyector clase="SeguridadProxyService" metodo="AccionesRolPorFuncionalidades"/>
+            <prototipo>
+                <parametro nombre="idsistema" tipo="enteropos"/>
+                <parametro nombre="idfuncionalidad" tipo="enteropos"/>
+                <parametro nombre="idrol" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getAccionesRolPorFuncionalidad>
+        <IsActivoTAutenticacion reference="">
+            <inyector clase="SeguridadProxyService" metodo="IsActivoTAutenticacion"/>
+            <prototipo>
+                <parametro nombre="abreviatura" tipo="numerosletras"/>
+
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </IsActivoTAutenticacion>
+        <loginFace reference="">
+            <inyector clase="SeguridadProxyService" metodo="loginFace"/>
+            <prototipo>
+                <parametro nombre="usuario"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </loginFace>
+        <cargarTemaUsuario reference="">
+            <inyector clase="SeguridadProxyService" metodo="cargarTemaUsuario"/>
+            <prototipo>
+                <parametro nombre="usuario"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </cargarTemaUsuario>
+        <ObtenerRolUsuarioEntidad reference="">
+            <inyector clase="SeguridadProxyService" metodo="obtenerrolActions"/>
+            <prototipo>
+                <parametro nombre="idusuario" tipo="enteropos"/>
+                <parametro nombre="identidad" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerRolUsuarioEntidad>
+
+        <Usuarios reference="">
+            <inyector clase="SeguridadProxyService" metodo="Usuarios"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </Usuarios>
+
+        <getRolesPorSistema reference="">
+            <inyector clase="SeguridadProxyService" metodo="getRolesPorSistema"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idestructura" tipo="enterospos"/>
+                <parametro nombre="idsistema" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getRolesPorSistema>
+
+        <getUsuariosPorRoles reference="">
+            <inyector clase="SeguridadProxyService" metodo="getUsuariosPorRoles"/>
+            <prototipo>
+                <parametro nombre="certificado" tipo="numerosletras"/>
+                <parametro nombre="idestructura" tipo="enterospos"/>
+                <parametro nombre="idrol" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getUsuariosPorRoles>
+
+        <NomRol reference="">
+            <inyector clase="SeguridadProxyService" metodo="NomRol"/>
+            <prototipo>
+                <parametro nombre="idrol" tipo="enterospos"/>
+                <resultado tipo="numerosletras"/>
+            </prototipo>
+        </NomRol>
+    </seguridad>
+
+    <metadatos src="metadatos">
+        <getIcon>
+            <inyector clase="EstructuraService" metodo="getIcon"/>
+            <prototipo>
+                <resultado tipo="boolean"/>
+            </prototipo>
+        </getIcon>
+        <!--componenteArbol-->
+        <cargarComboDominioBuscar>
+            <inyector clase="DominioService" metodo="cargarComboDominioBuscar"/>
+            <prototipo>
+                <parametro tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarComboDominioBuscar>
+        <buscarHijosEstructuras>
+            <inyector clase="IDominio" metodo="buscarHijosEstructuras"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <parametro nombre="idestructura" tipo="enterospos"/>
+                <parametro nombre="checked" tipo="enterospos"/>
+                <parametro nombre="checkear" tipo="enterospos"/>
+                <parametro nombre="arrayTiposEAV" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </buscarHijosEstructuras>
+        <buscarArbolHijosEstructuras>
+            <inyector clase="IDominio" metodo="buscarArbolHijosEstructuras"/>
+            <prototipo>
+                <parametro nombre="arrayEstructuras" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </buscarArbolHijosEstructuras>
+        <buscarArbolHijosDominio>
+            <inyector clase="IDominio" metodo="buscarArbolHijosDominio"/>
+            <prototipo>
+                <parametro nombre="arrayDominios" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </buscarArbolHijosDominio>
+        <cargarArbolDominios>
+            <inyector clase="IDominio" metodo="cargarArbolDominios"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cargarArbolDominios>
+        <buscarHijosEstructurasDadoArray>
+            <inyector clase="IDominio" metodo="buscarHijosEstructurasDadoArray"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <parametro nombre="idestructura" tipo="enterospos"/>
+                <parametro nombre="checked" tipo="enterospos"/>
+                <parametro nombre="arrayIdestructura" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </buscarHijosEstructurasDadoArray>
+        <buscarIdEstructurasDominio>
+            <inyector clase="IDominio" metodo="buscarIdEstructurasDominio"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <parametro nombre="arrayIdestructura" tipo="array"/>
+                <parametro nombre="tipoEAV" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </buscarIdEstructurasDominio>
+        <cantIdEstructurasDominio>
+            <inyector clase="IDominio" metodo="cantIdEstructurasDominio"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <parametro nombre="arrayIdestructura" tipo="array"/>
+                <parametro nombre="tipoEAV" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </cantIdEstructurasDominio>
+        <buscarCargosPorClas>
+            <inyector clase="CargoService" metodo="buscarCargosPorClas"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <parametro nombre="isdet" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </buscarCargosPorClas>
+        <ObtenerEstructurasNoFormales>
+            <inyector clase="DominioService" metodo="ObtenerEstructurasNoFormales"/>
+            <prototipo>
+                <parametro nombre="iddoominio" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerEstructurasNoFormales>
+        <ComponenteArbol>
+
+            <inyector clase="EstructuraService" metodo="ComponenteArbol"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ComponenteArbol>
+        <InsertarDominio>
+            <inyector clase="DominioService" metodo="InsertarDominio"/>
+            <prototipo>
+                <parametro nombre="nombre" tipo="numerosletras"/>
+                <parametro nombre="descripcion"/>
+                <parametro nombre="Entidades" tipo="array"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </InsertarDominio>
+        <verificarNombreDominio>
+            <inyector clase="DominioService" metodo="verificarNombreDominio"/>
+            <prototipo>
+                <parametro nombre="nombre" tipo="numerosletras"/>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </verificarNombreDominio>
+        <ModificarDominio>
+            <inyector clase="DominioService" metodo="ModificarDominio"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enteropos"/>
+                <parametro nombre="nombre" tipo="numerosletras"/>
+                <parametro nombre="descripcion"/>
+                <parametro nombre="entidades" tipo="array"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ModificarDominio>
+        <EliminarDominio>
+            <inyector clase="DominioService" metodo="EliminarDominio"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </EliminarDominio>
+        <BuscarDomio>
+            <inyector clase="DominioService" metodo="BuscarDomio"/>
+            <prototipo>
+                <parametro nombre="limint" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarDomio>
+        <BuscarComboDominio>
+            <inyector clase="DominioService" metodo="BuscarComboDominio"/>
+            <prototipo>
+                <parametro nombre="limint" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarComboDominio>
+        <BuscarDomioDadoNombre>
+            <inyector clase="DominioService" metodo="BuscarDomioDadoNombre"/>
+            <prototipo>
+                <parametro nombre="limint" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <parametro nombre="dendominio" tipo="numerosletras"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarDomioDadoNombre>
+        <DatosDominioDadoID>
+            <inyector clase="DominioService" metodo="DatosDominioDadoID"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DatosDominioDadoID>
+        <IdEstructurasDominio>
+            <inyector clase="DominioService" metodo="IdEstructurasDominio"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </IdEstructurasDominio>
+        <ObtenerEstructurasPorIdOrgano>
+            <inyector clase="DominioService" metodo="ObtenerEstructurasPorIdOrgano"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enteropos"/>
+                <parametro nombre="valor" tipo="enteropos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerEstructurasPorIdOrgano>
+        <BuscarIdDominioSeguridad>
+            <inyector clase="DominioService" metodo="BuscarIdDominioSeguridad"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </BuscarIdDominioSeguridad>
+        <AnadirEstructura>
+            <inyector clase="DominioService" metodo="AnadirEstructura"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <parametro nombre="idestructura" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </AnadirEstructura>
+        <ExtraerEstructura>
+            <inyector clase="DominioService" metodo="ExtraerEstructura"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <parametro nombre="idestructura" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExtraerEstructura>
+        <EstaEstructuraEnDominio>
+            <inyector clase="DominioService" metodo="EstaEstructuraEnDominio"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospos"/>
+                <parametro nombre="idestructura" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </EstaEstructuraEnDominio>
+        <ListarEstructuras>
+            <inyector clase="DominioService" metodo="ListarEstructuras"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospo"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ListarEstructuras>
+        <ListarEstructuraSinCheked>
+            <inyector clase="DominioService" metodo="ListarEstructuraSinCheked"/>
+            <prototipo>
+                <parametro nombre="iddominio" tipo="enterospo"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ListarEstructuraSinCheked>
+        <DominiosPorEstructura>
+            <inyector clase="DominioService" metodo="DominiosPorEstructura"/>
+            <prototipo>
+                <parametro nombre="idestructura"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DominiosPorEstructura>
+
+        <DameEstructura>
+            <inyector clase="EstructuraService" metodo="DameEstructura"/>
+            <prototipo>
+                <parametro nombre="idEstructura" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameEstructura>
+        <ObtenerDatosEstructurasPorArrayId>
+            <inyector clase="EstructuraService" metodo="ObtenerDatosEstructurasPorArrayId"/>
+            <prototipo>
+                <parametro nombre="arrayId" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerDatosEstructurasPorArrayId>
+        <DameEstructuraSeguridad>
+            <inyector clase="EstructuraService" metodo="DameEstructuraSeguridad"/>
+            <prototipo>
+                <parametro nombre="idEstructura" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameEstructuraSeguridad>
+        <ObtenerEstructurasPorOrgano>
+            <inyector clase="EstructuraService" metodo="ObtenerEstructurasPorOrgano"/>
+            <prototipo>
+                <parametro nombre="idorgano" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ObtenerEstructurasPorOrgano>
+        <ListadoEstructuras>
+            <inyector clase="EstructuraService" metodo="ListadoEstructuras"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ListadoEstructuras>
+        <ListadoEstructurasT>
+            <inyector clase="EstructuraService" metodo="ListadoEstructurasT"/>
+            <prototipo>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ListadoEstructurasT>
+        <DameHijosEstructura>
+            <inyector clase="EstructuraService" metodo="DameHijosEstructura"/>
+            <prototipo>
+                <parametro nombre="idPadre" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameHijosEstructura>
+        <EstructurasInternasDadoIDSeguridad>
+            <inyector clase="EstructuraService" metodo="EstructurasInternasDadoIDSeguridad"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </EstructurasInternasDadoIDSeguridad>
+        <DameEstructurasInternas>
+            <inyector clase="EstructuraService" metodo="DameEstructurasInternas"/>
+            <prototipo>
+                <parametro nombre="idEstructura" tipo="enterospos"/>
+                <parametro nombre="soloRaices" tipo="bool"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameEstructurasInternas>
+        <ExisteEstructuraop>
+            <inyector clase="EstructuraService" metodo="ExisteEstructuraop"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteEstructuraop>
+        <DameEstructuraOp>
+            <inyector clase="EstructuraService" metodo="DameEstructuraOp"/>
+            <prototipo>
+                <parametro nombre="id_estructuraop" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameEstructuraOp>
+        <DameEstructurasinChecked>
+            <inyector clase="EstructuraService" metodo="DameEstructurasinChecked"/>
+            <prototipo>
+                <parametro nombre="idEstructura" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameEstructurasinChecked>
+        <DameHijosInternaSeguridad>
+            <inyector clase="EstructuraService" metodo="DameHijosInternaSeguridad"/>
+            <prototipo>
+                <parametro nombre="idPadre" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameHijosInternaSeguridad>
+        <DameEstructurasInternasSeguridad>
+            <inyector clase="EstructuraService" metodo="DameEstructurasInternasSeguridad"/>
+            <prototipo>
+                <parametro nombre="idEstructura" tipo="enterospos"/>
+                <parametro nombre="soloRaices" tipo="bool"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameEstructurasInternasSeguridad>
+        <DameEstructurasInternasSeguridadSinCheked>
+            <inyector clase="EstructuraService" metodo="DameEstructurasInternasSeguridadSinCheked"/>
+            <prototipo>
+                <parametro nombre="idEstructura" tipo="enterospos"/>
+                <parametro nombre="soloRaices" tipo="bool"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameEstructurasInternasSeguridadSinCheked>
+        <DameHijosInternaSeguridadSinCheked>
+            <inyector clase="EstructuraService" metodo="DameHijosInternaSeguridadSinCheked"/>
+            <prototipo>
+                <parametro nombre="idEstructura" tipo="enterospos"/>
+                <parametro nombre="soloRaices" tipo="bool"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameHijosInternaSeguridadSinCheked>
+
+        <ListadoEstructurasInternas>
+            <inyector clase="EstructuraService" metodo="ListadoEstructurasInternas"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ListadoEstructurasInternas>
+        <DameHijosInterna>
+            <inyector clase="EstructuraService" metodo="DameHijosInterna"/>
+            <prototipo>
+                <parametro nombre="idPadre" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameHijosInterna>
+        <IdPadre>
+            <inyector clase="EstructuraService" metodo="IdPadre"/>
+            <prototipo>
+                <parametro nombre="idhijo" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </IdPadre>
+        <DameAreasPorId>
+            <inyector clase="EstructuraService" metodo="DameAreasPorId"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameAreasPorId>
+        <BuscarCargosPorClas>
+            <inyector clase="CargoService" metodo="BuscarCargosPorClas"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <parametro nombre="isdet" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarCargosPorClas>
+        <BuscarCargoPuesto>
+            <inyector clase="CargoService" metodo="BuscarCargoPuesto"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarCargoPuesto>
+        <DameCargoPorId>
+            <inyector clase="CargoService" metodo="DameCargoPorId"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameCargoPorId>
+        <InsertarCargoCivil>
+            <inyector clase="CargoService" metodo="InsertarCargoCivil"/>
+            <prototipo>
+                <parametro nombre="idcarg" tipo="enterospos"/>
+                <parametro nombre="idcategciv" tipo="enterospos"/>
+                <parametro nombre="salario" tipo="enterospos"/>
+                <parametro nombre="idespecial" tipo="enterospos"/>
+                <parametro nombre="idtipoc" tipo="enterospos"/>
+                <parametro nombre="idpref" tipo="enterospos"/>
+                <parametro nombre="idpref" tipo="enterospos"/>
+                <parametro nombre="ctp" tipo="enterospos"/>
+                <parametro nombre="ctg" tipo="enterospos"/>
+                <parametro nombre="ord" tipo="enterospos"/>
+                <parametro nombre="est" tipo="enterospos"/>
+                <parametro nombre="fini" tipo="fecha"/>
+                <parametro nombre="ffin" tipo="fecha"/>
+                <resultado clase="bool"/>
+            </prototipo>
+        </InsertarCargoCivil>
+        <DameDatosCargo>
+            <inyector clase="CargoService" metodo="DameDatosCargo"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <parametro nombre="militar" tipo="bool"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosCargo>
+        <BuscarCargoCivil>
+            <inyector clase="CargoService" metodo="BuscarCargoCivil"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarCargoCivil>
+        <BuscarCargosPorTipos>
+            <inyector clase="CargoService" metodo="BuscarCargosPorTipos"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarCargosPorTipos>
+        <BuscarCargosPorTiposSeguridad>
+            <inyector clase="CargoService" metodo="BuscarCargosPorTiposSeguridad"/>
+            <prototipo>
+                <parametro nombre="id" tipo="numerosletras"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarCargosPorTiposSeguridad>
+        <CargoDadoIDSeguridad>
+            <inyector clase="CargoService" metodo="CargoDadoIDSeguridad"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </CargoDadoIDSeguridad>
+        <ExisteCargoCivil>
+            <inyector clase="CargoService" metodo="ExisteCargoCivil"/>
+            <prototipo>
+                <parametro nombre="idCargo" tipo="enterospos"/>
+                <resultado clase="bool"/>
+            </prototipo>
+        </ExisteCargoCivil>
+        <EliminarCargoCivil>
+            <inyector clase="CargoService" metodo="EliminarCargoCivil"/>
+            <prototipo>
+                <parametro nombre="idcc" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </EliminarCargoCivil>
+        <ModificarCargoCivil>
+            <inyector clase="CargoService" metodo="ModificarCargoCivil"/>
+            <prototipo>
+                <parametro nombre="idcarg" tipo="enterospos"/>
+                <parametro nombre="idespecial" tipo="enterospos"/>
+                <parametro nombre="idtipocif" tipo="enterospos"/>
+                <parametro nombre="idprefo" tipo="enterospos"/>
+                <parametro nombre="mctp" tipo="numerosletras"/>
+                <parametro nombre="mctg" tipo="numerosletras"/>
+                <parametro nombre="ord" tipo="enterospos"/>
+                <parametro nombre="estad" tipo="enterospos"/>
+                <parametro nombre="fini" tipo="fecha"/>
+                <parametro nombre="ffin" tipo="fecha"/>
+                <parametro nombre="idcargoc" tipo="enterospos"/>
+                <parametro nombre="idcategc" tipo="enterospos"/>
+                <parametro nombre="salar" tipo="enterospos"/>
+                <resultado clase="bool"/>
+            </prototipo>
+        </ModificarCargoCivil>
+        <DameDatosCiviles>
+            <inyector clase="CargoService" metodo="DameDatosCiviles"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosCiviles>
+        <InsertarCargoMilitar>
+            <inyector clase="CargoService" metodo="InsertarCargoMilitar"/>
+            <prototipo>
+                <parametro nombre="idcargo" tipo="enterospos"/>
+                <parametro nombre="idespecialidad" tipo="enterospos"/>
+                <parametro nombre="idtipocifra" tipo="enterospos"/>
+                <parametro nombre="idprefijo" tipo="enterospos"/>
+                <parametro nombre="ctp" tipo="numerosletras"/>
+                <parametro nombre="ctg" tipo="numerosletras"/>
+                <parametro nombre="orden" tipo="enterospos"/>
+                <parametro nombre="estado" tipo="enterospos"/>
+                <parametro nombre="fechaini" tipo="fecha"/>
+                <parametro nombre="fechafin" tipo="fecha"/>
+                <parametro nombre="idcargmtar" tipo="enterospos"/>
+                <parametro nombre="idgradomtar" tipo="enterospos"/>
+                <parametro nombre="salario" tipo="enterospos"/>
+                <parametro nombre="escadmando" tipo="numerosletras"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </InsertarCargoMilitar>
+        <BuscarCargoMilitar>
+            <inyector clase="CargoService" metodo="BuscarCargoMilitar"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarCargoMilitar>
+        <ExisteCargoMilitar>
+            <inyector clase="CargoService" metodo="ExisteCargoMilitar"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteCargoMilitar>
+        <EliminarCargoMilitar>
+            <inyector clase="CargoService" metodo="EliminarCargoMilitar"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </EliminarCargoMilitar>
+        <ModificarCargoMilitar>
+            <inyector clase="CargoService" metodo="ModificarCargoMilitar"/>
+            <prototipo>
+                <parametro nombre="idcargo" tipo="enterospos"/>
+                <parametro nombre="idespecialidad" tipo="enterospos"/>
+                <parametro nombre="idtipocifra" tipo="enterospos"/>
+                <parametro nombre="idprefijo" tipo="enterospos"/>
+                <parametro nombre="ctp" tipo="numerosletras"/>
+                <parametro nombre="ctg" tipo="numerosletras"/>
+                <parametro nombre="orden" tipo="enterospos"/>
+                <parametro nombre="estado" tipo="enterospos"/>
+                <parametro nombre="fechaini" tipo="fecha"/>
+                <parametro nombre="fechafin" tipo="fecha"/>
+                <parametro nombre="idcargmtar" tipo="enterospos"/>
+                <parametro nombre="idgradomtar" tipo="enterospos"/>
+                <parametro nombre="salario" tipo="enterospos"/>
+                <parametro nombre="escadmando" tipo="numerosletras"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ModificarCargoMilitar>
+        <BuscarCargosPorInterfaces>
+            <inyector clase="CargoService" metodo="BuscarCargosPorInterfaces"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <parametro nombre="idop" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarCargosPorInterfaces>
+        <DameDatosMilitares>
+            <inyector clase="CargoService" metodo="DameDatosMilitares"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosMilitares>
+        <buscarCargoPorNombreArea>            <!-- /*En este sericio si se pasa 1 en el parametro $tipo devuelve los cargos militares , si pasa 2 , los civiles y si pasa 3 los civiles y militares*/-->
+            <inyector clase="CargoService" metodo="buscarCargoPorNombreArea"/>
+            <prototipo>
+                <parametro nombre="identidad" tipo="enterospos"/>
+                <parametro nombre="nombrearea" tipo="numerosletras"/>
+                <parametro nombre="tipocargo" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </buscarCargoPorNombreArea>
+        <getPadreSuperior>            <!-- /*Este servicio devuelve el padre superior de una estructura dada*/-->
+            <inyector clase="EstructuraService" metodo="getPadreSuperior"/>
+            <prototipo>
+                <parametro nombre="identidad" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </getPadreSuperior>
+        <!-- Nomenclador Agrupaciones -->
+        <DameDatosAgrupaciones>
+            <inyector clase="NomencladorService" metodo="DameDatosAgrupaciones"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosAgrupaciones>
+        <ExisteAgrupacion>
+            <inyector clase="NomencladorService" metodo="ExisteAgrupacion"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteAgrupacion>
+        <DamedProximoAgrupacion>
+            <inyector clase="NomencladorService" metodo="DamedProximoAgrupacion"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DamedProximoAgrupacion>
+        <!-- Nomenclador Organo -->
+        <DameDatosOrganos>
+            <inyector clase="NomencladorService" metodo="DameDatosOrganos"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="stdClss"/>
+            </prototipo>
+        </DameDatosOrganos>
+        <ExisteOrgano>
+            <inyector clase="NomencladorService" metodo="ExisteOrgano"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteOrgano>
+        <DameIdProximoOrgano>
+            <inyector clase="NomencladorService" metodo="getIdProximoOrgano"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoOrgano>
+        <!-- Nomenclador Especialidad -->
+        <DameDatosEspecialidades>
+            <inyector clase="NomencladorService" metodo="DameDatosEspecialidades"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosEspecialidades>
+        <ExisteEspecialidad>
+            <inyector clase="NomencladorService" metodo="ExisteEspecialidad"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteEspecialidad>
+        <DameIdProximoEspecialidad>
+            <inyector clase="NomencladorService" metodo="DameIdProximoEspecialidad"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoEspecialidad>
+        <!-- Nomeclador de Subcategoria -->
+        <DameDatosSbCate>
+            <inyector clase="NomencladorService" metodo="DameDatosSbCate"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado clase="stdClass"/>
+            </prototipo>
+        </DameDatosSbCate>
+        <ExisteSbCate>
+            <inyector clase="NomencladoreService" metodo="ExisteSbCate"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteSbCate>
+        <DameIdProximoSbCate>
+            <inyector clase="NomencladorService" metodo="DameIdProximoSbCate"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoSbCate>
+        <!-- Nomneclador nivel estructural -->
+        <DameDatosNivelEstr>
+            <inyector clase="NomencladorService" metodo="DameDatosNivelEstr"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosNivelEstr>
+        <ExisteNivelEstr>
+            <inyector clase="NomencladorService" metodo="ExisteNivelEstr"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteNivelEstr>
+        <DameIdProximoNivelEstr>
+            <inyector clase="NomencladoresService" metodo="DameIdProximoNivelEstr"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoNivelEstr>
+        <!-- Nomenclador tipo de cifra -->
+        <DameDatosTpCifras>
+            <inyector clase="NomencladorService" metodo="DameDatosTpCifras"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosTpCifras>
+        <ExisteTpCifras>
+            <inyector clase="NomencladorService" metodo="ExisteTpCifras"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteTpCifras>
+        <DameIdProximoTpCifras>
+            <inyector clase="NomencladorService" metodo="DameIdProximoTpCifras"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoTpCifras>
+        <!--Nomenclador Prefijo-->
+        <DameDatosPrefijos>
+            <inyector clase="NomencladorService" metodo="DameDatosPrefijos"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosPrefijos>
+        <ExistePrefijo>
+            <inyector clase="NomencladorService" metodo="ExistePrefijo"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExistePrefijo>
+        <DameIdProximoPrefijo>
+            <inyector clase="NomencladorService" metodo="DameIdProximoPrefijo"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoPrefijo>
+        <!--Nomenclador categoria civil-->
+        <DameDatosCatCvil>
+            <inyector clase="NomencladorService" metodo="DameDatosCatCvil"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosCatCvil>
+        <ExisteCatCvil>
+            <inyector clase="NomencladorService" metodo="ExisteCatCvil"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteCatCvil>
+        <DameIdProximoCatCvil>
+            <inyector clase="NomencladorService" metodo="DameIdProximoCatCvil"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoCatCvil>
+        <!--Nomenclador de categoria ocupacional-->
+        <DameDatosCatOcup>
+            <inyector clase="NomencladorService" metodo="DameDatosCatOcup"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosCatOcup>
+        <ExisteCatOcup>
+            <inyector clase="NomencladorService" metodo="ExisteCatOcup"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteCatOcup>
+        <DameIdProximoCatOcup>
+            <inyector clase="NomencladorsService" metodo="DameIdProximoCatOcup"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoCatOcup>
+        <!--Nomenclador de preparacion militar-->
+        <DameDatosPrepMltar>
+            <inyector clase="NomencladorService" metodo="DameDatosPrepMltar"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosPrepMltar>
+        <ExistePrepMltar>
+            <inyector clase="NomencladorService" metodo="ExistePrepMltar"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExistePrepMltar>
+        <DameIdProximoPrepMltar>
+            <inyector clase="NomencladorService" metodo="DameIdProximoPrepMltar"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoPrepMltar>
+        <!--Nomenclador de MODULOS-->
+        <DameDatosModulo>
+            <inyector clase="NomencladorService" metodo="DameDatosModulo"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado clase="stdClass"/>
+            </prototipo>
+        </DameDatosModulo>
+        <ExisteModulo>
+            <inyector clase="NomencladorService" metodo="ExisteModulo"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteModulo>
+        <DameIdProximoModulo>
+            <inyector clase="NomencladorService" metodo="DameIdProximoModulo"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoModulo>
+        <!--Nomenclador de TECNICA-->
+        <DameDatosTecnica>
+            <inyector clase="NomencladorService" metodo="DameDatosTecnica"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado clase="stdClass"/>
+            </prototipo>
+        </DameDatosTecnica>
+        <ExisteTecnica>
+            <inyector clase="NomencladorService" metodo="ExisteTecnica"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteTecnica>
+        <DameIdProximoTecnica>
+            <inyector clase="NomencladorService" metodo="DameIdProximoTecnica"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoTecnica>
+        <!--Nomenclador de Cargo Civil-->
+        <DameDatosCargCivl>
+            <inyector clase="NomencladorService" metodo="DameDatosCargCivl"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado clase="stdClass"/>
+            </prototipo>
+        </DameDatosCargCivl>
+        <ExisteCargCivl>
+            <inyector clase="NomencladorService" metodo="ExisteCargCivl"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="bool"/>
+            </prototipo>
+        </ExisteCargCivl>
+        <DameIdProximoCargCivl>
+            <inyector clase="NomencladorService" metodo="DameIdProximoCargCivl"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoCargCivl>
+        <!--Nomenclador de Cargo Militar-->
+        <DameDatosCargMltar>
+            <inyector clase="NomencladorService" metodo="DameDatosCargMltar"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </DameDatosCargMltar>
+        <ExisteCargMltar>
+            <inyector clase="NomencladorService" metodo="existeCargMltar"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <resultado tipo="boo"/>
+            </prototipo>
+        </ExisteCargMltar>
+        <DameIdProximoCargMltar>
+            <inyector clse="NomencladorService" metodo="DameIdProximoCargMltar"/>
+            <prototipo>
+                <resultado tipo="enterospos"/>
+            </prototipo>
+        </DameIdProximoCargMltar>
+        <MostrarCamposEstructura>
+            <inyector clase="EstructuraService" metodo="MostrarCamposEstructura"/>
+            <prototipo>
+                <parametro nombre="id" tipo="enterospos"/>
+                <parametro nombre="campos" tipo="numerosletras"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </MostrarCamposEstructura>
+        <MostrarCamposEstructuraSeguridad>
+            <inyector clase="EstructuraService" metodo="MostrarCamposEstructuraSeguridad"/>
+            <prototipo>
+                <parametro nombre="idestructura" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </MostrarCamposEstructuraSeguridad>
+        <!--Nomenclador de Grado Militar-->
+        <BuscarGradosMilitar>
+            <inyector clase="NomencladorService" metodo="BuscarGradosMilitar"/>
+            <prototipo>
+                <parametro nombre="limit" tipo="enterospos"/>
+                <parametro nombre="start" tipo="enterospos"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarGradosMilitar>
+        <ListarEstructurasDadoArrayId>
+            <inyector clase="DominioService" metodo="ListarEstructurasDadoArrayId"/>
+            <prototipo>
+                <parametro nombre="arrayiddominio" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ListarEstructurasDadoArrayId>
+        <ListarEstructurasExternasDadoArrayId>
+            <inyector clase="DominioService" metodo="ListarEstructurasExternasDadoArrayId"/>
+            <prototipo>
+                <parametro nombre="arrayiddominio" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </ListarEstructurasExternasDadoArrayId>
+        <BuscarPadrePorSubordinacion>
+            <inyector clase="SubordinacionService" metodo="getPadre"/>
+            <prototipo>
+                <parametro nombre="idpadre" tipo="array"/>
+                <parametro nombre="idsubordinacion" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarPadrePorSubordinacion>
+        <BuscarHijoPorSubordinacion>
+            <inyector clase="SubordinacionService" metodo="DameHijosEstructura"/>
+            <prototipo>
+                <parametro nombre="idpadre" tipo="array"/>
+                <parametro nombre="idsubordinacion" tipo="array"/>
+                <resultado tipo="array"/>
+            </prototipo>
+        </BuscarHijoPorSubordinacion>
+        <cantidadDominios reference="">
+            <inyector clase="DominioService" metodo="cantidadDominios"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </cantidadDominios>
+        <cantidadOrganos reference="">
+            <inyector clase="NomencladorService" metodo="cantidadOrganos"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </cantidadOrganos>
+        <cantidadNivelesJerarquicos reference="">
+            <inyector clase="NomencladorService" metodo="cantidadNivelesJerarquicos"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </cantidadNivelesJerarquicos>
+        <cantidadEstructuras reference="">
+            <inyector clase="EstructuraService" metodo="cantidadEstructuras"/>
+            <prototipo>
+                <resultado tipo="enteropos"/>
+            </prototipo>
+        </cantidadEstructuras>
+
+    </metadatos>
+</ioc>

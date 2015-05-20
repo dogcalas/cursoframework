@@ -1,0 +1,165 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="../../../../../lib/ExtJS/temas/resources4/ExtThemes/ext-theme-access/ext-theme-access-all.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../../lib/ExtJS/temas/resources4/ExtThemes/ext-theme-classic/ext-theme-classic-all.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../../lib/ExtJS/temas/resources4/ExtThemes/ext-theme-neptune/ext-theme-neptune-all.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../../../../../lib/ExtJS/temas/resources4/ExtThemes/ext-theme-gray/ext-theme-gray-all.css" rel="stylesheet" type="text/css" media="screen"/>
+<!--insertion Point-->
+</head>
+
+<body>
+
+	
+<script type="text/javascript" src="../../../../../lib/ExtJS/idioma/es/js/ext-all-4.2.1.js"></script>
+<script type="text/javascript" >
+function removejscssfile(filename, filetype){
+ var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none" //determine element type to create nodelist from
+ var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none" //determine corresponding attribute to test for
+ var allsuspects=document.getElementsByTagName(targetelement)
+ for (var i=allsuspects.length; i>=0; i--){ //search backwards within nodelist for matching elements to remove
+  if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
+   allsuspects[i].parentNode.removeChild(allsuspects[i]) //remove element by calling parentNode.removeChild()
+ }
+}
+function createjscssfile(filename, filetype){
+ if (filetype=="js"){ //if filename is a external JavaScript file
+  var fileref=document.createElement('script')
+  fileref.setAttribute("type","text/javascript")
+  fileref.setAttribute("src", filename)
+ }
+ else if (filetype=="css"){ //if filename is an external CSS file
+  var fileref=document.createElement("link")
+  fileref.setAttribute("rel", "stylesheet")
+  fileref.setAttribute("type", "text/css")
+  fileref.setAttribute("href", filename)
+ }
+ //alert(fileref.href)
+ return fileref
+}
+
+function setCss(){
+	var node=createjscssfile('../../../../../lib/ExtJS/temas/resources4/ExtThemes/'+valor+'/'+valor+'-all.css','css');
+var all=document.getElementsByTagName('head')[0]
+ all.appendChild(node)
+
+
+imagen.set({src:'../../../../../lib/ExtJS/temas/'+tema+'/cache/entry_logo_1.png'})
+
+
+
+}
+
+removejscssfile("../../../../../lib/ExtJS/temas/resources4/ExtThemes/ext-theme-access/ext-theme-access-all.css", "css")
+removejscssfile("../../../../../lib/ExtJS/temas/resources4/ExtThemes/ext-theme-classic/ext-theme-classic-all.css", "css")
+removejscssfile("../../../../../lib/ExtJS/temas/resources4/ExtThemes/ext-theme-neptune/ext-theme-neptune-all", "css")
+removejscssfile("../../../../../lib/ExtJS/temas/resources4/ExtThemes/ext-theme-gray/ext-theme-gray-all.css", "css")
+//insertion Point
+var imagen;
+Ext.onReady(function(){
+	//window.parent.document.getElementById('charg').style.display = 'none';
+		Ext.define('Ext.Vista',{
+	extend:'Ext.Viewport',
+	layout:'fit',
+	
+	
+	//panel
+	panel:new Ext.FormPanel({
+	formId:'FormIndexxx',
+	frame:true,
+	
+	title: window.parent.perfil.etiquetas.vistaPreviaTitle,
+	 bodyPadding: 5,
+	width: 370,
+	//style:'text-align:left',
+	
+		items: [new Ext.tree.TreePanel({
+			
+			autoScroll:true,
+			frame:false,
+			animate: false,
+			bodyStyle:'background-color:#FFFFFF;',
+			height:200,
+                      
+                        rootVisible: true,
+                        root: {expanded: true, text: window.parent.perfil.etiquetas.dominioEnt, id:'0'},
+                      
+                       
+		}),
+	
+			{
+				xtype:'fieldset',
+				style:'margin-top:10px;',
+				title: window.parent.perfil.etiquetas.lbInputAccess,
+				autoHeight:true,
+				items:[{
+					xtype: 'radio',
+					hideLabel: true,
+					boxLabel: window.parent.perfil.etiquetas.userAut,
+					name: 'tipoacceso',
+					inputValue :'ultimo',
+					checked: true,
+					
+				},{
+					xtype: 'radio',
+					hideLabel: true,
+					boxLabel: window.parent.perfil.etiquetas.userDif,
+					name: 'tipoacceso',
+					inputValue :'nuevo',
+					
+				}]
+			}
+		],
+		buttons: [{
+			text: window.parent.perfil.etiquetas.aceptButton,
+			disabled:true,
+			id:'btnAceptarcc',
+			handler: function(){}
+		}]
+	}),
+
+	initComponent:function(){
+			var me=this;
+			this.items=[this.panel];
+			
+			
+			this.callParent();
+	}
+	
+});
+
+var node=createjscssfile('../../../../../lib/ExtJS/temas/resources4/ExtThemes/'+valor+'/'+valor+'-all.css','css');
+var all=document.getElementsByTagName('head')[0]
+ all.appendChild(node)
+reed=new Ext.Vista();
+var el=reed.getEl().createChild({
+			tag:'img',
+			src:'../../../../../lib/ExtJS/temas/'+tema+'/cache/entry_logo_1.png'
+			});	
+		Ext.DomHelper.applyStyles(el,{
+                            'width':'120px',
+                            'bottom':'100px',
+                            'right':'15px',
+                             
+                            'position':'absolute',
+                            'z-index':'2000000000',
+                           
+                            'height':'43px'
+                            
+          });
+
+tab.setLoading(false)
+
+imagen=el;
+
+
+},this);
+
+
+
+
+</script>
+
+</body>
+</html>

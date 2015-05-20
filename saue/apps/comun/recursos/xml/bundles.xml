@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<bundles>
+    <bundle id="0" state="solved" name="curso" version="1.0">
+        <path>/curso</path>
+		</bundle>
+    <bundle id="1" state="solved" name="metadatos" version="1.3.1">
+        <path>/metadatos</path>
+		</bundle>
+		<bundle id="2" state="solved" name="calendar" version="1.0">
+				<path>/calendar</path>
+		</bundle>
+    <bundle id="3" state="solved" name="fac" version="1.0">
+        <path>/fac</path>
+		</bundle>
+    <bundle id="4" state="solved" name="seguridad" version="1.2">
+        <path>/seguridad</path>
+    </bundle>
+    <bundle id="7" state="solved" name="nomencladores" version="1.0">
+        <path>/nomencladores</path>
+    </bundle>
+    <bundle id="5" state="solved" name="mat" version="1.0">
+        <path>/mat</path>
+    </bundle>
+    <bundle id="6" state="solved" name="portal" version="1">
+				<path>/portal</path>
+		</bundle>
+</bundles>

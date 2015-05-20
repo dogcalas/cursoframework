@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Request>
+  <Subject>
+    <Attribute Attributeid0="user">
+      <AttributeValue>1000000001</AttributeValue>
+    </Attribute>
+  </Subject>
+  <Dominio>
+    <Attribute Attributeid1="iddominio">
+      <AttributeValue>1</AttributeValue>
+    </Attribute>
+  </Dominio>
+  <Certificate>
+    <Attribute Attributeid1="certificado">
+      <AttributeValue>11000000001</AttributeValue>
+    </Attribute>
+  </Certificate>
+  <Estructure>
+    <Attribute Attributeid1="estructura">
+      <AttributeValue>100000001</AttributeValue>
+    </Attribute>
+  </Estructure>
+  <Resource>
+    <Attribute Attributeid2="recurso">
+      <AttributeValue>seguridad/index.php/gestusuario/gestusuario</AttributeValue>
+    </Attribute>
+  </Resource>
+  <Action>
+    <Attribute Attributeid3="accion">
+      <AttributeValue>gestusuario</AttributeValue>
+    </Attribute>
+  </Action>
+  <Environment>
+    <Entorno>uci</Entorno>
+  </Environment>
+</Request>

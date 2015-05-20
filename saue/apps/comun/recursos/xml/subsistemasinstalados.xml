@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subsistemas version="0">
+    <datos idinstalador="ddmm" antecesor="0" visible="false" nombre="Datos Maestros" uri="datosmaestros" instalado="true" seleccionado="false" obligatorio="true" dependencia="0" orden="0" dependenciaP="0"/>
+    <datos idinstalador="nom" antecesor="0" visible="false" nombre="Nomencladores" uri="nomencladores" instalado="true" seleccionado="false" obligatorio="true" orden="0" dependencia="0" dependenciaP="0"/>
+   <datos idinstalador="estructura" antecesor="0" visible="true" nombre="Módulo de estructura y composición" uri="estructura" instalado="true" seleccionado="false" obligatorio="true" orden="0" dependencia="0" dependenciaP="0"/>
+    <datos idinstalador="seg" antecesor="0" visible="true" nombre="Módulo de seguridad" uri="seguridad" instalado="true" seleccionado="false" obligatorio="true" orden="0" dependencia="0" dependenciaP="0"/>
+    <datos idinstalador="traz" antecesor="0" visible="false" nombre="Traza" uri="traza" instalado="true" seleccionado="false" obligatorio="true" dependencia="0" orden="0" dependenciaP="0"/>
+    <datos idinstalador="rec" antecesor="0" visible="true" nombre="Módulo de reportes" uri="recuperaciones" instalado="true" seleccionado="false" obligatorio="true" dependencia="0" orden="0" dependenciaP="0"/>
+</subsistemas>

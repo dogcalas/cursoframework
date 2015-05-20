@@ -1,0 +1,14 @@
+[
+	{cantidad:9},
+	{url :'saveform.php'},
+	{xtype:'textfield',fieldLabel:'label',id:'id',maxLength:20,name:'nombre',regex:'ss'},
+	{xtype:'textfield',fieldLabel:'label',id:'id',maxLength:20,name:'nombre',regex:'ss'},
+	{xtype:'textfield',fieldLabel:'label',id:'id',maxLength:20,name:'nombre',regex:'ss'},
+	{xtype:'datefield',fieldLabel:'label',id:'id',maxLength:20,name:'nombre',regex:'ss'},
+	{xtype:'textfield',fieldLabel:'label',id:'id',maxLength:20,name:'nombre',regex:'ss'},
+	{xtype:'datefield',fieldLabel:'label',id:'id',maxLength:20,name:'nombre',regex:'ss'},
+	{xtype:'combo', fieldLabel:'label Combo',id:'lcombo',maxLength:80,name:'lcidns',regex:null,anchor:'95%',
+		data:[['sdsd','sdfsdf'],['hjgk','fsdfsd'],['ghjkj','fsdf'],['gjkhgjk','fsdf']]},
+	{xtype:'textarea', fieldLabel:'label',id:'id',maxLength:20,name:'nombre',regex:'ss'},
+	{xtype:'textarea', fieldLabel:'label',id:'id',maxLength:20,name:'nombre',regex:'ss'}
+]

@@ -1,0 +1,1395 @@
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: EP009
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                Acceso denegado al sistema. Usted no tiene los
+                privilegios suficientes para acceder a los sistemas
+                instalados en la entidad selecionada.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): IndexController->entraralsistemaAction()
+#1 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('entraralsistema...')
+#2 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+Linea: 93	
+Fichero: D:\GitRepos\saue\apps\portal\controllers\IndexController.php
+Fecha: 30/04/15
+Hora:  03:19:38
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: D:\GitRepos\saue\lib\ZendExt\App.php
+Fecha: 01/05/15
+Hora:  06:06:00
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Pgsql_Exception' with message 'SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es vÃ¡lida para el tipo numeric: Â«undefinedÂ»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:1055
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection\Statement.php(244): Doctrine_Connection->rethrowException(Object(PDOException), Object(Doctrine_Connection_Statement))
+#1 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(984): Doctrine_Connection_Statement->execute(Array)
+#2 D:\GitRepos\saue\lib\Doctrine\Doctrine\Query\Abstract.php(981): Doctrine_Connection->execute('SELECT m.idcarr...', Array)
+#3 D:\GitRepos\saue\lib\Doctrine\Doctrine\Query\Abstract.php(1023): Doctrine_Query_Abstract->_execute(Array)
+#4 D:\GitRepos\saue\lib\Doctrine\Doctrine\Query.php(313): Doctrine_Query_Abstract->execute(Array, NULL)
+#5 D:\GitRepos\saue\lib\Doctrine\Doctrine\Table.php(1221): Doctrine_Query->fetchOne(Array, NULL)
+#6 D:\GitRepos\saue\apps\saue\esudiantes\controllers\GestestudiantesController.php(796): Doctrine_Table->find('undefined')
+#7 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): GestestudiantesController->reportesAction()
+#8 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('reportesAction')
+#9 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#10 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#11 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#12 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#13 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: D:\GitRepos\saue\lib\ZendExt\App.php
+Fecha: 01/05/15
+Hora:  06:07:21
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Pgsql_Exception' with message 'SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es vÃ¡lida para el tipo numeric: Â«undefinedÂ»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:1055
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection\Statement.php(244): Doctrine_Connection->rethrowException(Object(PDOException), Object(Doctrine_Connection_Statement))
+#1 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(984): Doctrine_Connection_Statement->execute(Array)
+#2 D:\GitRepos\saue\lib\Doctrine\Doctrine\Query\Abstract.php(981): Doctrine_Connection->execute('SELECT m.idcarr...', Array)
+#3 D:\GitRepos\saue\lib\Doctrine\Doctrine\Query\Abstract.php(1023): Doctrine_Query_Abstract->_execute(Array)
+#4 D:\GitRepos\saue\lib\Doctrine\Doctrine\Query.php(313): Doctrine_Query_Abstract->execute(Array, NULL)
+#5 D:\GitRepos\saue\lib\Doctrine\Doctrine\Table.php(1221): Doctrine_Query->fetchOne(Array, NULL)
+#6 D:\GitRepos\saue\apps\saue\esudiantes\controllers\GestestudiantesController.php(796): Doctrine_Table->find('undefined')
+#7 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): GestestudiantesController->reportesAction()
+#8 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('reportesAction')
+#9 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#10 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#11 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#12 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#13 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:00:37
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:01:00
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:02:36
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:02:43
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:24:00
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:24:38
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:24:42
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:24:45
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:24:46
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:26:21
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:26:22
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 06/05/15
+Hora:  02:26:25
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «sauxe»' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\portal\index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 09/05/15
+Hora:  12:23:16
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] could not connect to server: No route to host (0x00002751/10065)
+	Is the server running on host "192.168.30.190" and accepting
+	TCP/IP connections on port 5432?' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                En estos momentos el servidor de base de datos no estÃ¡
+                disponible. Intente utlizar el sistema mÃ¡s tarde. Si el
+                problema persiste contacte al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#3 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#4 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 09/05/15
+Hora:  12:23:27
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] could not connect to server: No route to host (0x00002751/10065)
+	Is the server running on host "192.168.30.190" and accepting
+	TCP/IP connections on port 5432?' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(116): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: 
+Metodo: require
+Descripcion: 
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(213): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\web\saml\modules\sqlauth\lib\Auth\Source\SQL.php(156): ZendExt_App->initSaml(Array)
+#3 D:\GitRepos\saue\web\saml\modules\core\lib\Auth\UserPassBase.php(179): sspmod_sqlauth_Auth_Source_SQL->login('acalas', 'instalacion')
+#4 D:\GitRepos\saue\web\saml\modules\core\www\loginuserpass.php(52): sspmod_core_Auth_UserPassBase::handleLogin('_e1129c2ac18e83...', 'acalas', 'instalacion', NULL)
+#5 D:\GitRepos\saue\web\saml\www\module.php(135): require('D:\\GitRepos\\sau...')
+#6 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 09/05/15
+Hora:  09:17:15
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host "192.168.30.190" and accepting
+	TCP/IP connections on port 5432?' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(213): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\web\saml\modules\sqlauth\lib\Auth\Source\SQL.php(156): ZendExt_App->initSaml(Array)
+#5 D:\GitRepos\saue\web\saml\modules\core\lib\Auth\UserPassBase.php(179): sspmod_sqlauth_Auth_Source_SQL->login('acalas', 'instalacion')
+#6 D:\GitRepos\saue\web\saml\modules\core\www\loginuserpass.php(52): sspmod_core_Auth_UserPassBase::handleLogin('_e1129c2ac18e83...', 'acalas', 'instalacion', NULL)
+#7 D:\GitRepos\saue\web\saml\www\module.php(135): require('D:\\GitRepos\\sau...')
+#8 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: E014
+Clase: 
+Metodo: require
+Descripcion: 
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#1 D:\GitRepos\saue\lib\ZendExt\App.php(213): ZendExt_App->initConexion()
+#2 D:\GitRepos\saue\web\saml\modules\sqlauth\lib\Auth\Source\SQL.php(156): ZendExt_App->initSaml(Array)
+#3 D:\GitRepos\saue\web\saml\modules\core\lib\Auth\UserPassBase.php(179): sspmod_sqlauth_Auth_Source_SQL->login('acalas', 'instalacion')
+#4 D:\GitRepos\saue\web\saml\modules\core\www\loginuserpass.php(52): sspmod_core_Auth_UserPassBase::handleLogin('_ebabf9e8dc54ee...', 'acalas', 'instalacion', NULL)
+#5 D:\GitRepos\saue\web\saml\www\module.php(135): require('D:\\GitRepos\\sau...')
+#6 {main}
+Linea: 132	
+Fichero: D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php
+Fecha: 09/05/15
+Hora:  09:35:23
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Exception' with message 'PDO Connection Error: SQLSTATE[08006] [7] could not connect to server: Connection timed out (0x0000274C/10060)
+	Is the server running on host "192.168.30.190" and accepting
+	TCP/IP connections on port 5432?' in D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php:461
+Stack trace:
+#0 D:\GitRepos\saue\lib\Doctrine\Doctrine\Connection.php(1015): Doctrine_Connection->connect()
+#1 D:\GitRepos\saue\lib\ZendExt\Aspect\TransactionManager.php(127): Doctrine_Connection->exec('set search_path...')
+#2 D:\GitRepos\saue\lib\ZendExt\App.php(538): ZendExt_Aspect_TransactionManager->openConections(NULL, true)
+#3 D:\GitRepos\saue\lib\ZendExt\App.php(213): ZendExt_App->initConexion()
+#4 D:\GitRepos\saue\web\saml\modules\sqlauth\lib\Auth\Source\SQL.php(156): ZendExt_App->initSaml(Array)
+#5 D:\GitRepos\saue\web\saml\modules\core\lib\Auth\UserPassBase.php(179): sspmod_sqlauth_Auth_Source_SQL->login('acalas', 'instalacion')
+#6 D:\GitRepos\saue\web\saml\modules\core\www\loginuserpass.php(52): sspmod_core_Auth_UserPassBase::handleLogin('_ebabf9e8dc54ee...', 'acalas', 'instalacion', NULL)
+#7 D:\GitRepos\saue\web\saml\www\module.php(135): require('D:\\GitRepos\\sau...')
+#8 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: D:\GitRepos\saue\lib\ZendExt\App.php
+Fecha: 09/05/15
+Hora:  08:08:32
+Excepciones Interiores: 
+exception 'Exception' with message 'Could not create PDF: Could not run command "wkhtmltopdf" --encoding "UTF-8" --user-style-sheet "css/reportes.css" --orientation "Portrait" --page-size "A4" --footer-left "Generado por acalas" --footer-center "[page] / [topage]" --footer-right "09 de mayo de 2015  20:08:31" --footer-font-name "Calibri" --footer-font-size "8" --footer-line C:\Users\abs\AppData\Local\Temp\tmp3F6.tmp.html C:\Users\abs\AppData\Local\Temp\tmp406.tmp' in D:\GitRepos\saue\lib\ZendExt\WkHtmlToPdf.php:389
+Stack trace:
+#0 D:\GitRepos\saue\apps\saue\esudiantes\controllers\EstreportesController.php(330): ZendExt_WkHtmlToPdf->exportarPDF('<html xml:lang=...', 'acalas', '09 de mayo de 2...', NULL, true, true, 'Portrait')
+#1 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): EstreportesController->verreporteAction()
+#2 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('verreporteActio...')
+#3 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#5 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#6 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#7 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: D:\GitRepos\saue\lib\ZendExt\App.php
+Fecha: 09/05/15
+Hora:  09:19:08
+Excepciones Interiores: 
+exception 'Exception' with message 'Could not create PDF: Could not run command "wkhtmltopdf" --encoding "UTF-8" --user-style-sheet "css/reportes.css" --orientation "Portrait" --page-size "A4" --footer-left "Generado por acalas" --footer-center "[page] / [topage]" --footer-right "09 de mayo de 2015  21:19:07" --footer-font-name "Calibri" --footer-font-size "8" --footer-line C:\Users\abs\AppData\Local\Temp\tmpA7E1.tmp.html C:\Users\abs\AppData\Local\Temp\tmpA7F2.tmp' in D:\GitRepos\saue\lib\ZendExt\WkHtmlToPdf.php:389
+Stack trace:
+#0 D:\GitRepos\saue\apps\saue\esudiantes\controllers\EstreportesController.php(330): ZendExt_WkHtmlToPdf->exportarPDF('<html xml:lang=...', 'acalas', '09 de mayo de 2...', NULL, true, true, 'Portrait')
+#1 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): EstreportesController->verreporteAction()
+#2 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('verreporteActio...')
+#3 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#5 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#6 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#7 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: D:\GitRepos\saue\lib\ZendExt\App.php
+Fecha: 09/05/15
+Hora:  09:29:37
+Excepciones Interiores: 
+exception 'Exception' with message 'Could not create PDF: Could not run command "wkhtmltopdf" --encoding "UTF-8" --user-style-sheet "css/reportes.css" --orientation "Portrait" --page-size "A4" --footer-left "Generado por acalas" --footer-center "[page] / [topage]" --footer-right "09 de mayo de 2015  21:29:37" --footer-font-name "Calibri" --footer-font-size "8" --footer-line C:\Users\abs\AppData\Local\Temp\tmp4437.tmp.html C:\Users\abs\AppData\Local\Temp\tmp4448.tmp' in D:\GitRepos\saue\lib\ZendExt\WkHtmlToPdf.php:389
+Stack trace:
+#0 D:\GitRepos\saue\apps\saue\esudiantes\controllers\EstreportesController.php(330): ZendExt_WkHtmlToPdf->exportarPDF('<html xml:lang=...', 'acalas', '09 de mayo de 2...', NULL, true, true, 'Portrait')
+#1 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): EstreportesController->verreporteAction()
+#2 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('verreporteActio...')
+#3 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#5 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#6 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#7 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: D:\GitRepos\saue\lib\ZendExt\App.php
+Fecha: 09/05/15
+Hora:  09:29:50
+Excepciones Interiores: 
+exception 'Exception' with message 'Could not create PDF: Could not run command "wkhtmltopdf" --encoding "UTF-8" --user-style-sheet "css/reportes.css" --orientation "Portrait" --page-size "A4" --footer-left "Generado por acalas" --footer-center "[page] / [topage]" --footer-right "09 de mayo de 2015  21:29:49" --footer-font-name "Calibri" --footer-font-size "8" --footer-line C:\Users\abs\AppData\Local\Temp\tmp7461.tmp.html C:\Users\abs\AppData\Local\Temp\tmp7462.tmp' in D:\GitRepos\saue\lib\ZendExt\WkHtmlToPdf.php:389
+Stack trace:
+#0 D:\GitRepos\saue\apps\saue\esudiantes\controllers\EstreportesController.php(330): ZendExt_WkHtmlToPdf->exportarPDF('<html xml:lang=...', 'acalas', '09 de mayo de 2...', NULL, true, true, 'Portrait')
+#1 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): EstreportesController->verreporteAction()
+#2 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('verreporteActio...')
+#3 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#5 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#6 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#7 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: D:\GitRepos\saue\lib\ZendExt\App.php
+Fecha: 09/05/15
+Hora:  09:30:09
+Excepciones Interiores: 
+exception 'Exception' with message 'Could not create PDF: Could not run command "wkhtmltopdf" --encoding "UTF-8" --user-style-sheet "css/reportes.css" --orientation "Portrait" --page-size "A4" --footer-left "Generado por acalas" --footer-center "[page] / [topage]" --footer-right "09 de mayo de 2015  21:30:08" --footer-font-name "Calibri" --footer-font-size "8" --footer-line C:\Users\abs\AppData\Local\Temp\tmpBEAB.tmp.html C:\Users\abs\AppData\Local\Temp\tmpBEAC.tmp' in D:\GitRepos\saue\lib\ZendExt\WkHtmlToPdf.php:389
+Stack trace:
+#0 D:\GitRepos\saue\apps\saue\esudiantes\controllers\EstreportesController.php(330): ZendExt_WkHtmlToPdf->exportarPDF('<html xml:lang=...', 'acalas', '09 de mayo de 2...', NULL, true, true, 'Portrait')
+#1 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): EstreportesController->verreporteAction()
+#2 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('verreporteActio...')
+#3 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#5 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#6 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#7 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: D:\GitRepos\saue\lib\ZendExt\App.php
+Fecha: 09/05/15
+Hora:  09:30:20
+Excepciones Interiores: 
+exception 'Exception' with message 'Could not create PDF: Could not run command "wkhtmltopdf" --encoding "UTF-8" --user-style-sheet "css/reportes.css" --orientation "Portrait" --page-size "A4" --footer-left "Generado por acalas" --footer-center "[page] / [topage]" --footer-right "09 de mayo de 2015  21:30:20" --footer-font-name "Calibri" --footer-font-size "8" --footer-line C:\Users\abs\AppData\Local\Temp\tmpED3F.tmp.html C:\Users\abs\AppData\Local\Temp\tmpED40.tmp' in D:\GitRepos\saue\lib\ZendExt\WkHtmlToPdf.php:389
+Stack trace:
+#0 D:\GitRepos\saue\apps\saue\esudiantes\controllers\EstreportesController.php(330): ZendExt_WkHtmlToPdf->exportarPDF('<html xml:lang=...', 'acalas', '09 de mayo de 2...', NULL, true, true, 'Portrait')
+#1 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): EstreportesController->verreporteAction()
+#2 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('verreporteActio...')
+#3 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#5 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#6 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#7 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: D:\GitRepos\saue\lib\ZendExt\App.php
+Fecha: 09/05/15
+Hora:  09:30:33
+Excepciones Interiores: 
+exception 'Exception' with message 'Could not create PDF: Could not run command "wkhtmltopdf" --encoding "UTF-8" --user-style-sheet "css/reportes.css" --orientation "Portrait" --page-size "A4" --footer-left "Generado por acalas" --footer-center "[page] / [topage]" --footer-right "09 de mayo de 2015  21:30:32" --footer-font-name "Calibri" --footer-font-size "8" --footer-line C:\Users\abs\AppData\Local\Temp\tmp1D2A.tmp.html C:\Users\abs\AppData\Local\Temp\tmp1D2B.tmp' in D:\GitRepos\saue\lib\ZendExt\WkHtmlToPdf.php:389
+Stack trace:
+#0 D:\GitRepos\saue\apps\saue\esudiantes\controllers\EstreportesController.php(330): ZendExt_WkHtmlToPdf->exportarPDF('<html xml:lang=...', 'acalas', '09 de mayo de 2...', NULL, true, true, 'Portrait')
+#1 D:\GitRepos\saue\lib\ZendExt\Controller\Secure.php(242): EstreportesController->verreporteAction()
+#2 D:\GitRepos\saue\lib\Zend\Controller\Dispatcher\Standard.php(295): ZendExt_Controller_Secure->dispatch('verreporteActio...')
+#3 D:\GitRepos\saue\lib\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 D:\GitRepos\saue\lib\ZendExt\App.php(134): Zend_Controller_Front->dispatch()
+#5 D:\GitRepos\saue\lib\ZendExt\App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#6 D:\GitRepos\saue\web\saue\esudiantes\index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#7 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 /var/www/curso/saue/web/herramientas/gdm/index.php(52): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: /var/www/curso/saue/lib/ZendExt/App.php
+Fecha: 18/05/15
+Hora:  10:28:49
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Pgsql_Exception' with message 'SQLSTATE[23505]: Unique violation: 7 ERROR:  duplicate key value violates unique constraint "PK14"
+DETAIL:  Key (idfuncionalidad)=(300482) already exists.' in /var/www/curso/saue/lib/Doctrine/Doctrine/Connection.php:1055
+Stack trace:
+#0 /var/www/curso/saue/lib/Doctrine/Doctrine/Connection/Statement.php(244): Doctrine_Connection->rethrowException(Object(PDOException), Object(Doctrine_Connection_Statement))
+#1 /var/www/curso/saue/lib/Doctrine/Doctrine/Connection.php(1020): Doctrine_Connection_Statement->execute(Array)
+#2 /var/www/curso/saue/lib/Doctrine/Doctrine/Connection.php(674): Doctrine_Connection->exec('INSERT INTO mod...', Array)
+#3 /var/www/curso/saue/lib/Doctrine/Doctrine/Connection/UnitOfWork.php(575): Doctrine_Connection->insert(Object(Doctrine_Table), Array)
+#4 /var/www/curso/saue/lib/Doctrine/Doctrine/Connection/UnitOfWork.php(537): Doctrine_Connection_UnitOfWork->processSingleInsert(Object(DatFuncionalidad))
+#5 /var/www/curso/saue/lib/Doctrine/Doctrine/Connection/UnitOfWork.php(74): Doctrine_Connection_UnitOfWork->insert(Object(DatFuncionalidad))
+#6 /var/www/curso/saue/lib/Doctrine/Doctrine/Record.php(1114): Doctrine_Connection_UnitOfWork->saveGraph(Object(DatFuncionalidad))
+#7 /var/www/curso/saue/apps/seguridad/models/bussines/DatFuncionalidadModel.php(21): Doctrine_Record->save()
+#8 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(2326): DatFuncionalidadModel->insertarfuncionalidad(Object(DatFuncionalidad))
+#9 /var/www/curso/saue/lib/ZendExt/IoC.php(146) : eval()'d code(1): SeguridadProxyService->insertarfuncionalidad('30286', 'GestionarPerson...', '/dir', 'gestpersona', '1')
+#10 /var/www/curso/saue/lib/ZendExt/IoC.php(146): eval()
+#11 /var/www/curso/saue/apps/herramientas/gdm/controllers/GestionarcarpetasController.php(723): ZendExt_IoC->__call('insertarfuncion...', Array)
+#12 /var/www/curso/saue/apps/herramientas/gdm/controllers/GestionarcarpetasController.php(723): ZendExt_IoC->insertarfuncionalidad('30286', 'GestionarPerson...', '/dir', 'gestpersona', '1', '')
+#13 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(242): GestionarcarpetasController->adicionarRQFNAction()
+#14 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('adicionarrqfnAc...')
+#15 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#16 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#17 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#18 /var/www/curso/saue/web/herramientas/gdm/index.php(52): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#19 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 /var/www/curso/saue/web/metadatos/index.php(52): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: /var/www/curso/saue/lib/ZendExt/App.php
+Fecha: 18/05/15
+Hora:  10:56:20
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Pgsql_Exception' with message 'SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block' in /var/www/curso/saue/lib/Doctrine/Doctrine/Connection.php:1055
+Stack trace:
+#0 /var/www/curso/saue/lib/Doctrine/Doctrine/Connection.php(1003): Doctrine_Connection->rethrowException(Object(PDOException), Object(Doctrine_Connection_Pgsql))
+#1 /var/www/curso/saue/lib/Doctrine/Doctrine/Query/Abstract.php(981): Doctrine_Connection->execute('SELECT m.idestr...', Array)
+#2 /var/www/curso/saue/lib/Doctrine/Doctrine/Query/Abstract.php(1023): Doctrine_Query_Abstract->_execute(Array)
+#3 /var/www/curso/saue/apps/metadatos/models/bussines/EstructuraopModel.php(181): Doctrine_Query_Abstract->execute()
+#4 /var/www/curso/saue/apps/metadatos/controllers/EstructuraController.php(1345): EstructuraopModel->getHijos('Composicion')
+#5 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(242): EstructuraController->buscarcomposicionAction()
+#6 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('buscarcomposici...')
+#7 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#8 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#9 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#10 /var/www/curso/saue/web/metadatos/index.php(52): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#11 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: NOCONTROLLED
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#1 /var/www/curso/saue/web/metadatos/index.php(52): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#2 {main}
+Linea: 141	
+Fichero: /var/www/curso/saue/lib/ZendExt/App.php
+Fecha: 18/05/15
+Hora:  10:56:20
+Excepciones Interiores: 
+exception 'Doctrine_Connection_Pgsql_Exception' with message 'SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block' in /var/www/curso/saue/lib/Doctrine/Doctrine/Connection.php:1055
+Stack trace:
+#0 /var/www/curso/saue/lib/Doctrine/Doctrine/Connection.php(1003): Doctrine_Connection->rethrowException(Object(PDOException), Object(Doctrine_Connection_Pgsql))
+#1 /var/www/curso/saue/lib/Doctrine/Doctrine/Query/Abstract.php(981): Doctrine_Connection->execute('SELECT m.idestr...', Array)
+#2 /var/www/curso/saue/lib/Doctrine/Doctrine/Query/Abstract.php(1023): Doctrine_Query_Abstract->_execute(Array)
+#3 /var/www/curso/saue/apps/metadatos/models/bussines/EstructuraopModel.php(181): Doctrine_Query_Abstract->execute()
+#4 /var/www/curso/saue/apps/metadatos/controllers/EstructuraController.php(1345): EstructuraopModel->getHijos('Composicion')
+#5 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(242): EstructuraController->buscarcomposicionAction()
+#6 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('buscarcomposici...')
+#7 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#8 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#9 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#10 /var/www/curso/saue/web/metadatos/index.php(52): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#11 {main}
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: SEG017
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                Ya existe un tema con la misma abreviatura.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(242): GestpersonaController->gestpersonaAction()
+#1 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('gestpersonaActi...')
+#2 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#4 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 /var/www/curso/saue/web/dir/index.php(43): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+Linea: 22	
+Fichero: /var/www/curso/saue/apps/dir/controllers/GestpersonaController.php
+Fecha: 18/05/15
+Hora:  11:27:19
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: IOC002
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/IoC.php(110): ZendExt_IoC->Exception(NULL, 'IOC002')
+#1 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->__call('buscarHijosEstr...', Array)
+#2 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->buscarHijosEstructuras(NULL, 0, 0, 0, 1)
+#3 /var/www/curso/saue/lib/ZendExt/IoC.php(146) : eval()'d code(1): SeguridadProxyService->loadDomain('1220000000045', 0)
+#4 /var/www/curso/saue/lib/ZendExt/IoC.php(146): eval()
+#5 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->__call('CargarDominio', Array)
+#6 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->CargarDominio('1220000000045', 0)
+#7 /var/www/curso/saue/apps/portal/controllers/IndexController.php(36): ZendExt_Aspect_Security_Sgis->getDomain(0)
+#8 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->cargardominioAction()
+#9 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('cargardominioAc...')
+#10 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#12 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#13 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#14 {main}
+Linea: 234	
+Fichero: /var/www/curso/saue/lib/ZendExt/IoC.php
+Fecha: 19/05/15
+Hora:  04:25:24
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: IOC002
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/IoC.php(110): ZendExt_IoC->Exception(NULL, 'IOC002')
+#1 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->__call('buscarHijosEstr...', Array)
+#2 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->buscarHijosEstructuras(NULL, 0, 0, 0, 1)
+#3 /var/www/curso/saue/lib/ZendExt/IoC.php(146) : eval()'d code(1): SeguridadProxyService->loadDomain('1220000000045', 0)
+#4 /var/www/curso/saue/lib/ZendExt/IoC.php(146): eval()
+#5 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->__call('CargarDominio', Array)
+#6 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->CargarDominio('1220000000045', 0)
+#7 /var/www/curso/saue/apps/portal/controllers/IndexController.php(36): ZendExt_Aspect_Security_Sgis->getDomain(0)
+#8 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->cargardominioAction()
+#9 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('cargardominioAc...')
+#10 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#12 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#13 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#14 {main}
+Linea: 234	
+Fichero: /var/www/curso/saue/lib/ZendExt/IoC.php
+Fecha: 19/05/15
+Hora:  04:25:27
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: IOC002
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/IoC.php(110): ZendExt_IoC->Exception(NULL, 'IOC002')
+#1 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->__call('buscarHijosEstr...', Array)
+#2 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->buscarHijosEstructuras(NULL, 0, 0, 0, 1)
+#3 /var/www/curso/saue/lib/ZendExt/IoC.php(146) : eval()'d code(1): SeguridadProxyService->loadDomain('1220000000045', 0)
+#4 /var/www/curso/saue/lib/ZendExt/IoC.php(146): eval()
+#5 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->__call('CargarDominio', Array)
+#6 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->CargarDominio('1220000000045', 0)
+#7 /var/www/curso/saue/apps/portal/controllers/IndexController.php(36): ZendExt_Aspect_Security_Sgis->getDomain(0)
+#8 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->cargardominioAction()
+#9 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('cargardominioAc...')
+#10 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#12 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#13 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#14 {main}
+Linea: 234	
+Fichero: /var/www/curso/saue/lib/ZendExt/IoC.php
+Fecha: 19/05/15
+Hora:  04:25:27
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: IOC002
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/IoC.php(110): ZendExt_IoC->Exception(NULL, 'IOC002')
+#1 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->__call('buscarHijosEstr...', Array)
+#2 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->buscarHijosEstructuras(NULL, 0, 0, 0, 1)
+#3 /var/www/curso/saue/lib/ZendExt/IoC.php(146) : eval()'d code(1): SeguridadProxyService->loadDomain('1220000000045', 0)
+#4 /var/www/curso/saue/lib/ZendExt/IoC.php(146): eval()
+#5 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->__call('CargarDominio', Array)
+#6 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->CargarDominio('1220000000045', 0)
+#7 /var/www/curso/saue/apps/portal/controllers/IndexController.php(36): ZendExt_Aspect_Security_Sgis->getDomain(0)
+#8 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->cargardominioAction()
+#9 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('cargardominioAc...')
+#10 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#12 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#13 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#14 {main}
+Linea: 234	
+Fichero: /var/www/curso/saue/lib/ZendExt/IoC.php
+Fecha: 19/05/15
+Hora:  04:25:29
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: IOC002
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/IoC.php(110): ZendExt_IoC->Exception(NULL, 'IOC002')
+#1 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->__call('buscarHijosEstr...', Array)
+#2 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->buscarHijosEstructuras(NULL, 0, 0, 0, 1)
+#3 /var/www/curso/saue/lib/ZendExt/IoC.php(146) : eval()'d code(1): SeguridadProxyService->loadDomain('1220000000045', 0)
+#4 /var/www/curso/saue/lib/ZendExt/IoC.php(146): eval()
+#5 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->__call('CargarDominio', Array)
+#6 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->CargarDominio('1220000000045', 0)
+#7 /var/www/curso/saue/apps/portal/controllers/IndexController.php(36): ZendExt_Aspect_Security_Sgis->getDomain(0)
+#8 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->cargardominioAction()
+#9 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('cargardominioAc...')
+#10 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#12 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#13 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#14 {main}
+Linea: 234	
+Fichero: /var/www/curso/saue/lib/ZendExt/IoC.php
+Fecha: 19/05/15
+Hora:  04:25:29
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: IOC002
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/IoC.php(110): ZendExt_IoC->Exception(NULL, 'IOC002')
+#1 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->__call('buscarHijosEstr...', Array)
+#2 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->buscarHijosEstructuras(NULL, 0, 0, 0, 1)
+#3 /var/www/curso/saue/lib/ZendExt/IoC.php(146) : eval()'d code(1): SeguridadProxyService->loadDomain('1220000000045', 0)
+#4 /var/www/curso/saue/lib/ZendExt/IoC.php(146): eval()
+#5 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->__call('CargarDominio', Array)
+#6 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->CargarDominio('1220000000045', 0)
+#7 /var/www/curso/saue/apps/portal/controllers/IndexController.php(36): ZendExt_Aspect_Security_Sgis->getDomain(0)
+#8 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->cargardominioAction()
+#9 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('cargardominioAc...')
+#10 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#12 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#13 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#14 {main}
+Linea: 234	
+Fichero: /var/www/curso/saue/lib/ZendExt/IoC.php
+Fecha: 19/05/15
+Hora:  04:25:29
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: IOC002
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/IoC.php(110): ZendExt_IoC->Exception(NULL, 'IOC002')
+#1 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->__call('buscarHijosEstr...', Array)
+#2 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->buscarHijosEstructuras(NULL, 0, 0, 0, 1)
+#3 /var/www/curso/saue/lib/ZendExt/IoC.php(146) : eval()'d code(1): SeguridadProxyService->loadDomain('1220000000045', 0)
+#4 /var/www/curso/saue/lib/ZendExt/IoC.php(146): eval()
+#5 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->__call('CargarDominio', Array)
+#6 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->CargarDominio('1220000000045', 0)
+#7 /var/www/curso/saue/apps/portal/controllers/IndexController.php(36): ZendExt_Aspect_Security_Sgis->getDomain(0)
+#8 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->cargardominioAction()
+#9 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('cargardominioAc...')
+#10 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#12 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#13 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#14 {main}
+Linea: 234	
+Fichero: /var/www/curso/saue/lib/ZendExt/IoC.php
+Fecha: 19/05/15
+Hora:  04:25:29
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: IOC002
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                OcurriÃ³ un error interno del sistema. Por favor contacte
+                al administrador.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/IoC.php(110): ZendExt_IoC->Exception(NULL, 'IOC002')
+#1 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->__call('buscarHijosEstr...', Array)
+#2 /var/www/curso/saue/apps/seguridad/services/SeguridadProxyService.php(595): ZendExt_IoC->buscarHijosEstructuras(NULL, 0, 0, 0, 1)
+#3 /var/www/curso/saue/lib/ZendExt/IoC.php(146) : eval()'d code(1): SeguridadProxyService->loadDomain('1220000000045', 0)
+#4 /var/www/curso/saue/lib/ZendExt/IoC.php(146): eval()
+#5 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->__call('CargarDominio', Array)
+#6 /var/www/curso/saue/lib/ZendExt/Aspect/Security/Sgis.php(109): ZendExt_IoC->CargarDominio('1220000000045', 0)
+#7 /var/www/curso/saue/apps/portal/controllers/IndexController.php(36): ZendExt_Aspect_Security_Sgis->getDomain(0)
+#8 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->cargardominioAction()
+#9 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('cargardominioAc...')
+#10 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#11 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#12 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#13 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#14 {main}
+Linea: 234	
+Fichero: /var/www/curso/saue/lib/ZendExt/IoC.php
+Fecha: 19/05/15
+Hora:  04:25:30
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: EP009
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                Acceso denegado al sistema. Usted no tiene los
+                privilegios suficientes para acceder a los sistemas
+                instalados en la entidad selecionada.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->entraralsistemaAction()
+#1 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('entraralsistema...')
+#2 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#4 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+Linea: 93	
+Fichero: /var/www/curso/saue/apps/portal/controllers/IndexController.php
+Fecha: 19/05/15
+Hora:  04:25:34
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: EP009
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                Acceso denegado al sistema. Usted no tiene los
+                privilegios suficientes para acceder a los sistemas
+                instalados en la entidad selecionada.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->entraralsistemaAction()
+#1 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('entraralsistema...')
+#2 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#4 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+Linea: 93	
+Fichero: /var/www/curso/saue/apps/portal/controllers/IndexController.php
+Fecha: 19/05/15
+Hora:  04:25:48
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: EP009
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                Acceso denegado al sistema. Usted no tiene los
+                privilegios suficientes para acceder a los sistemas
+                instalados en la entidad selecionada.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->entraralsistemaAction()
+#1 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('entraralsistema...')
+#2 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#4 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+Linea: 93	
+Fichero: /var/www/curso/saue/apps/portal/controllers/IndexController.php
+Fecha: 19/05/15
+Hora:  04:25:49
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: EP009
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                Acceso denegado al sistema. Usted no tiene los
+                privilegios suficientes para acceder a los sistemas
+                instalados en la entidad selecionada.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->entraralsistemaAction()
+#1 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('entraralsistema...')
+#2 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#4 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+Linea: 93	
+Fichero: /var/www/curso/saue/apps/portal/controllers/IndexController.php
+Fecha: 19/05/15
+Hora:  04:26:00
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: EP009
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                Acceso denegado al sistema. Usted no tiene los
+                privilegios suficientes para acceder a los sistemas
+                instalados en la entidad selecionada.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->entraralsistemaAction()
+#1 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('entraralsistema...')
+#2 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#4 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+Linea: 93	
+Fichero: /var/www/curso/saue/apps/portal/controllers/IndexController.php
+Fecha: 19/05/15
+Hora:  04:26:14
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: EP009
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                Acceso denegado al sistema. Usted no tiene los
+                privilegios suficientes para acceder a los sistemas
+                instalados en la entidad selecionada.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(258): IndexController->entraralsistemaAction()
+#1 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('entraralsistema...')
+#2 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#3 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#4 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#5 /var/www/curso/saue/web/portal/index.php(53): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#6 {main}
+Linea: 93	
+Fichero: /var/www/curso/saue/apps/portal/controllers/IndexController.php
+Fecha: 19/05/15
+Hora:  04:26:32
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: EC05
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                El objeto no se puede eliminar estÃ¡ siendo usado.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/Aspect/Validation.php(131): ZendExt_Aspect_Validation->Exception('EC05', 'EV012')
+#1 /var/www/curso/saue/lib/ZendExt/Aspect/Validation.php(53): ZendExt_Aspect_Validation->checkPreconditions(Object(SimpleXMLElement))
+#2 /var/www/curso/saue/lib/ZendExt/Weaver.php(196): ZendExt_Aspect_Validation->validateAction(Object(SimpleXMLElement))
+#3 /var/www/curso/saue/lib/ZendExt/Weaver.php(155): ZendExt_Weaver->eventAction(Array)
+#4 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(185): ZendExt_Weaver->preAction()
+#5 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(255): ZendExt_Controller_Secure->preDispatch()
+#6 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('eliminartablaAc...')
+#7 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#8 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#9 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#10 /var/www/curso/saue/web/metadatos/index.php(52): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#11 {main}
+Linea: 164	
+Fichero: /var/www/curso/saue/lib/ZendExt/Aspect/Validation.php
+Fecha: 20/05/15
+Hora:  01:39:33
+Excepciones Interiores: 
+<No posee>
+
+----------------------------------------------------------------------
+Excepcion: 
+Codigo: EC05
+Clase: ZendExt_App
+Metodo: init
+Descripcion: 
+                El objeto no se puede eliminar estÃ¡ siendo usado.
+            
+Traza: 
+#0 /var/www/curso/saue/lib/ZendExt/Aspect/Validation.php(131): ZendExt_Aspect_Validation->Exception('EC05', 'EV012')
+#1 /var/www/curso/saue/lib/ZendExt/Aspect/Validation.php(53): ZendExt_Aspect_Validation->checkPreconditions(Object(SimpleXMLElement))
+#2 /var/www/curso/saue/lib/ZendExt/Weaver.php(196): ZendExt_Aspect_Validation->validateAction(Object(SimpleXMLElement))
+#3 /var/www/curso/saue/lib/ZendExt/Weaver.php(155): ZendExt_Weaver->eventAction(Array)
+#4 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(185): ZendExt_Weaver->preAction()
+#5 /var/www/curso/saue/lib/ZendExt/Controller/Secure.php(255): ZendExt_Controller_Secure->preDispatch()
+#6 /var/www/curso/saue/lib/Zend/Controller/Dispatcher/Standard.php(295): ZendExt_Controller_Secure->dispatch('eliminartablaAc...')
+#7 /var/www/curso/saue/lib/Zend/Controller/Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#8 /var/www/curso/saue/lib/ZendExt/App.php(134): Zend_Controller_Front->dispatch()
+#9 /var/www/curso/saue/lib/ZendExt/App.php(91): ZendExt_App->initApp(Array, Object(SimpleSAML_Auth_Simple))
+#10 /var/www/curso/saue/web/metadatos/index.php(52): ZendExt_App->init(Array, Object(SimpleSAML_Auth_Simple))
+#11 {main}
+Linea: 164	
+Fichero: /var/www/curso/saue/lib/ZendExt/Aspect/Validation.php
+Fecha: 20/05/15
+Hora:  01:39:44
+Excepciones Interiores: 
+<No posee>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<config id="0">
+
+    <conn id="01" usuario="inoelkis@uci.cu"
+          password="49943065016757817219 32048589377550264848 37663266330724703786 21790155169145754286"
+          smtp="smtp.uci.cu" port="25" ssl="tls" estado="true"/>
+
+</config>

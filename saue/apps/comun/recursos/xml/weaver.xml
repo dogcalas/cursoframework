@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weaver>
+    <usuario>
+        <GestusuarioController>
+            <modificarusuarioAction aspecttemplate="aspectemplate1"/>
+            <insertarusuarioAction aspecttemplate="aspectemplate1"/>
+            <eliminarusuarioAction aspecttemplate="aspectemplate2"/>
+        </GestusuarioController>
+    </usuario>
+    <!--<portal>
+        <PortalController>
+            <closeportalAction aspecttemplate="aspectemplate2"/>
+            <entraralsistemaAction aspecttemplate="aspectemplate2"/>
+        </PortalController>
+        <IndexController>
+            <entraralsistemaAction aspecttemplate="aspectemplate2"/>
+        </IndexController>
+    </portal>-->
+    <portal>
+        <IndexController>
+            <indexAction aspecttemplate="aspectemplate2"/>
+        </IndexController>
+    </portal>
+
+
+    <seguridad>
+        <GestusuarioController>
+            <modificarusuarioAction aspecttemplate="aspectemplate2"/>
+        </GestusuarioController>
+        <GestnomdominioController>
+            <modificarnomdominioAction aspecttemplate="aspectemplate2"/>
+        </GestnomdominioController>
+        <GestrolesbdController>
+            <conectarseBDAction aspecttemplate="aspectemplate2"/>
+        </GestrolesbdController>
+    </seguridad>
+
+    <configuracion>
+
+        <nomencladores>
+            <ConceptosController>
+                <adicionartablaAction aspecttemplate="aspectemplate1"/>
+
+            </ConceptosController>
+        </nomencladores>
+    </configuracion>
+    <metadatos>
+        <NomencladorController>
+            <!--1 Nomenclador de organo -->
+            <mostrartiposeavAction aspecttemplate="aspectemplate2"/>
+            <modificarorganosAction aspecttemplate="aspectemplate2"/>
+            <eliminarorganosAction aspecttemplate="aspectemplate2"/>
+            <insertarorganosAction aspecttemplate="aspectemplate2"/>
+
+            <!--2 Nomenclador de Subcategoria -->
+            <mostrarsbcategoriaAction aspecttemplate="aspectemplate2"/>
+            <insertarsbcategoriaAction aspecttemplate="aspectemplate2"/>
+            <modificarsbcategoriaAction aspecttemplate="aspectemplate2"/>
+            <eliminarsbcategoriaAction aspecttemplate="aspectemplate2"/>
+
+
+            <!--3 Nomenclador Prefijo-->
+            <mostrarprefijoAction aspecttemplate="aspectemplate2"/>
+            <insertarprefijoAction aspecttemplate="aspectemplate2"/>
+            <modificarprefijoAction aspecttemplate="aspectemplate2"/>
+            <eliminarprefijoAction aspecttemplate="aspectemplate2"/>
+            <!-- 4 Nomenclador Grupo Complejidad-->
+            <mostrargrupocomplejidadAction aspecttemplate="aspectemplate2"/>
+            <insertargrupocomplejidadAction aspecttemplate="aspectemplate2"/>
+            <modificargrupocomplejidadAction aspecttemplate="aspectemplate2"/>
+            <eliminargrupocomplejidadAction aspecttemplate="aspectemplate2"/>
+            <!-- 5 Nomenclador Escala Salarial-->
+            <mostrarescalasalarialAction aspecttemplate="aspectemplate2"/>
+            <insertarescalasalarialAction aspecttemplate="aspectemplate2"/>
+            <modificarescalasalarialAction aspecttemplate="aspectemplate2"/>
+            <eliminarescalasalarialAction aspecttemplate="aspectemplate2"/>
+            <!-- 6 Nomenclador categoria ocupacional-->
+            <mostrarcatgriaocpnalAction aspecttemplate="aspectemplate2"/>
+            <insertarcatgriaocpnalAction aspecttemplate="aspectemplate2"/>
+            <modificarcatgriaocpnalAction aspecttemplate="aspectemplate2"/>
+            <eliminarcatgriaocpnalAction aspecttemplate="aspectemplate2"/>
+            <!-- 7 Nomenclador categoria Civil-->
+            <mostrarcatgriacvilAction aspecttemplate="aspectemplate2"/>
+            <insertarcatgriacvilAction aspecttemplate="aspectemplate2"/>
+            <modificarcatgriacvilAction aspecttemplate="aspectemplate2"/>
+            <eliminarcatgriacvilAction aspecttemplate="aspectemplate2"/>
+            <!-- 8 Nomenclador Calificador-->
+            <mostrarcalificadorAction aspecttemplate="aspectemplate2"/>
+            <insertarcalificadorAction aspecttemplate="aspectemplate2"/>
+            <modificarcalificadorAction aspecttemplate="aspectemplate2"/>
+            <eliminarcalificadorAction aspecttemplate="aspectemplate2"/>
+            <!-- 9 Nomenclador Salario-->
+            <mostrarsalarioAction aspecttemplate="aspectemplate2"/>
+            <insertarsalarioAction aspecttemplate="aspectemplate2"/>
+            <modificarsalarioAction aspecttemplate="aspectemplate2"/>
+            <eliminarsalarioAction aspecttemplate="aspectemplate2"/>
+            <!-- 10 Nomenclador Tecnica-->
+            <mostrarntecnicaAction aspecttemplate="aspectemplate2"/>
+            <insertarntecnicaAction aspecttemplate="aspectemplate2"/>
+            <modificarntecnicaAction aspecttemplate="aspectemplate2"/>
+            <eliminarntecnicaAction aspecttemplate="aspectemplate2"/>
+            <!--11 Nomenclador Modulo-->
+            <mostrarnmoduloAction aspecttemplate="aspectemplate2"/>
+            <insertarnmoduloAction aspecttemplate="aspectemplate2"/>
+            <modificarnmoduloAction aspecttemplate="aspectemplate2"/>
+            <eliminarnmoduloAction aspecttemplate="aspectemplate2"/>
+            <!-- Nomenclador Clasificacion-->
+            <mostrarclasificacionAction aspecttemplate="aspectemplate2"/>
+            <insertarclasificacionAction aspecttemplate="aspectemplate2"/>
+            <modificarclasificacionAction aspecttemplate="aspectemplate2"/>
+            <eliminarclasificacionAction aspecttemplate="aspectemplate2"/>
+
+            <!-- 12 Nomenclador Tipo Calificador -->
+            <mostrartipocalificadorAction aspecttemplate="aspectemplate2"/>
+            <insertartipocalificadorAction aspecttemplate="aspectemplate2"/>
+            <modificartipocalificadorAction aspecttemplate="aspectemplate2"/>
+            <eliminartipocalificadorAction aspecttemplate="aspectemplate2"/>
+            <!--13 Nomenclador Grado Militar -->
+            <mostrargradomilitarAction aspecttemplate="aspectemplate2"/>
+            <insertargradomilitarAction aspecttemplate="aspectemplate2"/>
+            <modificargradomilitarAction aspecttemplate="aspectemplate2"/>
+            <eliminargradomilitarAction aspecttemplate="aspectemplate2"/>
+            <!--14 Nomenclador Agrupacion-->
+            <mostrarnagrupacionAction aspecttemplate="aspectemplate2"/>
+            <insertarnagrupacionAction aspecttemplate="aspectemplate2"/>
+            <modificarnagrupacionAction aspecttemplate="aspectemplate2"/>
+            <eliminarnagrupacionAction aspecttemplate="aspectemplate2"/>
+            <!--15 Nomenclador Preparacion militar-->
+            <mostrarpmilitarAction aspecttemplate="aspectemplate2"/>
+            <insertarpmilitarAction aspecttemplate="aspectemplate2"/>
+            <modificarpmilitarAction aspecttemplate="aspectemplate2"/>
+            <eliminarpmilitarAction aspecttemplate="aspectemplate2"/>
+            <!-- 16 Nomenclador Nivel utilizacion-->
+            <insertarnivelutilizacionAction aspecttemplate="aspectemplate2"/>
+            <mostrarnivelutilizacionAction aspecttemplate="aspectemplate2"/>
+            <modificarnivelutilizacionAction aspecttemplate="aspectemplate2"/>
+            <eliminarnivelutilizacionAction aspecttemplate="aspectemplate2"/>
+            <!-- 17 Nomenclador Cargo Civil-->
+            <insertarcargocivilAction aspecttemplate="aspectemplate2"/>
+            <modificarcargocivilAction aspecttemplate="aspectemplate2"/>
+            <mostrarcargocivilAction aspecttemplate="aspectemplate2"/>
+            <eliminarcargocivilAction aspecttemplate="aspectemplate2"/>
+            <!-- 18 Nomenclador Cargo Militar-->
+            <insertarcargomtarAction aspecttemplate="aspectemplate2"/>
+            <modificarcargomtarAction aspecttemplate="aspectemplate2"/>
+            <mostrarcargomtarAction aspecttemplate="aspectemplate2"/>
+            <eliminarcargomtarAction aspecttemplate="aspectemplate2"/>
+            <!--Nivel Estructura-->
+            <mostrarnvelestrAction aspecttemplate="aspectemplate2"/>
+            <insertarnvelestrAction aspecttemplate="aspectemplate2"/>
+            <modificarnvelestrAction aspecttemplate="aspectemplate2"/>
+            <eliminarnvelestrAction aspecttemplate="aspectemplate2"/>
+        </NomencladorController>
+        <EstructuraController>
+            <tablasAction aspecttemplate="aspectemplate2"/>
+            <tablascamposAction aspecttemplate="aspectemplate2"/>
+            <tablascamposvaloresAction aspecttemplate="aspectemplate2"/>
+            <insertavaloresAction aspecttemplate="aspectemplate2"/>
+            <eliminarvaloresAction aspecttemplate="aspectemplate2"/>
+            <mostrarcamposAction aspecttemplate="aspectemplate2"/>
+            <mostrartablasAction aspecttemplate="aspectemplate2"/>
+            <construirformularioinsercionAction aspecttemplate="aspectemplate2"/>
+            <construirformulariomodificarAction aspecttemplate="aspectemplate2"/>
+
+            <construircamposgridAction aspecttemplate="aspectemplate2"/>
+
+
+            <construircamposgridopAction aspecttemplate="aspectemplate2"/>
+            <buscarhijosagrupAction aspecttemplate="aspectemplate2"/>
+            <modificarvaloresAction aspecttemplate="aspectemplate2"/>
+            <buscarcomposicionAction aspecttemplate="aspectemplate2"/>
+
+            <insertarcargocivilAction aspecttemplate="aspectemplate2"/>
+            <modificarcargocivilAction aspecttemplate="aspectemplate2"/>
+            <buscarsalarioporgrupoescalaAction aspecttemplate="aspectemplate2"/>
+            <mostrarcargosAction aspecttemplate="aspectemplate2"/>
+            <mostrardatoscargoAction aspecttemplate="aspectemplate2"/>
+            <insertarcargomilitarAction aspecttemplate="aspectemplate2"/>
+            <modificarcargomilitarAction aspecttemplate="aspectemplate2"/>
+            <eliminarcargoAction aspecttemplate="aspectemplate2"/>
+            <eliminarestructuraagrupacionAction aspecttemplate="aspectemplate2"/>
+            <insertarestructuraagrupacionAction aspecttemplate="aspectemplate2"/>
+            <insertartecnicaAction aspecttemplate="aspectemplate2"/>
+            <eliminartecnicaAction aspecttemplate="aspectemplate2"/>
+            <modificartecnicaAction aspecttemplate="aspectemplate2"/>
+            <mostrarestructuraagrupacionAction aspecttemplate="aspectemplate2"/>
+            <mostrartecnicaAction aspecttemplate="aspectemplate2"/>
+            <!--<construirvaloresgridAction aspecttemplate="aspectemplate2"/>-->
+        </EstructuraController>
+        <EavController>
+            <insertarTablasAction aspecttemplate="aspectemplate2"/>
+            <modificarTablasAction aspecttemplate="aspectemplate2"/>
+            <eliminartablaAction aspecttemplate="aspectemplate2"/>
+            <insertarcamposAction aspecttemplate="aspectemplate2"/>
+            <eliminarcamposAction aspecttemplate="aspectemplate2"/>
+            <mostrarcamposAction aspecttemplate="aspectemplate2"/>
+            <modificarcamposAction aspecttemplate="aspectemplate2"/>
+            <insertarvalorcomboAction aspecttemplate="aspectemplate2"/>
+            <mostrarvalorcomboAction aspecttemplate="aspectemplate2"/>
+            <buscarconexionesAction aspecttemplate="aspectemplate2"/>
+            <insertarconexionesAction aspecttemplate="aspectemplate2"/>
+            <eliminarconexionesAction aspecttemplate="aspectemplate2"/>
+        </EavController>
+    </metadatos>
+
+    <fac>
+        <GestcarrerasController>
+            <insertarCarrerasAction aspecttemplate="aspectemplate2"/>
+            <modificarCarrerasAction aspecttemplate="aspectemplate2"/>
+        </GestcarrerasController>
+        <GestmencionesController>
+            <modificarMencionAction aspecttemplate="aspectemplate2"/>
+        </GestmencionesController>
+        <GestpensumController>
+            <modificarPensumAction aspecttemplate="aspectemplate2"/>
+            <eliminarPensumAction aspecttemplate="aspectemplate2"/>
+        </GestpensumController>
+    </fac>
+
+</weaver>

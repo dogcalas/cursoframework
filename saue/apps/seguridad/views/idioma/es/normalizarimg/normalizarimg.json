@@ -1,0 +1,42 @@
+{lbBtnAdicionar:'Adicionar',
+lbBtnAceptar:'Aceptar',
+lbBtnEliminar:'Eliminar',
+lbBtnModificar:'Modificar',
+lbBtnAyuda:'Ayuda',
+lbBtnCancelar:'Cancelar',
+lbBtnAplicar:'Aplicar',
+lbBtnEntrenar:'Entrenar',
+lbBtnBuscar:'Buscar',
+lbTitImSet:'Imagen de prueba',
+lbDatosImagenes:'Normalizar im&aacute;genes',
+lbFLAncho:'Ancho',
+lbFLAlto:'Alto',
+lbFLNoimg:'Cantidad de im&aacute;genes',
+lbFLFormato:'Formato',
+lbFLFimg:'Forma de la imagen',
+lbTitPanelTit:'Normalizar im&aacute;genes',
+lbFLBrillo:'Brillo',
+lbFLContraste:'Contraste',
+
+lbTitDescripcion:'Descripci&oacute;n',
+
+
+
+lbFLDescripcion:'Descripci&oacute;n',
+
+lbMsgbbarI:'Resultados {0} - {1} de {2}',
+lbMsgbbarII:'Ning&uacute;n resultado para mostrar.',
+lbMsgBlank:'Este campo es obligatorio.',
+lbMsgregexI:'Este valor es incorrecto.',
+
+lbMsgFunAdicionarMsg:'Registrando datos...',
+lbMsgFunModificarMsg:'Modificando datos...',
+lbMsgFunEliminarMsgI:'&iquest;Est&aacute; seguro que desea eliminarlo?',
+lbMsgEntrenam:'Entrenamiento finalizado con &eacutexito.',
+lbMsgNoImg:'No existen im&aacute;genes para realizar el entrenamiento.',
+NoModify:'Usted no ha modificado ningún campo.',
+lbMsgErrorEnCamops:'Por favor verifique, existen campos con valores incorrectos.',
+lbMsgNolibrary:'No se encontr&oacute la librer&iacutea de reconocimiento.',
+lbMsgInfModificar:'Las datos fueron modificados satisfactoriamente.'
+}
+

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<package_component>
+    <cmp30211 id="30211" text="Generador de interfaces" leaf="1" component="1" path="/herramientas/gi">
+        <rq300342 den="Definicion de conceptos" desc="" parent="30211" fecha="15/05/2014 10:52:35" abrev="defconcepto"/>
+        <rq300343 den="Generacion de interfaz" desc="" parent="30211" fecha="15/05/2014 10:53:10" abrev="gestinterfaz"/>
+    </cmp30211>
+</package_component>

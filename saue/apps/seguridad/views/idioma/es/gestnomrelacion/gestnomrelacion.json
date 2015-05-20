@@ -1,0 +1,36 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+{
+waitMsg:"Salvado datos...",
+btnRelacionar:"Relacionar",
+cmpArbol:"Arbol de servicios",
+gridTitle:'Asignar permisos',
+msgCargando:"Cargando...",
+emptyTextServidor:"Servidor",
+emptyTextGestor:"Gestor",
+emptyTextBD:"Base de datos",
+emptyTextEsquema:"Esquema",
+emptyTextEntidad:"Entidad",
+checkBoxLabel:"Seleccionados",
+waitTitle:'Espere un momento',
+NoModify:'Por favor verifique, no ha realizado ningún cambio.',
+menuTextSelectAllFile:'Marcar toda la fila',
+menuTextUnCheckAllFile:'Desmarcar toda la fila',
+menuTextSelectAllColumn:'Marcar toda la columna',
+menuTextUnCheckAllColumn:'Desmarcar toda la columna',
+combEmptyText:'[-Seleccione-]',
+padreArbolServiciosText:'Sistemas',
+labelCriterio:'Criterio de selección:',
+lbNombreColumServidor:'Servidor',
+lbNombreColumGestor:'Gestor',
+lbNombreColumBD:'Base de datos',
+lbNombreColumEsquema:'Esquema',
+lbNombreColumTabla:'Tabla',
+lbNombreColumVista:'Vistas',
+lbNombreColumSec:'Secuencias',
+lbNombreColumFun:'Funciones',
+lbMsgInfObjetos:'No se encontraron objetos al buscar',
+lbMsgInfRelacion:'Permisos gestionados satisfactoriamente.'}

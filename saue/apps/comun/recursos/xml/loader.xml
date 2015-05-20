@@ -1,0 +1,52 @@
+<cargador>
+		
+	<index>
+	
+	
+		<index>
+			<nomenclador consulta = 'select * from est'>nomEstudiantes</nomenclador>
+			<nomenclador consulta = 'select * from facultades'>nomFacultades</nomenclador>
+		</index>
+		
+		<eliminarestudiantes>
+			<Estudiante/>
+			<Facultad/>
+		</eliminarestudiantes>
+		<insertarestudiantes>
+			<Estudiante/>
+			<Facultad/>
+		</insertarestudiantes>
+		<modificarestudiantes>
+			<Estudiante/>
+			<Facultad/>
+		</modificarestudiantes>
+		<pdf>
+			<Estudiante/>
+			<Facultad/>
+		</pdf>
+		<cargaretiquetas>
+			<Estudiante/>
+			<Facultad/>
+		</cargaretiquetas>
+	</index>
+	
+	<prueba>
+		<cargarselect>
+			<nomenclador consulta = 'select idmoneda, moneda from nom_moneda'>NomMoneda</nomenclador>
+		</cargarselect>
+	</prueba>
+	<nomencladores>
+			<gestionarnomencladores>
+			</gestionarnomencladores>
+			<cargar>
+						<nomenclador consulta = 'select idgenero,nom_genero.denominacion,nom_pais.denominacion as pais,prueba from nom_genero inner join nom_pais on nom_genero.prueba=nom_pais.codigo' cond='denominacion|prueba|idgenero|limit|offset'>NomGenero</nomenclador>
+						<nomenclador consulta = 'select idmoneda,codigoiso,nombremoneda from nom_moneda' cond='codigoiso|nombremoneda|limit|offset'>NomMoneda</nomenclador>
+						<nomenclador consulta = 'select idcliente,codigocliente,nombrecliente from nom_cliente' cond='codigocliente|nombrecliente|limit|offset'>NomCliente</nomenclador>
+						<nomenclador consulta = 'select idtipotasa,nombretipotasa from nom_tipotasa' cond='codigocliente|nombrecliente|limit|offset'>NomTipotasa</nomenclador>
+						<nomenclador consulta = 'select idpais,codigopais,nombrepais from nom_pais' cond='codigopais|nombrepais|limit|offset'>NomPais</nomenclador>
+			</cargar>
+			<cargarselect>
+						<nomenclador consulta = 'select * from nom_pais'>NomPais</nomenclador>
+			</cargarselect>
+	</nomencladores>
+</cargador>

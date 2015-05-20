@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conceptos>
+    <concepto>
+        <denominacion>ccc</denominacion>
+        <plantilla>CRUD-Simple</plantilla>
+        <urlG>zxc</urlG>
+        <atributos>
+            <atributo>
+                <denominacion>ll</denominacion>
+                <componente>TextArea</componente>
+            </atributo>
+        </atributos>
+    </concepto>
+</conceptos>

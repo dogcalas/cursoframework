@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<excepciones>
+  <MD01 nombre="ErrGeneración">
+    <tipo>B</tipo>
+    <es>
+      <mensaje>No se pueden generar los modelos.</mensaje>
+      <descripcion>Excepción que se dispara cuando no se pueden generar los modelos.</descripcion>
+    </es>
+  </MD01>
+</excepciones>

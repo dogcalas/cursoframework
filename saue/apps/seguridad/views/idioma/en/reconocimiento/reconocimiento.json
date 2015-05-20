@@ -1,0 +1,7 @@
+{lbErrorCamara:'Any camera was found',
+lbTomarImagen:'Capture Image',
+lbErrorMovie:'Image not loaded',
+lbMsgErrUs:'You should specify the user',
+lbMsgUserNotFound:'The user does not exists',
+}
+

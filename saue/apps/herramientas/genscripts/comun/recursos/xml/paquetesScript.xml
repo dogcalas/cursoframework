@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<paquetes>
+  <paquete>
+    <nombrePaquete>rene</nombrePaquete>
+    <nombreSistema>seguridad</nombreSistema>
+    <versionSistema>1.0</versionSistema>
+    <versionScript>1.1</versionScript>
+    <descripcion/>
+    <abreviaturaPaquete>seg</abreviaturaPaquete>
+  </paquete>
+</paquetes>

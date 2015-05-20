@@ -1,0 +1,11 @@
+{lbBtnModificar:'Modificar',
+lbBtnCancelar:'Cancelar',
+lbBtnAceptar:'Aceptar',
+lbTitPanelTit:'Gestionar m&eacute;todos',
+lbMsgFunModificarMsg:'Modificando datos...',
+lbMsgFunModificarMsgI:'Los datos fueron modificados satisfactoriamente',
+lbBtnMetododistancia:'M&eacutetodo de distancia',
+lbBtnMetodoknn:'M&eacutetodo de clasificaci&oacuten',
+lbBtnMetodoRec:'M&eacutetodo de reconocimiento',
+NoModify:'Usted no ha modificado ning&uacuten campo.'}
+

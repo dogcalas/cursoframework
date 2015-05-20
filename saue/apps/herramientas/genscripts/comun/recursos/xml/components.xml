@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<package_component>
+  <cmp30011 id="30011" text="Generador de scripts" leaf="1" component="1" path="/herramientas/genscripts"/>
+</package_component>

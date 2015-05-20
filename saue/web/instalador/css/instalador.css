@@ -1,0 +1,6 @@
+#idbody{background-image:url(../images/back.png); background-repeat:repeat-x;height: 100%;}
+#center{width: 500px;height:200px;}
+.FilaRoja .x-grid3-cell-inner{
+    color:black;
+    background-color:#d1d1d1;
+}

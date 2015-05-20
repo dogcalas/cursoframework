@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subsistemas>
+  <messagebus>
+    <!-- el subsistema messagebus  escucha los eventos de todos los  subsistemas-->
+    
+  
+<notificacion sub="herramientas" cod="Her9397" literal="jjjjjjjjj" servicio="notify" mid="30002"/><notificacion sub="traza" cod="Tra9725" literal="dfghdfg" servicio="notify" mid="30002"/><notificacion sub="pac" cod="PAC7616" literal="dcfgsdfgsdfg" servicio="notify" mid="30002"/><notificacion sub="estructuraycomposición" cod="Est7219" literal="Usuario activado" servicio="notify" mid="30002"/><notificacion sub="estructuraycomposición" cod="Est1823" literal="Subsistema eliminado." servicio="notify" mid="30002"/><notificacion sub="traza" cod="Tra9898" literal="Probando" servicio="notify" mid="30002"/><notificacion sub="seguridad" cod="Seg7106" literal="Preparacion" servicio="notify" mid="30002"/><notificacion sub="estructuraycomposición" cod="Est5883" literal="Subsistemas modificado." servicio="notify" mid="30002"/></messagebus>
+<seguridad><notificacion sub="traza" cod="Tra9725" literal="dfghdfg" servicio="notify" mid="2"/><notificacion sub="traza" cod="Tra9898" literal="Probando" servicio="notify" mid="2"/><notificacion sub="herramientas" cod="Her9397" literal="jjjjjjjjj" servicio="notify" mid="2"/></seguridad></subsistemas>

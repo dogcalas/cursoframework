@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subsistemas>
+<seguridad id="2" text="Seguridad">
+<notificacion cod="Seg7106" literal="Preparacion"/></seguridad>
+<herramientas id="1105" text="Herramientas"><notificacion cod="Her9397" literal="jjjjjjjjj"/></herramientas><estructuraycomposición id="101" text="Estructura y composición"><notificacion cod="Est7219" literal="Usuario activado"/><notificacion cod="Est1823" literal="Subsistema eliminado."/><notificacion cod="Est5883" literal="Subsistemas modificado."/></estructuraycomposición><traza id="1001" text="Traza"><notificacion cod="Tra9725" literal="dfghdfg"/><notificacion cod="Tra9898" literal="Probando"/></traza><pac id="1895" text="PAC"><notificacion cod="PAC7616" literal="dcfgsdfgsdfg"/></pac></subsistemas>

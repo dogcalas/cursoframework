@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<bundle>
+<data version="1"/>
+<dependencies>
+	<dependency id="seguridadInterface" interface="services/seguridadInterface.php"/>
+	<dependency id="estructuraInterface" interface="services/metadatosInterface.php"/>
+</dependencies>
+</bundle>

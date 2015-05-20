@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exceptions>
+ 	<usuario>
+		<GestusuarioController>
+			<cargargridusuarioAction>
+				<exception type="Doctrine_Excepcion" code="EGU001" />
+			</cargargridusuarioAction>
+			<cargarformusuarioAction>
+				<exception type="Doctrine_Excepcion" code="EGU002" />
+			</cargarformusuarioAction>
+			<insertarusuarioAction>
+				<exception type="Doctrine_Excepcion" code="EGU003" />
+			</insertarusuarioAction>
+			<modificarusuarioAction>
+				<exception type="Doctrine_Excepcion" code="EGU004" />
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="EGU005" filter="CONCURRENCE RESTRICTION"/>
+			</modificarusuarioAction>
+			<eliminarusuarioAction>
+				<exception type="Doctrine_Excepcion" code="EGU006" />
+			</eliminarusuarioAction>
+		</GestusuarioController>
+	</usuario>
+	
+	<portal>
+		<PortalController>
+			<cargarmodfuncAction>
+				<exception type="Doctrine_Excepcion" code="EP006"/>
+			</cargarmodfuncAction>
+			<cargarsistemasAction>
+				<exception type="Doctrine_Excepcion" code="EP004"/>
+			</cargarsistemasAction>
+			<cargardesktopAction>
+				<exception type="Doctrine_Excepcion" code="EP007"/>
+			</cargardesktopAction>
+			<cargardesktopmoduloAction>
+				<exception type="Doctrine_Excepcion" code="EP007"/>
+			</cargardesktopmoduloAction>
+		</PortalController>
+	</portal>
+	
+	<seguridad>
+		<GestsistemaController>
+			<cargarservidoresAction>
+				<exception type="Doctrine_Connection_Exception" code="SEG024" filter="PDO Connection Error: SQLSTATE[08006] [7] could not connect to server"/>
+				<exception type="Doctrine_Connection_Exception" code="SEG023"/>
+			</cargarservidoresAction>
+		</GestsistemaController>
+		<GestrolesbdController>
+			<conectarseBDAction>
+				<exception type="PDOException" code="SEG025" filter="SQLSTATE[08006] [7] FATAL:  database "/>
+				<exception type="PDOException" code="SEG025" filter="SQLSTATE[08006] [7] FATAL:  role"/>
+				<exception type="PDOException" code="SEG025" filter="SQLSTATE[08006] [7] FATAL:  password authentication"/>
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="SEG026" filter="SQLSTATE[42501]: Insufficient privilege: 7 ERROR:  permission denied for relation pg_authid"/>
+			</conectarseBDAction>
+		</GestrolesbdController>
+	</seguridad>
+	
+	<contabilidad>
+  	<ClasificadorgrupoController>	
+		<cargargruposAction>
+		<exception type="Doctrine_Exception" code="CONT421" />
+		</cargargruposAction>
+	
+		<adicionargrupoAction>
+		<exception type="Doctrine_Exception" code="CONT418" />
+		</adicionargrupoAction>
+			
+		<modificargrupoAction>
+		<exception type="Doctrine_Exception" code="CONT419"/>
+		<exception type="Doctrine_Connection_Pgsql_Exception" code="CONT001" filter="CONCURRENCE RESTRICTION"/>
+		</modificargrupoAction>
+	
+		<eliminargrupoAction>
+		<exception type="Doctrine_Exception" code="CONT420" />
+		</eliminargrupoAction>
+	</ClasificadorgrupoController>
+
+    <EstructuraeconomicaController>
+      <adicionarAction>
+        <exception type="Doctrine_Connection_Pgsql_Exception"
+        code="EVEC009" />
+      </adicionarAction>
+    </EstructuraeconomicaController>
+	
+   <ClasificadorcuentasController>
+      <insertarcuentaAction>
+      <exception type="Doctrine_Exception" code="CONT104" />
+      </insertarcuentaAction>
+      
+      <eliminarcuentaAction>
+      <exception type="Doctrine_Exception" code="CONT103" />
+      </eliminarcuentaAction>
+      
+      <modificarCuentaAction>
+      <exception type="Doctrine_Exception" code="CONT105"/>
+      <exception type="Doctrine_Connection_Pgsql_Exception" code="CONT001" filter="CONCURRENCE RESTRICTION"/>
+      </modificarCuentaAction>
+	  
+      <pudeteneraperturaAction>
+      <exception type="Doctrine_Exception" code="CONT106" />
+      </pudeteneraperturaAction>
+	
+      <createaperturaAction>
+      <exception type="Doctrine_Exception" code="CONT104" />
+      </createaperturaAction>
+      
+      <obtenercuentasAction>
+      <exception type="Doctrine_Exception" code="CONT106" />
+      </obtenercuentasAction>
+	  
+      <loadnomsapertAction>
+      <exception type="Doctrine_Exception" code="CONT107" />
+      </loadnomsapertAction>
+      
+      <loaddetailsnomapertAction>
+      <exception type="Doctrine_Exception" code="CONT107" />
+      </loaddetailsnomapertAction>
+      
+      <verificoperacionesAction>
+      <exception type="Doctrine_Exception" code="CONT107" />
+      </verificoperacionesAction>
+      
+      <obtenerdatosnecesariosAction>
+      <exception type="Doctrine_Exception" code="CONT106" />
+      </obtenerdatosnecesariosAction>
+      
+      <pudeponersefueravigenciaAction>
+      <exception type="Doctrine_Exception" code="CONT107" />
+      </pudeponersefueravigenciaAction>
+      
+      <cargarnaturalezasAction>
+      <exception type="Doctrine_Exception" code="CONT107" />
+      </cargarnaturalezasAction>
+
+      <obtenerconteconomicoAction>
+      <exception type="Doctrine_Exception" code="CONT107" />
+      </obtenerconteconomicoAction>
+	  
+      <existecuentaAction>
+      <exception type="Doctrine_Exception" code="CONT106" />
+      </existecuentaAction>
+      
+      <cargarparteformatoAction>
+      <exception type="Doctrine_Exception" code="CONT107" />
+      </cargarparteformatoAction>
+
+    </ClasificadorcuentasController>
+	
+	<ConfigurarnomaperturaController>
+	  <adicionarnomencladorAction>
+      <exception type="Doctrine_Exception" code="CONT108" />
+      </adicionarnomencladorAction>
+	  <modificarnomencladorAction>
+	  <exception type="Doctrine_Connection_Pgsql_Exception" code="CONT001" filter="CONCURRENCE RESTRICTION"/>
+      </modificarnomencladorAction>
+	  <eliminarnomencladorAction>
+      <exception type="Doctrine_Exception" code="CONT110" />
+      </eliminarnomencladorAction>
+	  <cargarnomaperturaAction>
+      <exception type="Doctrine_Exception" code="CONT111" />
+      </cargarnomaperturaAction>
+	</ConfigurarnomaperturaController>
+	
+	<EstadosfinancieroController>
+	  <adicionarestadofAction>
+      <exception type="ZendExt_Exception" code="CONT113" />
+	  </adicionarestadofAction>
+	  <cargarEstadosFAction>
+      <exception type="ZendExt_Exception" code="CONT112" />
+      </cargarEstadosFAction>
+	</EstadosfinancieroController>
+	
+	 <ClasificadorcuentasConfController>
+		 <insertarCtaAction>
+		   <exception type="ZendExt_Exception" code="CONT125" />
+		 </insertarCtaAction>
+	 </ClasificadorcuentasConfController>
+	 
+	 <ClasificadorcuentasconfController>
+		 <cargardatosgridgastoAction>
+		   <exception type="ZendExt_Exception" code="CONT126" />
+		 </cargardatosgridgastoAction>
+		 <cargardatosgridingresoAction>
+		   <exception type="ZendExt_Exception" code="CONT127" />
+		 </cargardatosgridingresoAction>
+		 <cargardatosgridresultAction>
+		   <exception type="ZendExt_Exception" code="CONT128" />
+		 </cargardatosgridresultAction>
+		 <cargarcombogastoAction>
+		   <exception type="ZendExt_Exception" code="CONT129" />
+		 </cargarcombogastoAction>
+		 <cargarcomboingresoAction>
+		   <exception type="ZendExt_Exception" code="CONT130" />
+		 </cargarcomboingresoAction>
+		 <cargarcamboresultadoAction>
+		   <exception type="ZendExt_Exception" code="CONT131" />
+		 </cargarcamboresultadoAction>
+		 <insertarCtaAction>
+		   <exception type="ZendExt_Exception" code="CONT132" />
+		 </insertarCtaAction>
+	 </ClasificadorcuentasconfController>
+	
+	<RegistrocomprobantesController>
+		<cargargAction>
+			<exception type="Doctrine_Exception" code="CONT200" />
+		</cargargAction>
+		<cambiarnumeroAction>
+			<exception type="Doctrine_Exception" code="CONT201" />
+	    </cambiarnumeroAction>	
+		<eliminarAction>
+			<exception type="Doctrine_Exception" code="CONT202" />
+	    </eliminarAction>
+		<cambiarestadoterminadoAction>
+			<exception type="Doctrine_Exception" code="CONT203" />
+	    </cambiarestadoterminadoAction>	
+		<cambiarestadoasentadoAction>
+			<exception type="Doctrine_Exception" code="CONT203" />
+	    </cambiarestadoasentadoAction>	
+		<duplicarinvertirAction>
+			<exception type="Doctrine_Exception" code="CONT204" />
+	    </duplicarinvertirAction>
+		<exportarAction>
+			<exception type="ZendExt_Exception" code="CONT206" />
+	    </exportarAction>	
+		<importarAction>
+			<exception type="ZendExt_Exception" code="CONT205" />
+	    </importarAction>			
+	</RegistrocomprobantesController>	
+
+	<AsignartipocuentaController>
+      <cargarcuentassintipoAction> 
+        <exception type="Doctrine_Connection_Pgsql_Exception"
+        code="CONT210" />
+      </cargarcuentassintipoAction> 
+	  <cargartipocuentaAction>
+        <exception type="Doctrine_Connection_Pgsql_Exception"
+        code="CONT211" />
+      </cargartipocuentaAction>
+	  <modificarcuentaAction>
+        <exception type="Doctrine_Connection_Pgsql_Exception"
+        code="CONT212" />
+      </modificarcuentaAction>  
+    </AsignartipocuentaController>
+	
+	<ClasificadorcontenidoeconomicoController>
+	<insertarcontenidoeAction>
+		<exception type="Doctrine_Exception" code="CONT300" />
+	</insertarcontenidoeAction>
+	<cargarnaturalezasAction>
+		<exception type="Doctrine_Exception" code="CONT301" />
+	</cargarnaturalezasAction>
+	<cargargrupoAction>
+		<exception type="Doctrine_Exception" code="CONT301" />
+	</cargargrupoAction>
+	<cargarestadosfAction>
+		<exception type="Doctrine_Exception" code="CONT301" />
+	</cargarestadosfAction>
+	<cargarcontenidoseAction>
+		<exception type="Doctrine_Exception" code="CONT302" />
+	</cargarcontenidoseAction>
+	<modificarcontenidoeAction>
+		<exception type="Doctrine_Exception" code="CONT303" />
+		<exception type="Doctrine_Connection_Pgsql_Exception" code="CONT001" filter="CONCURRENCE RESTRICTION"/>
+	</modificarcontenidoeAction>
+	<eliminarcontenidoeAction>
+		<exception type="Doctrine_Exception" code="CONT304" />
+	</eliminarcontenidoeAction>
+	<cargarformatosAction>
+		<exception type="ZendExt_Exception" code="CONT305" />
+	</cargarformatosAction>
+	<cargarparteformatoAction>
+		<exception type="ZendExt_Exception" code="CONT305" />
+	</cargarparteformatoAction>
+	<importarcontAction>
+		<exception type="ZendExt_Exception" code="CONT306" />
+	</importarcontAction>
+	<exportarAction>
+		<exception type="ZendExt_Exception" code="CONT307" />
+	</exportarAction>
+		<insertarcontenidoeAction>
+			<exception type="Doctrine_Exception" code="CONT300" />
+		</insertarcontenidoeAction>
+		<cargarnaturalezasAction>
+			<exception type="Doctrine_Exception" code="CONT301" />
+		</cargarnaturalezasAction>
+		<cargargrupoAction>
+			<exception type="Doctrine_Exception" code="CONT301" />
+		</cargargrupoAction>
+		<cargarestadosfAction>
+			<exception type="Doctrine_Exception" code="CONT301" />
+		</cargarestadosfAction>
+		<cargarcontenidoseAction>
+			<exception type="Doctrine_Exception" code="CONT302" />
+		</cargarcontenidoseAction>
+		<modificarcontenidoeAction>
+			<exception type="Doctrine_Exception" code="CONT303" />
+		</modificarcontenidoeAction>
+		<eliminarcontenidoeAction>
+			<exception type="Doctrine_Exception" code="CONT304" />
+		</eliminarcontenidoeAction>
+		<cargarformatosAction>
+			<exception type="ZendExt_Exception" code="CONT305" />
+		</cargarformatosAction>
+		<cargarparteformatoAction>
+			<exception type="ZendExt_Exception" code="CONT305" />
+		</cargarparteformatoAction>
+		<importarcontAction>
+			<exception type="ZendExt_Exception" code="CONT306" />
+		</importarcontAction>
+		<exportarAction>
+			<exception type="ZendExt_Exception" code="CONT307" />
+		</exportarAction>
+	</ClasificadorcontenidoeconomicoController>
+	
+	<CierrecontableController>
+	  <cerrarperiodoAction>
+		<exception type="ZendExt_Exception" code="CONT214" />
+	  </cerrarperiodoAction>
+	  <cerrarejercicioAction>
+		<exception type="ZendExt_Exception" code="CONT214" />
+	  </cerrarejercicioAction>
+	</CierrecontableController>
+	
+	<ComprobanteController>
+	  <cargarctaAction>
+		<exception type="ZendExt_Exception" code="CONT213" />
+	  </cargarctaAction>
+	</ComprobanteController>
+  
+  
+  </contabilidad>
+    
+	<costos_procesos>
+    <OpnomencladorController>
+      <cargarnomencladoresAction>
+        <exception type="Doctrine_Exception" code="COST001" />
+      </cargarnomencladoresAction>
+      <importarAction>
+        <exception type="ZendExt_Exception" code="CP001" />
+      </importarAction>
+	  <insertarAction>
+        <exception type="Doctrine_Exception" code="CP005"/>
+        <exception type="ZendExt_Exception_NotDefined" code="CP005"/>
+      </insertarAction>
+	  <eliminarAction>
+        <exception type="Doctrine_Connection_Pgsql_Exception" code="COST007"/>
+		<exception type="ZendExt_Exception" code="COST007"/>
+		<exception type="ZendExt_Exception_NotDefined" code="COST007"/>
+        <exception type="Exception" code="COST007"/>
+        <exception type="PDOException" code="COST007"/>
+      </eliminarAction>
+    </OpnomencladorController>
+    <OpasociacionController>
+      <cargarcuentasAction>
+        <exception type="ZendExt_Exception" code="COST005" />
+      </cargarcuentasAction>
+      <asociarcuentascentroelementoAction>
+        <exception type="Doctrine_Exception" code="COST005" />
+      </asociarcuentascentroelementoAction>
+      <asociarcuentascentroAction>
+        <exception type="Doctrine_Exception" code="COST005" />
+      </asociarcuentascentroAction>
+      <eliminarasociacionAction>
+        <exception type="Doctrine_Exception" code="COST005" />
+      </eliminarasociacionAction>
+      <modificarasociacionAction>
+        <exception type="Doctrine_Exception" code="COST005" />
+      </modificarasociacionAction>
+    </OpasociacionController>
+    <OpcuentasgastosController>
+      <cargarcuentasgastosAction>
+        <exception type="Doctrine_Exception" code="COST003" />
+      </cargarcuentasgastosAction>
+      <cargarcuentasAction>
+        <exception type="ZendExt_Exception" code="COST003" />
+      </cargarcuentasAction>
+      <adicionarcuentasAction>
+        <exception type="ZendExt_Exception" code="COST003" />
+      </adicionarcuentasAction>
+      <actualizarcuentasgastosAction>
+        <exception type="Doctrine_Exception" code="COST003" />
+		<exception type="Doctrine_Connection_Pgsql_Exception" code="EGU005" filter="CONCURRENCE RESTRICTION"/>
+      </actualizarcuentasgastosAction>
+      <eliminarcuentagastoAction>
+        <exception type="ZendExt_Exception" code="COST003" />
+      </eliminarcuentagastoAction>
+      <cargarcuentasinicioanoAction>
+        <exception type="Doctrine_Exception" code="COST003" />
+      </cargarcuentasinicioanoAction>
+    </OpcuentasgastosController>
+	
+	<OpasociacionccgpController>
+	  <asociarareascentrosAction>
+        <exception type="Doctrine_Exception" code="CP011" />
+      </asociarareascentrosAction>
+	  
+	  <eliminarasociacionAction>
+        <exception type="Doctrine_Exception" code="CP013" />
+      </eliminarasociacionAction>
+	  
+	  <eliminarcentroselementosAction>
+        <exception type="Doctrine_Exception" code="CP013" />
+      </eliminarcentroselementosAction>
+	</OpasociacionccgpController>
+	
+  </costos_procesos>
+    
+	<capital_humano>
+    <persona>
+      <GestionarpersonaController>
+		<cargarpersonaAction>
+			<exception type="Doctrine_Excepcion" code="CHP001"/>
+		</cargarpersonaAction>
+		<cargarcombosexoAction>
+			<exception type="Doctrine_Excepcion" code="CHP002"/>
+		</cargarcombosexoAction>
+		<cargarcomboojosAction>
+			<exception type="Doctrine_Excepcion" code="CHP003"/>
+		</cargarcomboojosAction>
+		<cargarcombopeloAction>
+			<exception type="Doctrine_Excepcion" code="CHP004"/>
+		</cargarcombopeloAction>
+		<cargarcombonivelescolarAction>
+			<exception type="Doctrine_Excepcion" code="CHP005"/>
+		</cargarcombonivelescolarAction>
+		<cargarcombopielAction>
+			<exception type="Doctrine_Excepcion" code="CHP006"/>
+		</cargarcombopielAction>
+		<cargarcombogruposanguineoAction>
+			<exception type="Doctrine_Excepcion" code="CHP007"/>
+		</cargarcombogruposanguineoAction>
+		<cargarcombocategoriadocenteAction>
+			<exception type="Doctrine_Excepcion" code="CHP008"/>
+		</cargarcombocategoriadocenteAction>
+		<cargarcombogradocientificoAction>
+			<exception type="Doctrine_Excepcion" code="CHP009"/>
+		</cargarcombogradocientificoAction>
+		<cargarcomboestadocivilAction>
+			<exception type="Doctrine_Excepcion" code="CHP010"/>
+		</cargarcomboestadocivilAction>
+		<cargarcombogradoescolarAction>
+			<exception type="Doctrine_Excepcion" code="CHP011"/>
+		</cargarcombogradoescolarAction>
+		<cargarcomboextrasocialAction>
+			<exception type="Doctrine_Excepcion" code="CHP012"/>
+		</cargarcomboextrasocialAction>
+		<cargarcombopantalonsayaAction>
+			<exception type="Doctrine_Excepcion" code="CHP013"/>
+		</cargarcombopantalonsayaAction>
+		<cargarcombocalzadoAction>
+			<exception type="Doctrine_Excepcion" code="CHP014"/>
+		</cargarcombocalzadoAction>
+		<cargarcombocamisablusaAction>
+			<exception type="Doctrine_Excepcion" code="CHP015"/>
+		</cargarcombocamisablusaAction>
+		<cargarcombogorraAction>
+			<exception type="Doctrine_Excepcion" code="CHP016"/>
+		</cargarcombogorraAction>
+		<insertarpersonaAction>
+			<exception type="Doctrine_Excepcion" code="CHP017"/>
+		</insertarpersonaAction>
+			<modificarpersonaAction>
+				<exception type="Doctrine_Excepcion" code="CHP018" />
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="CHP019" filter="CONCURRENCE RESTRICTION"/>
+			</modificarpersonaAction>
+    <eliminarusuarioAction>
+			<exception type="Doctrine_Excepcion" code="CHP020"/>
+		</eliminarusuarioAction>
+		<modificfotoAction>
+			<exception type="Doctrine_Excepcion" code="CHP021"/>
+		</modificfotoAction>
+      	
+      </GestionarpersonaController>
+    </persona>
+    <puesto_trabajo>
+	<GestionarpuestotrabajoController>
+	<cargarcomboareasAction>
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</cargarcomboareasAction>-
+	<cargarcombotipodemovimientoAction>
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</cargarcombotipodemovimientoAction>-
+	<cargarpuestotrabajoAction>
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</cargarpuestotrabajoAction>
+	<cargarformulariopuestotrabajoAction>
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</cargarformulariopuestotrabajoAction>-
+	<cargarcombocargosAction>
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</cargarcombocargosAction>-
+	<cargarcombocargosMAction>
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</cargarcombocargosMAction>-
+	<verificaridmovimientoAction>
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</verificaridmovimientoAction>-
+	<cargarcomboplantillapuestotrabajoAction>
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</cargarcomboplantillapuestotrabajoAction>-
+	<cargarcomboplantillapuestotrabajoMAction>
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</cargarcomboplantillapuestotrabajoMAction>-
+	<adicionarpuestotrabajoAction>
+		<exception type="Doctrine_Exception" code="CHPT049"/>
+	</adicionarpuestotrabajoAction>-
+	<modificarpuestotrabajoAction>
+		<exception type="Doctrine_Connection_Pgsql_Exception" code="CHPT050" filter="CONCURRENCE RESTRICTION" />
+		<exception type="Doctrine_Exception" code="CHPT046"/>
+	</modificarpuestotrabajoAction>-
+	<eliminarpuestotrabajoAction>
+		<exception type="Doctrine_Exception" code="CHPT049"/>
+	</eliminarpuestotrabajoAction>
+</GestionarpuestotrabajoController>
+	<Gestionarplantillapuestotrabajo>
+-
+<cargarcomboareatrabajoAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</cargarcomboareatrabajoAction>
+-
+<cargarcomboareatrabajomodAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</cargarcomboareatrabajomodAction>
+-
+<cargarcombotipomovimientoAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</cargarcombotipomovimientoAction>
+-
+<cargarcombomotivomovimientoAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</cargarcombomotivomovimientoAction>
+-
+<cargargridpagosadicionalesAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</cargargridpagosadicionalesAction>
+-
+<cargargridplantillaspuestotrabajoAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</cargargridplantillaspuestotrabajoAction>
+-
+<cargarcombocargoAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</cargarcombocargoAction>
+-
+<cargarcombocargomodAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</cargarcombocargomodAction>
+-
+<comprobardisponibilidadpuestosAction>
+<exception type="Doctrine_Exception" code="CHPT047"/>
+</comprobardisponibilidadpuestosAction>
+-
+<insertarNomPlantillaPtAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</insertarNomPlantillaPtAction>
+-
+<modificarNomPlantillaPtAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+<exception type="Doctrine_Connection_Pgsql_Exception" code="EGU005" filter="CONCURRENCE RESTRICTION"/>
+</modificarNomPlantillaPtAction>
+-
+<cargarformularioplantillapuestotrabajoAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</cargarformularioplantillapuestotrabajoAction>
+-
+<recargardatosgridpagosadicionalesAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</recargardatosgridpagosadicionalesAction>
+-
+<comprobarcodigoAction>
+<exception type="Doctrine_Exception" code="CHPT048"/>
+</comprobarcodigoAction>
+-
+<comprobardenominacionAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</comprobardenominacionAction>
+-
+<comprobatidmodelomovnominaAction>
+<exception type="Doctrine_Exception" code="CHPT046"/>
+</comprobatidmodelomovnominaAction>
+</Gestionarplantillapuestotrabajo>
+	</puesto_trabajo>
+	<pagos_adicionales>
+      <GestionarpagosadicionalesController>
+        <cargarpagosadicionalesAction>
+          <exception type="Doctrine_Exception" code="CH003" />
+          <exception type="Doctrine_Connection_Pgsql_Exception"
+          code="CH001" filter="CONCURRENCE RESTRICTION" />
+        </cargarpagosadicionalesAction>
+		<insertarpagoAction>		
+          <exception type="Doctrine_Connection_Pgsql_Exception"
+          code="CHPA201" filter="CONCURRENCE RESTRICTION" />
+		<exception type="Doctrine_Exception" code="CHPA220" />  
+		<exception type="Doctrine_Exception" code="CHPA211" />		
+		<exception type="Doctrine_Exception" code="CHPA210" />
+		<exception type="Doctrine_Exception" code="CHPA203" />
+		<exception type="Doctrine_Exception" code="CHPA204" />
+		<exception type="Doctrine_Exception" code="CHPA205" />
+		<exception type="Doctrine_Exception" code="CHPA206" />
+		<exception type="Doctrine_Exception" code="CHPA207" />
+		<exception type="Doctrine_Exception" code="CHPA208" />
+		<exception type="Doctrine_Exception" code="CHPA209" />
+		<exception type="Doctrine_Exception" code="CHPA218" />
+		<exception type="Doctrine_Exception" code="CHPA217" />
+		<exception type="Doctrine_Exception" code="CHPA216" />
+		<exception type="Doctrine_Exception" code="CHPA215" />
+		<exception type="Doctrine_Exception" code="CHPA213" />
+		<exception type="Doctrine_Exception" code="CHPA214" />
+		<exception type="Doctrine_Exception" code="CHPA219" />
+		</insertarpagoAction>
+		<eliminarpagosAction>
+		<exception type="Doctrine_Exception" code="CHPA212" />
+		</eliminarpagosAction>
+		<modificarpagoAction>
+		<exception type="Doctrine_Exception" code="CHPA220" />
+		<exception type="Doctrine_Exception" code="CHPA211" />		
+		<exception type="Doctrine_Exception" code="CHPA210" />
+		<exception type="Doctrine_Exception" code="CHPA204" />
+		<exception type="Doctrine_Exception" code="CHPA205" />
+		<exception type="Doctrine_Exception" code="CHPA206" />
+		<exception type="Doctrine_Exception" code="CHPA207" />
+		<exception type="Doctrine_Exception" code="CHPA208" />
+		<exception type="Doctrine_Exception" code="CHPA209" />
+		<exception type="Doctrine_Connection_Pgsql_Exception" code="CHPA201" filter="CONCURRENCE RESTRICTION" />
+		</modificarpagoAction>
+      </GestionarpagosadicionalesController>
+    </pagos_adicionales>
+	<nomina>
+		<GestionarnominaController>
+			<insertarnominaAction>
+				<exception type="ZendExt_Exception" code="CHN005"/>	
+			</insertarnominaAction>
+			<insertardocajusteAction>
+			<exception type="Doctrine_Exception" code="CHN024"/>
+			</insertardocajusteAction>
+			<modificarnominaAction>
+			<exception type="Doctrine_Exception" code="CHN043"/>
+			<exception type="Doctrine_Connection_Pgsql_Exception" code="CHN025" filter="CONCURRENCE RESTRICTION" />
+			</modificarnominaAction>
+			<eliminarnominaAction>
+			<exception type="Doctrine_Exception" code="CHN026"/>
+			</eliminarnominaAction>
+			<cargarcombotypenominaAction>
+			<exception type="Doctrine_Exception" code="CHN036"/>
+			</cargarcombotypenominaAction>
+			<cargarcomboppagoAction>
+			<exception type="Doctrine_Exception" code="CHN037"/>
+			</cargarcomboppagoAction>
+			<cargargpnominasAction>
+			<exception type="Doctrine_Exception" code="CHN038"/>
+			</cargargpnominasAction>
+			<cargarcombotipopajusteAction>
+			<exception type="Doctrine_Exception" code="CHN039"/>
+			</cargarcombotipopajusteAction>
+			<winbuscartrabajadorAction>
+			<exception type="Doctrine_Exception" code="CHN040"/>
+			</winbuscartrabajadorAction>
+			
+		</GestionarnominaController>
+		<GestionartipoajusteController>
+			<insertartipoajusteAction>
+				<exception type="ZendExt_Exception" code="CHN006"/>	
+			</insertartipoajusteAction>
+			<modificartipoajusteAction>
+				<exception type="ZendExt_Exception" code="CHN006"/>	
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="CHN010" filter="CONCURRENCE RESTRICTION"/>
+			</modificartipoajusteAction>
+			<eliminartipoajusteAction>
+				<exception type="ZendExt_Exception" code="CHN007"/>	
+			</eliminartipoajusteAction>
+			<cargarcombocomportamientoAction>
+				<exception type="Doctrine_Exception" code="CHN008"/>
+			</cargarcombocomportamientoAction>
+			<cargarformajusteAction>
+				<exception type="Doctrine_Exception" code="CHN009"/>	
+ 				<exception type="Doctrine_Connection_Pgsql_Exception" code="CHN010" filter="CONCURRENCE RESTRICTION"/>
+			</cargarformajusteAction>
+		</GestionartipoajusteController>
+		<GestionarperiodopagoController>
+			<insertarperiododepagoAction>
+				<exception type="ZendExt_Exception" code="CHN011"/>	
+			</insertarperiododepagoAction>
+			<modificarperiodopagoAction>
+				<exception type="ZendExt_Exception" code="CHN011"/>	
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="CHN010" filter="CONCURRENCE RESTRICTION"/>
+			</modificarperiodopagoAction>
+			<cargarcomboproAction>
+				<exception type="Doctrine_Exception" code="CHN008"/>
+			</cargarcomboproAction>
+			<cargarperiodosdepagoAction>
+				<exception type="Doctrine_Exception" code="CHN016"/>	
+ 				<exception type="Doctrine_Connection_Pgsql_Exception" code="CHN017" filter="CONCURRENCE RESTRICTION"/>
+			</cargarperiodosdepagoAction>
+			<cargarformperiodoAction>
+				<exception type="Doctrine_Exception" code="CHN016"/>	
+ 				<exception type="Doctrine_Connection_Pgsql_Exception" code="CHN017" filter="CONCURRENCE RESTRICTION"/>
+			</cargarformperiodoAction>
+		</GestionarperiodopagoController>
+
+	</nomina>
+    <incidencias>
+      <GestimpuestoController>
+        <insertarimpuestoAction>
+          <exception type="Doctrine_Exception" code="CHN005" />
+        </insertarimpuestoAction>
+        <cargargridimpuestoAction>
+          <exception type="Doctrine_Exception" code="CH257" />
+        </cargargridimpuestoAction>
+        <cargarCuentasAction>
+          <exception type="Doctrine_Exception" code="CH258" />
+          <exception type="ZendExt_Exception" code="CH258" />
+        </cargarCuentasAction>
+        <cargarformimpuestoAction>
+          <exception type="Doctrine_Exception" code="CH257" />
+        </cargarformimpuestoAction>
+        <modificarimpuestoAction>
+          <exception type="Doctrine_Exception" code="CH259" />
+          <exception type="Doctrine_Connection_Pgsql_Exception" code="CHPA201" filter="CONCURRENCE RESTRICTION" />
+        </modificarimpuestoAction>
+        <eliminarimpuestoAction>
+          <exception type="Doctrine_Exception" code="CH260" />
+        </eliminarimpuestoAction>
+        <elemgastoAction>
+          <exception type="Doctrine_Exception" code="CH261" />
+          <exception type="ZendExt_Exception" code="CH261" />
+        </elemgastoAction>
+      </GestimpuestoController>
+      <AsociarimpincController>
+        <asociarincidimpuestoAction>
+          <exception type="Doctrine_Exception" code="CHN005" />
+        </asociarincidimpuestoAction>
+        <eliminarinciimpuestoAction>
+          <exception type="Doctrine_Exception" code="CH260" />
+        </eliminarinciimpuestoAction>
+        <cargargridimpuestoincidenciaAction>
+          <exception type="Doctrine_Exception" code="CH257" />
+        </cargargridimpuestoincidenciaAction>
+        <cargardenominacionesimpuestoAction>
+          <exception type="Doctrine_Exception" code="CH257" />
+        </cargardenominacionesimpuestoAction>
+        <cargardenominacionesimpuestoAction>
+          <exception type="Doctrine_Exception" code="CH257" />
+        </cargardenominacionesimpuestoAction>
+      </AsociarimpincController>
+      <GestincidenciaController>
+        <cargargridincidenciaAction>
+          <exception type="Doctrine_Exception" code="CH257" />
+        </cargargridincidenciaAction>
+        <insertarincidenciaAction>
+          <exception type="Doctrine_Exception" code="CHN005" />
+        </insertarincidenciaAction>
+        <modificarincidenciaAction>
+          <exception type="Doctrine_Exception" code="CH263" />
+          <exception type="Doctrine_Connection_Pgsql_Exception" code="CHPA201" filter="CONCURRENCE RESTRICTION" />
+        </modificarincidenciaAction>
+        <eliminarincidenciaAction>
+          <exception type="Doctrine_Exception" code="CH260" />
+        </eliminarincidenciaAction>
+        <cargarcomboTipoIncidenciaAction>
+          <exception type="Doctrine_Exception" code="CH257" />
+        </cargarcomboTipoIncidenciaAction>
+        <cargarcomboTipoNominaAction>
+          <exception type="Doctrine_Exception" code="CH257" />
+        </cargarcomboTipoNominaAction>
+        <cargarCuentasCPAction>
+          <exception type="Doctrine_Exception" code="CH261" />
+        </cargarCuentasCPAction>
+        <cargarCuentasCAction>
+          <exception type="Doctrine_Exception" code="CH258" />
+        </cargarCuentasCAction>
+      </GestincidenciaController>
+    </incidencias>
+    <submayores>
+	  <GestionarsubmayorretencionesController>
+	    <insertarsubmayorretencionesAction>
+		  <exception type="Doctrine_Exception" code="CHS090" />
+		  <exception type="Doctrine_Exception" code="CHS015" />	
+		  <exception type="Doctrine_Exception" code="CHS016" />		  
+		  <exception type="Doctrine_Exception" code="CHS018" />
+		  <exception type="Doctrine_Exception" code="CHS019" />		  
+		  <exception type="Doctrine_Exception" code="CHS022" />
+		  <exception type="Doctrine_Exception" code="CHS023" />
+		  <exception type="Doctrine_Exception" code="CHS024" />
+		  <exception type="Doctrine_Exception" code="CHS025" />
+		  <exception type="Doctrine_Exception" code="CHS026" />
+		  <exception type="Doctrine_Exception" code="CHS027" />
+		  <exception type="Doctrine_Exception" code="CHS028" />
+		  <exception type="Doctrine_Exception" code="CHS029" />
+		  <exception type="Doctrine_Exception" code="CHS030" />
+		  <exception type="Doctrine_Exception" code="CHS031" />
+		  <exception type="Doctrine_Exception" code="CHS033" />
+		  <exception type="Doctrine_Exception" code="CHS034" />
+		  <exception type="Doctrine_Exception" code="CHS035" />
+		  <exception type="Doctrine_Exception" code="CHS036" />
+		  <exception type="Doctrine_Exception" code="CHS037" />
+		  <exception type="Doctrine_Exception" code="CHS038" />
+		  <exception type="Doctrine_Exception" code="CHS039" />
+		  <exception type="Doctrine_Exception" code="CHS040" />
+		</insertarsubmayorretencionesAction>
+		<modificarsubmayorretencionesAction>		  	  
+	          <exception type="Doctrine_Connection_Pgsql_Exception" code="CHS050" filter="CONCURRENCE RESTRICTION" />
+		</modificarsubmayorretencionesAction>
+		<buscarAction>
+		  <exception type="Doctrine_Exception" code="CHS035" />
+		  <exception type="Doctrine_Exception" code="CHS036" />
+		  <exception type="Doctrine_Exception" code="CHS037" />
+		  <exception type="Doctrine_Exception" code="CHS038" />
+		</buscarAction>
+	  </GestionarsubmayorretencionesController>
+	</submayores>
+	<evaluacion>
+	<GestionarplanillaController>
+	<cargarplanillasAction>
+	 <exception type="Doctrine_Exception" code="CHE007" />
+	</cargarplanillasAction>
+	<insertarplanillasindicadorAction>
+	<exception type="Doctrine_Exception" code="CHE036" />
+	</insertarplanillasindicadorAction>
+	</GestionarplanillaController>
+	</evaluacion>
+  </capital_humano>
+    
+	<planificacion>
+	<plantilla>
+	<GesplantillaController>
+	  <adicionarplantillaAction>
+	  <exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT008" />
+	  </adicionarplantillaAction>
+	  <modificarplantillaAction>
+	  <exception type="ZendExt_Exception" code="PLAP001" />
+	  </modificarplantillaAction>
+	</GesplantillaController>
+	</plantilla>
+	<CalnecesidadesController>
+		<cargargriddatosAction> 
+			<exception type="Doctrine_Excepcion" code="PLA001" />
+		</cargargriddatosAction>
+ 		<cargargridresultadosAction> 
+			<exception type="Doctrine_Excepcion" code="PLA001" />
+		</cargargridresultadosAction>
+		<calnormafinancieraAction>
+			<exception type="Doctrine_Excepcion" code="PLA001" />
+		</calnormafinancieraAction>
+	</CalnecesidadesController>
+	
+	<!--nomencladores>
+		<GestionartipoplanController>
+			<eliminartipoplanAction>
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="PLAN004" />
+			</eliminartipoplanAction>
+			<modificartipoplanAction>
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="PLAN005" />
+			</modificartipoplanAction>
+		</GestionartipoplanController>
+		<GestionartipomodeloController>
+			<eliminartipomodeloAction>
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="PLAN004" />
+			</eliminartipomodeloAction>
+			<modificartipomodeloAction>
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="PLAN005" />
+			</modificartipomodeloAction>
+		</GestionartipomodeloController>
+		<GestionartipoetapaController>
+			<eliminartipoetapaAction>
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="PLAN004" />
+			</eliminartipoetapaAction>
+			<modificartipoetapaAction>
+				<exception type="Doctrine_Connection_Pgsql_Exception" code="PLAN005" />
+			</modificartipoetapaAction>
+		</GestionartipoetapaController>
+	</nomencladores-->
+
+</planificacion>
+
+    <configuracion>
+	<nomencladores>
+		<ConceptosController>
+			<adicionartablaAction>
+				<exception type="ZendExt_Exception" code="CONF001"/>							
+			</adicionartablaAction>
+		</ConceptosController>	
+	</nomencladores>	
+</configuracion>
+	
+  	<finanzas>
+		<cobros_pagos>
+			<derechouobligacion>
+				<GestionarderechocobroController>  				
+					<cargarderechocobroclienteAction>
+						<exception type="ZendExt_Exception" code="FNCP0001"/>							
+					</cargarderechocobroclienteAction>					
+					<cargarclientesAction> 
+				        <exception type="Doctrine_Exception" code="FNCP0006" />
+				    </cargarclientesAction>					
+					<cargarmotivocancelacionAction> 
+				        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0007" />
+				    </cargarmotivocancelacionAction>					
+					<canceladerechocobroclienteAction> 
+				        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0008" />
+				    </canceladerechocobroclienteAction>					
+				</GestionarderechocobroController>
+				<GestionarderechofiscalController>
+					<cargarderechocobrofiscalAction>
+						<exception type="ZendExt_Exception" code="FNCP0001"/>							
+					</cargarderechocobrofiscalAction>					
+					<cargarmotivocancelacionAction> 
+				        <exception type="Doctrine_Exception" code="FNCP0007" />
+				    </cargarmotivocancelacionAction>					
+					<canceladerechocobrofiscalAction> 
+				        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0008" />
+				    </canceladerechocobrofiscalAction>	
+				</GestionarderechofiscalController>
+				<GestionarobligacionesfiscalesController>
+					<cargarobligacionpagofiscalAction>
+						<exception type="ZendExt_Exception" code="FNCP0002"/>							
+					</cargarobligacionpagofiscalAction>					
+					<cargarmotivocancelacionAction> 
+				        <exception type="Doctrine_Exception" code="FNCP0007" />
+				    </cargarmotivocancelacionAction>					
+					<cancelaobligacionpagofiscalAction> 
+				        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0009" />
+				    </cancelaobligacionpagofiscalAction>	
+				</GestionarobligacionesfiscalesController>
+				<GestionarobligacionpagoController>
+					<cargarobligacionpagoclienteAction>
+						<exception type="ZendExt_Exception" code="FNCP0002"/>							
+					</cargarobligacionpagoclienteAction>					
+					<cargarclientesAction> 
+				        <exception type="Doctrine_Exception" code="FNCP0006" />
+				    </cargarclientesAction>					
+					<cargarmotivocancelacionAction> 
+				        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0007" />
+				    </cargarmotivocancelacionAction>	
+					<cancelaobligacionpagoclienteAction> 
+				        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0009" />
+				    </cancelaobligacionpagoclienteAction>	
+				</GestionarobligacionpagoController>
+			</derechouobligacion>
+			<funcionalidades>
+				<liquidacion>
+					<GestgestionaroperacionesanticipadascobroController>
+						<cargarcobroanticipadoAction>
+							<exception type="ZendExt_Exception" code="FNCP0003"/>							
+						</cargarcobroanticipadoAction>					
+						<cargarclientesAction> 
+					        <exception type="Doctrine_Exception" code="FNCP0006" />
+					    </cargarclientesAction>					
+						<cargarmotivocancelacionAction> 
+					        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0007" />
+					    </cargarmotivocancelacionAction>	
+						<cancelacobroanticipadoAction> 
+					        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0010" />
+					    </cancelacobroanticipadoAction>				
+					</GestgestionaroperacionesanticipadascobroController>
+					<GestgestionaroperacionesanticipadasController>
+						<cargarpagosanticipadoAction>
+							<exception type="ZendExt_Exception" code="FNCP0004"/>							
+						</cargarpagosanticipadoAction>					
+						<cargarclientesAction> 
+					        <exception type="Doctrine_Exception" code="FNCP0006" />
+					    </cargarclientesAction>					
+						<cargarmotivocancelacionAction> 
+					        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0007" />
+					    </cargarmotivocancelacionAction>	
+						<cancelapagoanticipadoAction> 
+					        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0011" />
+					    </cancelapagoanticipadoAction>				
+					</GestgestionaroperacionesanticipadasController>
+				</liquidacion>			
+				<cambio_moneda>			
+					<GestionarcontratoController>
+						<cargarcontratoAction>
+							<exception type="ZendExt_Exception" code="FNCP0005"/>							
+						</cargarcontratoAction>					
+						<cargarmotivocancelacionAction> 
+					        <exception type="Doctrine_Exception" code="FNCP0007" />
+					    </cargarmotivocancelacionAction>					
+						<cancelacontratoAction> 
+					        <exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0012" />
+					    </cancelacontratoAction>			
+					</GestionarcontratoController>
+				</cambio_moneda>
+			</funcionalidades>
+			<configuracion>
+				<ParrafoController>
+					<cargarparrafofiscalAction>
+						<exception type="Doctrine_Exception" code="FNCP0034"/>							
+					</cargarparrafofiscalAction>	
+					<insertarparrafofiscalAction>
+						<exception type="Doctrine_Exception" code="FNCP0033"/>							
+					</insertarparrafofiscalAction>	
+					<modificarparrafofiscalAction>
+						<exception type="Doctrine_Exception" code="FNCP0033"/>							
+					</modificarparrafofiscalAction>	
+					<eliminarparrafofiscalAction>
+						<exception type="Doctrine_Exception" code="FNCP0033"/>							
+					</eliminarparrafofiscalAction>							
+				</ParrafoController>
+				<GestmotivocancelacionController>
+					<adicionarAction>
+						<exception type="Doctrine_Exception" code="FNCP0033"/>							
+					</adicionarAction>	
+					<modificarAction>
+						<exception type="Doctrine_Exception" code="FNCP0033"/>							
+					</modificarAction>	
+					<eliminarmotivocancelacionAction>
+						<exception type="Doctrine_Exception" code="FNCP0033"/>							
+					</eliminarmotivocancelacionAction>							
+				</GestmotivocancelacionController>
+				<CondicionpagoController>
+					<adicionarcondicionAction>
+						<exception type="Doctrine_Exception" code="FNCP0033"/>							
+					</adicionarcondicionAction>
+				</CondicionpagoController>
+			</configuracion>
+			<conciliacion>
+				<AdicionarconciliaciondeobligacionesoderechosController>
+					<cargarcbtipodcAction>
+						<exception type="Doctrine_Exception" code="FNCP0055"/>							
+					</cargarcbtipodcAction>	
+					<cargarcbclientAction>
+						<exception type="Doctrine_Exception" code="FNCP0055"/>							
+					</cargarcbclientAction>	
+					<cargargridAction>
+						<exception type="Doctrine_Exception" code="FNCP0055"/>							
+					</cargargridAction>	
+					<adicionarconciliacionAction>
+						<exception type="Doctrine_Exception" code="FNCP0055"/>							
+					</adicionarconciliacionAction>				
+				</AdicionarconciliaciondeobligacionesoderechosController>
+				
+				<AdicionarconcilaciondeanticiposController>
+					<cargarcbtipodocAction>
+						<exception type="Doctrine_Exception" code="FNCP0055"/>							
+					</cargarcbtipodocAction>	
+					<cargarcbclienteAction>
+						<exception type="Doctrine_Exception" code="FNCP0055"/>							
+					</cargarcbclienteAction>	
+					<cargargridanticipoAction>
+						<exception type="Doctrine_Exception" code="FNCP0055"/>							
+					</cargargridanticipoAction>	
+					<adicionarconciliacionaAction>
+						<exception type="Doctrine_Exception" code="FNCP0055"/>							
+					</adicionarconciliacionaAction>				
+				</AdicionarconcilaciondeanticiposController>
+			</conciliacion>
+			<funcionalidades>
+			        <adicionarcontratoAction>
+						<exception type="Doctrine_Connection_Pgsql_Exception" code="FNCP0055"/>	
+						<exception type="ZendExt_Exception" code="FNCP0055"/>
+						<exception type="ZendExt_Exception_NotDefined" code="FNCP0055"/>
+						<exception type="Exception" code="FNCP0055"/>
+						<exception type="PDOException" code="FNCP0055"/>						
+					</adicionarcontratoAction>	
+			</funcionalidades>
+		</cobros_pagos>
+		
+		<banco>
+			<GestionartipomovimientoController>
+				<adicionartipomovimientoAction>
+					<exception type="Doctrine_Exception" code="CONTB014" />
+				</adicionartipomovimientoAction>
+	            <modificartipomovimientoAction>
+					<exception type="Doctrine_Exception" code="CONTB013"/>
+	                <exception type="Doctrine_Connection_Pgsql_Exception" code="CONTB012" filter="CONCURRENCE RESTRICTION" />
+			     </modificartipomovimientoAction>
+	            <eliminartipomovimientoAction>
+					<exception type="Doctrine_Exception" code="CONTB014" />
+				</eliminartipomovimientoAction>
+			</GestionartipomovimientoController>
+			<GestionarcuentabancariaController>
+				<adicionarCuentaBancariaAction>
+					<exception type="Doctrine_Exception" code="CONTB014" />
+				</adicionarCuentaBancariaAction>
+	            <modificarCuentaBancariaAction>
+					<exception type="Doctrine_Exception" code="CONTB013"/>
+	                <exception type="Doctrine_Connection_Pgsql_Exception" code="CONTB012" filter="CONCURRENCE RESTRICTION" />
+			     </modificarCuentaBancariaAction>
+	            <eliminarCuentaBancariaAction>
+					<exception type="Doctrine_Exception" code="CONTB014" />
+				</eliminarCuentaBancariaAction>
+			</GestionarcuentabancariaController>
+		</banco>
+	</finanzas>
+	
+	<logistica>
+	    <inventario>
+		<nomencladores>
+		 <GestnomgrupoproductoController>
+				        <modDescripcionAction>
+						 <exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT018" filter="CONCURRENCE RESTRICTION" />
+						</modDescripcionAction>
+	    </GestnomgrupoproductoController>
+		 <GestnomconceptoplanController>
+				        <modDescripcionAction>
+						 <exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT018" filter="CONCURRENCE RESTRICTION" />
+						</modDescripcionAction>
+	    </GestnomconceptoplanController>
+		<GestnomdestfinalController>
+				        <modDescripcionAction>
+						 <exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT018" filter="CONCURRENCE RESTRICTION" />
+						</modDescripcionAction>
+	    </GestnomdestfinalController>
+		<GestnomcalidadmovdiferenciaController>
+				        <modDescripcionAction>
+						 <exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT018" filter="CONCURRENCE RESTRICTION" />
+						</modDescripcionAction>
+	    </GestnomcalidadmovdiferenciaController>
+	     <GestnomcategoriaController>
+				        <modDescripcionAction>
+						 <exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT018" filter="CONCURRENCE RESTRICTION" />
+						</modDescripcionAction>
+	    </GestnomcategoriaController>
+		</nomencladores>
+			
+		</inventario>
+		
+		
+		<activos_fijos>
+		
+			<aft>
+				<ActivofijotangibleController>
+					<modificaraftAction>
+	                <exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT016" filter="CONCURRENCE RESTRICTION" />
+					</modificaraftAction>
+				</ActivofijotangibleController>
+			</aft>
+			<nomencladores>
+				<GrupoController>
+					<modificargrupoAction>
+						<exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT016" filter="CONCURRENCE RESTRICTION" />
+					</modificargrupoAction>
+				</GrupoController>
+				<MarcamodeloController>
+					<modificarAction>
+						<exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT016" filter="CONCURRENCE RESTRICTION" />
+					</modificarAction>
+				</MarcamodeloController>
+				<NomareaController>
+					<modificarAction>
+						<exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT016" filter="CONCURRENCE RESTRICTION" />
+					</modificarAction>
+				</NomareaController>
+				<NomrazaController>
+					<modificarAction>
+						<exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT016" filter="CONCURRENCE RESTRICTION" />
+					</modificarAction>
+				</NomrazaController>
+				<TipocombustibleController>
+					<modificarAction>
+						<exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT016" filter="CONCURRENCE RESTRICTION" />
+					</modificarAction>
+				</TipocombustibleController>
+				<OperacionController>
+					<modificarAction>
+						<exception type="Doctrine_Connection_Pgsql_Exception" code="LOGAFT016" filter="CONCURRENCE RESTRICTION" />
+					</modificarAction>
+				</OperacionController>
+			</nomencladores>
+		</activos_fijos>
+	</logistica>
+
+</exceptions>
+

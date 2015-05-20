@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+	<conn gestor="pgsql" host="localhost" bd="saue"/>
+	<esquemas>
+		<datos nombre="mod_estructuracomp" usuario="sauxe" password="536209092282092759 59721342271980393151 33080464958168068556"/>
+		<datos nombre="mod_nomencladores" usuario="sauxe" password="536209092282092759 59721342271980393151 33080464958168068556"/>
+		<datos nombre="mod_seguridad" usuario="sauxe" password="536209092282092759 59721342271980393151 33080464958168068556"/>
+		<datos nombre="mod_traza" usuario="sauxe" password="536209092282092759 59721342271980393151 33080464958168068556"/>
+		</esquemas>
+</config>    

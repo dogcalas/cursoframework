@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recursos>  	          
+	
+        <recurso id='idrol'  alias='Roles' table_name='seg_rol'>Roles
+             <criteriosinsertar>
+				<criterio alias='denominacion' tipodato='cadena' subsistema='seguridad' service='LoadRolesCompartimentacion' needparam='no'>				
+				</criterio>
+                <criterio alias='idrol' tipodato='numerico' subsistema='seguridad' service='LoadRolesCompartimentacion' needparam='no'>				
+				</criterio>
+        	</criteriosinsertar>
+                
+                <criteriosmodificar>
+				<criterio alias='denominacion' tipodato='cadena' subsistema='seguridad' service='LoadRolesCompartimentacion' needparam='no'>				
+				</criterio>
+                <criterio alias='idrol' tipodato='numerico' subsistema='seguridad' service='LoadRolesCompartimentacion' needparam='no'>				
+				</criterio>
+           	</criteriosmodificar>
+                
+                <criterioseliminar>
+				<criterio alias='denominacion' tipodato='cadena' subsistema='seguridad' service='LoadRolesCompartimentacion' needparam='no'>				
+				</criterio>
+                                <criterio alias='idrol' tipodato='numerico' subsistema='seguridad' service='LoadRolesCompartimentacion' needparam='no'>				
+				</criterio>
+           	</criterioseliminar>
+                <criteriosver>
+				<criterio alias='denominacion' tipodato='cadena' subsistema='seguridad' service='LoadRolesCompartimentacion' needparam='no'>				
+				</criterio>
+                <criterio alias='idrol' tipodato='numerico' subsistema='seguridad' service='LoadRolesCompartimentacion' needparam='no'>				
+				</criterio>
+           	</criteriosver>
+   	</recurso>
+   	
+        <recurso id='idusuario'  alias='Usuario' table_name='seg_usuario'>Usuarios
+            <criteriosinsertar>
+				<criterio alias='identidad' tipodato='numerico' subsistema='seguridad' service='CargarTodasEstructuras' needparam='si'>	
+				</criterio>
+				<criterio alias='iddominio' tipodato='numerico' subsistema='metadatos' service='cargarArbolDominios' needparam='si'>							
+				</criterio>				
+        	</criteriosinsertar>
+                
+            <criteriosmodificar>
+				<criterio alias='identidad' tipodato='numerico' subsistema='seguridad' service='CargarTodasEstructuras' needparam='si'>
+				</criterio>
+				<criterio alias='iddominio' tipodato='numerico' subsistema='metadatos' service='cargarArbolDominios' needparam='si'>											
+				</criterio>				
+           	</criteriosmodificar>
+                
+                <criterioseliminar>
+				<criterio alias='identidad' tipodato='numerico' subsistema='seguridad' service='CargarTodasEstructuras' needparam='si'>
+				</criterio>
+				<criterio alias='iddominio' tipodato='numerico' subsistema='metadatos' service='cargarArbolDominios' needparam='si'>											
+				</criterio>				
+           	</criterioseliminar>
+                <criteriosver>
+				<criterio alias='identidad' tipodato='numerico' subsistema='seguridad' service='CargarTodasEstructuras' needparam='si'>
+				</criterio>
+				<criterio alias='iddominio' tipodato='numerico' subsistema='metadatos' service='cargarArbolDominios' needparam='si'>											
+				</criterio>				
+           	</criteriosver>
+   	    </recurso>
+        
+   	
+        
+</recursos>

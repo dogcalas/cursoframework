@@ -1,0 +1,124 @@
+#images-view .x-panel-body {
+    background: white;
+    font: 11px Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#images-view1 .x-panel-body {
+    background: auto;
+    font: 12px Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#images-view .thumb {
+    padding: 3px;
+    padding-bottom: 0;
+}
+
+#images-view1 .thumb1 {
+    background: #dddddd;
+    padding: 3px;
+    padding-bottom: 0;
+}
+
+.x-quirks #images-view .thumb {
+    padding-bottom: 3px;
+}
+
+.x-quirks #images-view1 .thumb1 {
+    padding-bottom: 3px;
+}
+
+#images-view .thumb img {
+
+}
+
+#images-view1 .thumb1 img {
+    height: 180px;
+    width: 80%;
+    text-align: center;
+    padding-left: 3%;
+}
+
+#images-view .thumb-wrap {
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+}
+
+
+#images-view .thumb-wrap span {
+
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width: 101px;
+}
+
+
+#images-view .x-item-over {
+    border: 1px solid #dddddd;
+    background: #efefef url(over.gif) repeat-x left top;
+    padding: 4px;
+}
+
+
+#images-view .x-item-selected {
+    border: 1px solid #99bbe8;
+    padding: 4px;
+}
+
+#images-view1 .x-item-selected1 {
+    background: #eff5fb url(selected.gif) no-repeat right bottom;
+    border: 1px solid #99bbe8;
+    padding: 1px;
+}
+
+#images-view .x-item-selected .thumb {
+    background: transparent;
+}
+
+#images-view1 .thumb1 {
+    background: transparent;
+}
+
+#images-view .loading-indicator {
+    font-size: 11px;
+    background-image: url('../../resources/themes/images/default/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    margin: 10px;
+}
+
+#images-view1 .loading-indicator {
+    font-size: 11px;
+    background-image: url('../../resources/themes/images/default/grid/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 20px;
+    margin: 10px;
+}
+
+.x-view-selector {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    border: 1px dotted;
+    opacity: .5;
+    -moz-opacity: .5;
+    filter: alpha(opacity=50);
+    zoom: 1;
+    background-color: #c3daf9;
+    border-color: #3399bb;
+}
+
+.ext-strict .ext-ie .x-tree .x-panel-bwrap {
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+	margin: 5px auto auto;
+}

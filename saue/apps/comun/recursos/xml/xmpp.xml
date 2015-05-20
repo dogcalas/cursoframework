@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config>
+	<activo activo="true"/>
+    <conn server="cig-tec-lpt-01" port="5222" user="admin" password="admin"/>
+	<conn_out server="jabber.uci.cu" port="5222" user="rrbauta" password=""/>
+</config>

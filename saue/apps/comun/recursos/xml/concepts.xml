@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conceptos>
+	<GlobalConcept nombre="Estructura y Composicion">
+		<ConcretConcept nombre="Entidad"></ConcretConcept>
+		<ConcretConcept nombre="Subsistema"></ConcretConcept>
+	</GlobalConcept>
+	<GlobalConcept nombre="Seguridad">
+		<ConcretConcept nombre="Usuario" />
+	</GlobalConcept>
+</conceptos>

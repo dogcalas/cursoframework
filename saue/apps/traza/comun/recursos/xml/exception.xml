@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Excepciones>	
+	<TRACE001>
+		<tipo>LP</tipo>
+		<es>
+			<mensaje>Error al insertar una traza.</mensaje>
+			<descripcion>Error al insertar una traza.</descripcion>			
+		</es>
+	</TRACE001>
+</Excepciones>

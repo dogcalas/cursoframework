@@ -1,0 +1,9 @@
+<bundle>
+    <data id="metadatos_id" name="metadatos" version=""/>
+    <services>
+        <service id="metadatosInterface">
+            <interface>services/MetadatosMetadatosInterface.php</interface>
+            <impl>services/metadatosServices.php</impl>
+        </service>
+    </services>
+</bundle>

@@ -1,0 +1,12 @@
+{lbBtnModificar:'Modify',
+lbBtnCancelar:'Cancel',
+lbBtnAceptar:'Accept',
+lbTitPanelTit:'Manage methods',
+lbMsgFunModificarMsg:'Modifying data...',
+lbBtnMetododistancia:'Distance method',
+lbBtnMetodoknn:'Method of classification',
+lbBtnMetodoRec:'Recognition method',
+lbMsgFunModificarMsgI:'Data were successfully modified',
+NoModify:'You have not modified any field.'
+}
+

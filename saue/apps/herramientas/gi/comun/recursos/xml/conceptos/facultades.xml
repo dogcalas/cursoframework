@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conceptos>
+    <concepto>
+        <denominacion>facultades</denominacion>
+        <plantilla>CRUD-Simple</plantilla>
+        <urlG>cargarFacultades</urlG>
+        <atributos>
+            <atributo>
+                <denominacion>idFacultad</denominacion>
+                <componente>Textfield</componente>
+            </atributo>
+            <atributo>
+                <denominacion>descripcion</denominacion>
+                <componente>Textfield</componente>
+            </atributo>
+        </atributos>
+    </concepto>
+</conceptos>

@@ -1,0 +1,78 @@
+
+
+.floting{
+
+	
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	border: 1px solid #777;
+	border-color: rgba(0,0,0,0.2);
+	border-bottom-color: #333;
+	border-bottom-color: rgba(0,0,0,0.4);
+	
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color:black;
+	color:white;
+	
+
+}
+
+.floting-mask{
+
+	
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	border: 1px solid #777;
+	border-color: rgba(0,0,0,0.2);
+	border-bottom-color: #333;
+	border-bottom-color: rgba(0,0,0,0.4);
+	
+	
+	background-color:black;
+	opacity:0.5;
+	color:white;
+	
+
+}
+
+.floting-msg{
+
+	
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	border: 1px solid #777;
+	border-color: rgba(0,0,0,0.2);
+	border-bottom-color: #333;
+	border-bottom-color: rgba(0,0,0,0.4);
+	
+	
+	background-color:white;
+	opacity:0.6;
+	color:red;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding:10px;
+
+}
+.imagenT{
+ float:left;
+ margin-top:5px;
+ margin-left:5px;
+ margin-right:10px;
+// background-image:url(../../images/ok.png);
+}
+
+.icon-desktop{
+	width:20px;
+	height:20px;
+	
+	background-image:url(../../images/desktop.png);
+	background-size:100% 100%;
+}
+.icon-editor{
+	width:20px;
+	height:20px;
+	
+	background-image:url(../../images/Editor.png);
+	background-size:100% 100%;
+}

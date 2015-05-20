@@ -1,0 +1,134 @@
+/*
+ * Framework EXTJS
+ *
+ * Elemento base del Framework EXTJS donde se difine las clases con los iconos personalizados a utilizar.
+ *
+ * @author Dionisdel Ponce Santana
+ * @package CSS
+ * @subpackage EXTJS
+ * @copyright UCID-ERP Cuba
+ * @version 1.0-0
+ */
+ 
+.abrir{background-image:url(../images/iconos/abrir.png);}
+.abrirventana{background-image:url(../images/iconos/abrirventana.png);}
+.aceptar{background-image:url(../images/iconos/aceptar.png);}
+.activardepbaco{background-image:url(../images/iconos/activardepbaco.png);}
+.actualizar{background-image:url(../images/iconos/actualizar.png);}
+.adicionar{background-image:url(../images/iconos/adicionar.png);}
+.ajustar{background-image:url(../images/iconos/ajustar.png);}
+.anterior{background-image:url(../images/iconos/anterior.png);}
+.anular{background-image:url(../images/iconos/anular.png);}
+.aplicar{background-image:url(../images/iconos/aplicar.png);}
+.aprobar{background-image:url(../images/iconos/aprobar.png);}
+.asentar{background-image:url(../images/iconos/asentar.png);}
+.asociar{background-image:url(../images/iconos/asociar.png);}
+.asignaroles{background-image:url(../images/iconos/asignaroles.png);}
+.auditoria{background-image:url(../images/iconos/auditoria.png);}
+.auditoriainactivo{background-image:url(../images/iconos/auditoriainactivo.png);}
+.ayuda{background-image:url(../images/iconos/ayuda.png);}
+.balance{background-image:url(../images/iconos/balance.png);}
+.borrar{background-image:url(../images/iconos/borrar.png);}
+.buscar{background-image:url(../images/iconos/buscar.png);}
+.buscaravanzada{background-image:url(../images/iconos/buscaravanzada.png);}
+.calcular{background-image:url(../images/iconos/calcular.png);}
+.calendario{background-image:url(../images/iconos/calendario.png);}
+.cambiar{background-image:url(../images/iconos/calendario.png);}
+.cambiarcontrasena{background-image:url(../images/iconos/cambiarcontrasena.png);}
+.cambiodestado{background-image:url(../images/iconos/cambiodestado.png);}
+.cancelar{background-image:url(../images/iconos/cancelar.png);}
+.cancelarestado{background-image:url(../images/iconos/cancelarestado.png);}
+.capitalhumano{background-image:url(../images/iconos/capitalhumano.png);}
+.chumanoinactivo{background-image:url(../images/iconos/chumanoinactivo.png);}
+.cargadoacuenta{background-image:url(../images/iconos/cargadoacuenta.png);}  
+.cerrar{background-image:url(../images/iconos/cerrar.png);}
+.comprobante{background-image:url(../images/iconos/comprobante.png);}
+.conciliar{background-image:url(../images/iconos/conciliar.png);}
+.configactivo{background-image:url(../images/iconos/configactivo.png);}
+.configinactivo{background-image:url(../images/iconos/configinactivo.png);}
+.confirmar{background-image:url(../images/iconos/confirmar.png);}
+.contabilidad{background-image:url(../images/iconos/contabilidad.png);}
+.contabilidadinactivo{background-image:url(../images/iconos/contabilidadinactivo.png);} 
+.copiar{background-image:url(../images/iconos/copiar.png);}
+.cortar{background-image:url(../images/iconos/cortar.png);}
+.costosyprocesos{background-image:url(../images/iconos/costosyprocesos.png);}
+.costosyprocinact{background-image:url(../images/iconos/costosyprocinact.png);}
+.crearreporte{background-image:url(../images/iconos/crearreporte.png);}
+.cumplimiento{background-image:url(../images/iconos/cumplimiento.png);}
+.deshabilitar{background-image:url(../images/iconos/deshabilitar.png);}
+.definir{background-image:url(../images/iconos/definir.png);}
+.deshacer{background-image:url(../images/iconos/deshacer.png);}
+.detalles{background-image:url(../images/iconos/detalles.png);}
+.diferenciaconbanco{background-image:url(../images/iconos/diferenciaconbanco.png);}
+.duplicar{background-image:url(../images/iconos/duplicar.png);}
+.eliminar{background-image:url(../images/iconos/eliminar.png);}
+.estado{background-image:url(../images/iconos/estado.png);} 
+.estructura{background-image:url(../images/iconos/estructura.png);}
+.estructurainactivo{background-image:url(../images/iconos/estructurainactivo.png);}
+.exportar{background-image:url(../images/iconos/exportar.png);}
+.facturar{background-image:url(../images/iconos/facturar.png);}
+.falta{background-image:url(../images/iconos/falta.png);}
+.filtrar{background-image:url(../images/iconos/filtrar.png);}
+.guardar{background-image:url(../images/iconos/guardar.png);}
+.generadorreportes{background-image:url(../images/iconos/generadorreportes.png);}
+.genreportesinactivo{background-image:url(../images/iconos/genreportesinactivo.png);}
+.historial{background-image:url(../images/iconos/historial.png);}
+.importar{background-image:url(../images/iconos/importar.png);}
+.imprimir{background-image:url(../images/iconos/imprimir.png);}
+.incluir{background-image:url(../images/iconos/incluir.png);}
+.info{background-image:url(../images/iconos/info.png);}
+.informe{background-image:url(../images/iconos/informe.png);}
+.iniciodeanno{background-image:url(../images/iconos/iniciodeanno.png);}
+.inventario{background-image:url(../images/iconos/inventario.png);}
+.inventarioinactivo{background-image:url(../images/iconos/inventarioinactivo.png);}
+.invertir{background-image:url(../images/iconos/invertir.png);}
+.limpiar{background-image:url(../images/iconos/limpiar.png);}
+.liquidar{background-image:url(../images/iconos/liquidar.png);}
+.logística{background-image:url(../images/iconos/logística.png);}
+.logisticainactivo{background-image:url(../images/iconos/logisticainactivo.png);}
+.lote{background-image:url(../images/iconos/lote.png);}
+.modificar{background-image:url(../images/iconos/modificar.png);}
+.mostrar{background-image:url(../images/iconos/mostrar.png);}
+.multimoneda{background-image:url(../images/iconos/multimoneda.png);}
+.numeroserie{background-image:url(../images/iconos/numeroserie.png);}
+.nuevacorrconbanco{background-image:url(../images/iconos/nuevacorrconbanco.png);}
+.nuevo{background-image:url(../images/iconos/nuevo.png);}
+.pegar{background-image:url(../images/iconos/pegar.png);}
+.periodoactual{background-image:url(../images/iconos/periodoactual.png);}
+.planificacion{background-image:url(../images/iconos/planificacion.png);}
+.planificacioninactivo {background-image:url(../images/iconos/planificacioninactivo.png);}
+.primerapagina{background-image:url(../images/iconos/primerapagina.png);}
+.primerapaginactivo{background-image:url(../images/iconos/primerapaginactivo.png);}
+.procesardocumento{background-image:url(../images/iconos/procesardocumento.png);}
+.rango{background-image:url(../images/iconos/rango.png);}
+.reevaluacion{background-image:url(../images/iconos/reevaluacion.png);}
+.recuperaciones{background-image:url(../images/iconos/recuperaciones.png);}
+.renovardocumento{background-image:url(../images/iconos/renovardocumento.png);}
+.restringir{background-image:url(../images/iconos/restringir.png);}
+.revisar{background-image:url(../images/iconos/revisar.png);}
+.salir{background-image:url(../images/iconos/salir.png);}
+.seguridad{background-image:url(../images/iconos/seguridad.png);}
+.seginactivo{background-image:url(../images/iconos/seginactivo.png);}
+.seleccion{background-image:url(../images/iconos/seleccion.png);}
+.siguiente{background-image:url(../images/iconos/siguiente.png);}
+.siguienteinactivo{background-image:url(../images/iconos/siguienteinactivo.png);}
+.sistemaintegral{background-image:url(../images/iconos/sistemaintegral.png);}
+.traza{background-image:url(../images/iconos/traza.png);}
+.trazainactivo{background-image:url(../images/iconos/trazainactivo.png);}
+.terminar{background-image:url(../images/iconos/terminar.png);}
+.tmpseguridad{background-image:url(../images/iconos/tmpseguridad.png);}
+.ubicarproducto{background-image:url(../images/iconos/ubicarproducto.png);}
+.ultimapagina{background-image:url(../images/iconos/ultimapagina.png);}
+.ultimapaginainactivo{background-image:url(../images/iconos/ultimapaginainactivo.png);} 
+.usuarioactivo{background-image:url(../images/iconos/usuarioactivo.png);}
+.usuarioinactivo{background-image:url(../images/iconos/usuarioinactivo.png);}
+.validar{background-image:url(../images/iconos/validar.png);}
+.validaryaceptar{background-image:url(../images/iconos/validaryaceptar.png);}
+.ver{background-image:url(../images/iconos/ver.png);}
+
+.row-hd-cell{background-image:url(../images/grid/grid3-hrow.gif);}
+.celda-no-editable{background-color:#CCCCCC;}
+
+/*Otros estilos*/
+.iconoERROR{ height:32px;width:32px; background-image:url(../images/window/icon-error.gif);}
+#entidadStAccedida, #entidadAccedida{position:absolute;background-color:#RRGGBB;margin:365px 0px 0px 200px;font-family:"Times New Roman", Times, serif; font-size:25px; color:#FFFFFF; text-decoration:underline;}

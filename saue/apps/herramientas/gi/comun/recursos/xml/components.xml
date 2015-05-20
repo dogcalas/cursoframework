@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<package_component>
+    <cmp30211 id="30211" text="Generador de interfaces" leaf="1" component="1" path="/herramientas/gi"/>
+</package_component>

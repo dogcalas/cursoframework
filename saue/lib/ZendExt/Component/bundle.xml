@@ -1,0 +1,22 @@
+<bundle>
+    <data version="" state=""/>
+    <services>
+        <service id="" interface="" impl=""/>
+    </services>
+    <dependencies>
+        <dependency id="" interface="" use="" optional="true"/>
+    </dependencies>  
+    <sources>
+        <source id='ZendExt_Events_Evento1' class='objEvent.php'/>
+        <source id='ZendExt_Events_Evento2' class='objEvent2.php' />
+    </sources>
+    <observers>
+        <observer source='ZendExt_Events_Evento1' impl='Class1.php' />
+        <observer source='ZendExt_Service_Evento1' impl='Class1.php' />
+    </observers>
+</bundle>
+
+
+
+
+

@@ -1,0 +1,1209 @@
+<?xml version="1.0"?>
+<validador>
+    <portal>
+        <PortalController>
+            <closeportalAction>
+                <precondition>
+                    <validator class="PortalValidator" method="desbloquearDocLog" error="EPDDL01"/>
+                </precondition>
+            </closeportalAction>
+            <entraralsistemaAction>
+                <precondition>
+                    <validator class="PortalValidator" method="desbloquearDocLog" error="EPDDL01"/>
+                </precondition>
+            </entraralsistemaAction>
+        </PortalController>
+        <IndexController>
+            <indexAction>
+                <precondition>
+                    <validator class="PortalValidator" method="comprobarConMongo" error="ECR06"/>
+                </precondition>
+            </indexAction>
+            <entraralsistemaAction>
+                <precondition>
+                    <validator class="PortalValidator" method="desbloquearDocLog" error="EPDDL01"/>
+                </precondition>
+            </entraralsistemaAction>
+        </IndexController>
+    </portal>
+    <seguridad>
+        <GestusuarioController>
+            <modificarusuarioAction>
+                <precondition>
+                    <validator class="UsuarioValidator" method="verificarDominioDadoUsuario" error="SEGDOM01"/>
+                </precondition>
+            </modificarusuarioAction>
+        </GestusuarioController>
+        <GestnomdominioController>
+            <modificarnomdominioAction>
+                <precondition>
+                    <validator class="UsuarioValidator" method="verificarDominio" error="SEGDOM02"/>
+                </precondition>
+            </modificarnomdominioAction>
+        </GestnomdominioController>
+    </seguridad>
+    <usuario>
+        <GestusuarioController>
+            <modificarusuarioAction>
+                <precondition>
+                    <validator class="UsuarioValidator" method="validarExistenciaUsuario" error="EGU010"/>
+                </precondition>
+                <precondition>
+                    <validator class="UsuarioValidator" method="validarConfirmacionClave" error="EGU009"/>
+                    <validator class="UsuarioValidator" method="validarRepeticionClave" error="EGU008"/>
+                </precondition>
+                <param name="idpersona" type="enterospos" not_null="true" null_error="EGU011" type_error="EGU012"/>
+                <param name="version" type="enterospos" not_null="true" null_error="EGU013" type_error="EGU014"/>
+                <param name="alias" type="letras" not_null="true" null_error="EGU015" type_error="EGU016"/>
+                <param name="nombre" type="letras" not_null="true" null_error="EGU017" type_error="EGU018"/>
+                <param name="papell" type="letras" not_null="true" null_error="EGU019" type_error="EGU020"/>
+                <param name="sapell" type="letras" not_null="false" type_error="EGU021"/>
+                <param name="ididioma" type="enterospos" not_null="true" null_error="EGU022" type_error="EGU023"/>
+                <param name="idtema" type="enterospos" not_null="true" null_error="EGU024" type_error="EGU025"/>
+                <param name="idespecialidad" type="enterospos" not_null="false" type_error="EGU026"/>
+            </modificarusuarioAction>
+            <insertarusuarioAction>
+                <precondition>
+                    <validator class="UsuarioValidator" method="validarExistenciaUsuario" error="EGU010"/>
+                    <validator class="UsuarioValidator" method="validarConfirmacionClave" error="EGU009"/>
+                </precondition>
+                <param name="alias" type="letras" not_null="true" null_error="EGU015" type_error="EGU016"/>
+                <param name="nombre" type="letras" not_null="true" null_error="EGU017" type_error="EGU018"/>
+                <param name="papell" type="letras" not_null="true" null_error="EGU019" type_error="EGU020"/>
+                <param name="sapell" type="letras" not_null="false" type_error="EGU021"/>
+                <param name="ididioma" type="enterospos" not_null="true" null_error="EGU022" type_error="EGU023"/>
+                <param name="idtema" type="enterospos" not_null="true" null_error="EGU024" type_error="EGU025"/>
+                <param name="idespecialidad" type="enterospos" not_null="false" type_error="EGU026"/>
+            </insertarusuarioAction>
+            <eliminarusuarioAction>
+                <param name="idpersona" type="enterospos" not_null="true" null_error="EGU011" type_error="EGU012"/>
+            </eliminarusuarioAction>
+        </GestusuarioController>
+    </usuario>
+    <metadatos>
+        <NomencladorController>
+            <!-- 1 Nomenclador de Organo-->
+            <mostrartiposeavAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposOrganosmos" error="LOG0026"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="LOG0026" type_error="CONF001"/>
+                <param name="start" type="enterospos" not_null="true" null_error="LOG0026" type_error="CONF001"/>
+            </mostrartiposeavAction>
+            <modificarorganosAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposOrganosmod" error="EC04"/>
+                </precondition>
+                <param name="idorgano" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                        <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="idnivelestr" type="enterospos" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarorganosAction>
+            <insertarorganosAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposOrganosinsert" error="EC04"/>
+                </precondition>
+                <!-- <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                        <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="idnivelestr" type="enterospos" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarorganosAction>
+            <eliminarorganosAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposOrganoselim" error="EC05"/>
+                </precondition>
+                <param name="idorgano" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarorganosAction>
+            <!-- 2 Nomenclador de Subcategoria-->
+            <mostrarsbcategoriaAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposSubcategoriamos" error="EC02"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="LOG0026" type_error="CONF001"/>
+                <param name="start" type="enterospos" not_null="true" null_error="LOG0026" type_error="CONF001"/>
+            </mostrarsbcategoriaAction>
+            <modificarsbcategoriaAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposSubcategoriamod" error="EC04"/>
+                </precondition>
+                <param name="idgsubcateg" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarsbcategoriaAction>
+            <insertarsbcategoriaAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposSubcategoriainsert" error="EC04"/>
+                </precondition>
+                <!--   <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarsbcategoriaAction>
+            <eliminarsbcategoriaAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposSubcategoriaelim" error="EC04"/>
+                </precondition>
+                <param name="idgsubcateg" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarsbcategoriaAction>
+            <!--  3 Nomenclador Prefijo-->
+            <mostrarprefijoAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarprefijoAction>
+            <insertarprefijoAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposPrefijoinsert" error="EC04"/>
+                </precondition>
+                <param name="prefijo" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <!--<param name="lugar" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarprefijoAction>
+            <modificarprefijoAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposPrefijomod" error="EC04"/>
+                </precondition>
+                <param name="idpref" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="prefijo" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <!-- <param name="lugar" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarprefijoAction>
+            <eliminarprefijoAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposPrefijoelim" error="EC05"/>
+                </precondition>
+                <param name="idpref" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarprefijoAction>
+            <!-- 4 Nomenclador Grupo Complejidad-->
+            <mostrargrupocomplejidadAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrargrupocomplejidadAction>
+            <insertargrupocomplejidadAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposGrupoComplejidadinsert" error="EC04"/>
+                </precondition>
+                <!-- <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertargrupocomplejidadAction>
+            <modificargrupocomplejidadAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposGrupoComplejidadmod" error="EC04"/>
+                </precondition>
+                <param name="idgrupocomplejidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--  <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificargrupocomplejidadAction>
+            <eliminargrupocomplejidadAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposGrupoComplejidadelim" error="EC05"/>
+                </precondition>
+                <param name="idgrupocomplejidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminargrupocomplejidadAction>
+            <!-- 5 Nomenclador Escala Salarial-->
+            <mostrarescalasalarialAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarescalasalarialAction>
+            <insertarescalasalarialAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposEscalaSalarialinsert" error="EC04"/>
+                </precondition>
+                <!-- <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarescalasalarialAction>
+            <modificarescalasalarialAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposEscalaSalarialmod" error="EC04"/>
+                </precondition>
+                <param name="idescalasalarial" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!-- <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarescalasalarialAction>
+            <eliminarescalasalarialAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposEscalaSalarialelim" error="EC05"/>
+                </precondition>
+                <param name="idescalasalarial" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarescalasalarialAction>
+            <!-- 6 Nomenclador categoria ocupacional-->
+            <mostrarcatgriaocpnalAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarcatgriaocpnalAction>
+            <insertarcatgriaocpnalAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCatgriaOcpnalinsert" error="EC04"/>
+                </precondition>
+                <!-- <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarcatgriaocpnalAction>
+            <modificarcatgriaocpnalAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCatgriaOcpnalmod" error="EC04"/>
+                </precondition>
+                <param name="idcatgriaocpnal" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!-- <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarcatgriaocpnalAction>
+            <eliminarcatgriaocpnalAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCatgriaOcpnalelim" error="EC05"/>
+                </precondition>
+                <param name="idcatgriaocpnal" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarcatgriaocpnalAction>
+            <!-- 7 Nomenclador categoria Civil-->
+            <mostrarcatgriacvilAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC05"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarcatgriacvilAction>
+            <insertarcatgriacvilAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCatgriaCvilinsert" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idessueldo" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarcatgriacvilAction>
+            <modificarcatgriacvilAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCatgriaCvilmod" error="EC04"/>
+                </precondition>
+                <param name="idcatgriacvil" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idessueldo" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarcatgriacvilAction>
+            <eliminarcatgriacvilAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCatgriaCvilelim" error="EC05"/>
+                </precondition>
+                <param name="idcatgriacvil" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarcatgriacvilAction>
+            <!-- 8 Nomenclador calificador-->
+            <mostrarcalificadorAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarcalificadorAction>
+            <insertarcalificadorAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCalificadorinsert" error="EC04"/>
+                </precondition>
+                <!--  <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="codigo" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idcategocup" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idtipocalificador" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarcalificadorAction>
+            <modificarcalificadorAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCalificadormod" error="EC04"/>
+                </precondition>
+                <param name="idcalificador" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--  <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="codigo" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idcategocup" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idtipocalificador" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarcalificadorAction>
+            <eliminarcalificadorAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCalificadorelim" error="EC05"/>
+                </precondition>
+                <param name="idcalificador" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarcalificadorAction>
+            <!-- 9 Nomenclador Salario-->
+            <mostrarsalarioAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarsalarioAction>
+            <insertarsalarioAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposSalarioinsert" error="EC04"/>
+                </precondition>
+                <param name="tarifa" type="real" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="salario" type="real" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idgrupocomplejidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idescalasalarial" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarsalarioAction>
+            <modificarsalarioAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposSalariomod" error="EC04"/>
+                </precondition>
+                <param name="idsalario" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="tarifa" type="real" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="salario" type="real" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idgrupocomplejidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idescalasalarial" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarsalarioAction>
+            <eliminarsalarioAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposSalarioelim" error="EC05"/>
+                </precondition>
+                <param name="idsalario" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarsalarioAction>
+            <!--10 Nomenclador Tecnica-->
+            <mostrarntecnicaAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarntecnicaAction>
+            <insertarntecnicaAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposTecnicainsert" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idvalor" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="codigo" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarntecnicaAction>
+            <modificarntecnicaAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposTecnicamod" error="EC04"/>
+                </precondition>
+                <param name="idtecnica" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/> -->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idvalor" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="codigo" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarntecnicaAction>
+            <eliminarntecnicaAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposTecnicaelim" error="EC05"/>
+                </precondition>
+                <param name="idtecnica" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarntecnicaAction>
+            <!--11 Nomenclador Modulo-->
+            <mostrarnmoduloAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarnmoduloAction>
+            <insertarnmoduloAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposModuloinsert" error="EC04"/>
+                </precondition>
+                <!-- <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>    -->
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarnmoduloAction>
+            <modificarnmoduloAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposModulomod" error="EC04"/>
+                </precondition>
+                <param name="idmodulo" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!-- <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>  -->
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarnmoduloAction>
+            <eliminarnmoduloAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposModuloelim" error="EC04"/>
+                </precondition>
+                <param name="idmodulo" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarnmoduloAction>
+            <!--11 Nomenclador Clasificacion-->
+            <mostrarclasificacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarclasificacionAction>
+            <insertarclasificacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposClasificacioninsert" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/> -->
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarclasificacionAction>
+            <modificarclasificacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposClasificacionmod" error="EC04"/>
+                </precondition>
+                <param name="idclasificacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!-- <param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>  -->
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarclasificacionAction>
+            <eliminarclasificacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposClasificacionelim" error="EC05"/>
+                </precondition>
+                <param name="idclasificacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarclasificacionAction>
+            <!-- 12 Nomenclador tipo de calificador-->
+            <mostrartipocalificadorAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrartipocalificadorAction>
+            <insertartipocalificadorAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposTipocalifcadorinserc" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertartipocalificadorAction>
+            <modificartipocalificadorAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposTipocalifcadormod" error="EC04"/>
+                </precondition>
+                <param name="idtipocalificador" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                     <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificartipocalificadorAction>
+            <eliminartipocalificadorAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposTipocalifcadorelim" error="EC05"/>
+                </precondition>
+                <param name="idtipocalificador" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminartipocalificadorAction>
+            <!-- 13 Nomenclador Grado militar -->
+            <mostrargradomilitarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrargradomilitarAction>
+            <insertargradomilitarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposGradoMilitarinsec" error="EC04"/>
+                </precondition>
+                <param name="idgsubcateg" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="esmarina" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="homologoterr" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="valanterior" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="valsucesor" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertargradomilitarAction>
+            <modificargradomilitarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposGradoMilitarmod" error="EC04"/>
+                </precondition>
+                <param name="idgradomilit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idgsubcateg" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="esmarina" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="homologoterr" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="valanterior" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="valsucesor" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificargradomilitarAction>
+            <eliminargradomilitarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposGradoMilitarelim" error="EC05"/>
+                </precondition>
+                <param name="idgradomilit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminargradomilitarAction>
+            <!--14 Nomenclador Agrupacion-->
+            <mostrarnagrupacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarnagrupacionAction>
+            <insertarnagrupacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposAgrupacioninserc" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarnagrupacionAction>
+            <modificarnagrupacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposAgrupacionmod" error="EC04"/>
+                </precondition>
+                <param name="idagrupacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarnagrupacionAction>
+            <eliminarnagrupacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposAgrupacionelim" error="EC05"/>
+                </precondition>
+                <param name="idagrupacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarnagrupacionAction>
+            <!-- 15 Nomenclador Preparacion Militar-->
+            <mostrarpmilitarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarpmilitarAction>
+            <insertarpmilitarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposPrepmilitarinserc" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarpmilitarAction>
+            <modificarpmilitarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposPrepmilitarmod" error="EC04"/>
+                </precondition>
+                <param name="idprepmilitar" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarpmilitarAction>
+            <eliminarpmilitarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposPrepmilitarelim" error="EC05"/>
+                </precondition>
+                <param name="idprepmilitar" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarpmilitarAction>
+            <!--16 Nomenclador Nivel utilizacion-->
+            <insertarnivelutilizacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposNivelutilizacioninsec" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarnivelutilizacionAction>
+            <mostrarnivelutilizacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarnivelutilizacionAction>
+            <modificarnivelutilizacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposNivelutilizacionmod" error="EC04"/>
+                </precondition>
+                <param name="idnivelutilizacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarnivelutilizacionAction>
+            <eliminarnivelutilizacionAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposNivelutilizacionelim" error="EC05"/>
+                </precondition>
+                <param name="idnivelutilizacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarnivelutilizacionAction>
+            <!--17 Nomenclador Cargo Civil-->
+            <mostrarcargocivilAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarcargocivilAction>
+            <insertarcargocivilAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCargoCivilinserc" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="idnivelutilizacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idgrupocomplejidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idcalificador" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="descrip" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="requisitos" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <!--<param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarcargocivilAction>
+            <modificarcargocivilAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCargoCivilimod" error="EC04"/>
+                </precondition>
+                <param name="idcargociv" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="idnivelutilizacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idgrupocomplejidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idcalificador" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="descrip" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="requisitos" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <!--<param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarcargocivilAction>
+            <eliminarcargocivilAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCargoCivilelim" error="EC05"/>
+                </precondition>
+                <param name="idcargociv" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarcargocivilAction>
+            <!--17 Nomenclador Cargo Militar-->
+            <mostrarcargomtarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposMostrar" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarcargomtarAction>
+            <insertarcargomtarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCargoMtarinserc" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="idprepmilitar" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarcargomtarAction>
+            <modificarcargomtarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCargoMilitarmod" error="EC04"/>
+                </precondition>
+                <param name="idcargomilitar" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="idprepmilitar" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarcargomtarAction>
+            <eliminarcargomtarAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposCargoMilitarelim" error="EC05"/>
+                </precondition>
+                <param name="idcargomilitar" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarcargomtarAction>
+            <insertarnvelestrAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposNivelestrinsert" error="EC04"/>
+                </precondition>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarnvelestrAction>
+            <modificarnvelestrAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposNivelestrmod" error="EC04"/>
+                </precondition>
+                <param name="idnvelestr" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denom" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                    <param name="abrev" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="ffin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarnvelestrAction>
+            <eliminarnvelestrAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposNivelestrelim" error="EC05"/>
+                </precondition>
+                <param name="idcargomilitar" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarnvelestrAction>
+            <mostrarnvelestrAction>
+                <precondition>
+                    <validator class="NomencladorValidator" method="ValidarCamposNivelestrmos" error="EC04"/>
+                </precondition>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </mostrarnvelestrAction>
+        </NomencladorController>
+        <EstructuraController>
+            <tablasAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarIdTabla" error="EC04"/>
+                </precondition>
+                <param name="idnivelutilizacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </tablasAction>
+            <tablascamposAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarIdTabla" error="EC04"/>
+                </precondition>
+                <param name="idnivelutilizacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </tablascamposAction>
+            <tablascamposvaloresAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarIdTablas" error="EC04"/>
+                </precondition>
+                <param name="idnivelutilizacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </tablascamposvaloresAction>
+            <insertavaloresAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarIdTablasinsertarvalores" error="EC04"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <!--<param name="denominacion" type="numerosletras" not_null="true" null_error="EC01" type_error="EC02"/>-->
+                <!--<param name="abreviatura" type="numerosletras" not_null="true" null_error="EC01" type_error="EC02"/>-->
+                <param name="codigo" type="numerosletras" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fechai" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="fechaf" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idnivelestr" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="iddpa" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="nom_organo" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </insertavaloresAction>
+            <eliminarvaloresAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarValorFila" error="EC10"/>
+                </precondition>
+                <param name="idfila" type="numerosletras" not_null="true" null_error="EC01" type_error="EC02"/>
+            </eliminarvaloresAction>
+            <mostrarcamposAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarValorTabla" error="EC10"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </mostrarcamposAction>
+            <construirformularioinsercionAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarValorTabla" error="EC10"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </construirformularioinsercionAction>
+            <construirformulariomodificarAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarValorFila" error="EC10"/>
+                </precondition>
+                <param name="idfila" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </construirformulariomodificarAction>
+            <construircamposgridAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarValorTabla" error="EC10"/>
+                </precondition>
+                <param name="idtabla" type="numerosletras" not_null="true" null_error="EC01" type_error="EC02"/>
+            </construircamposgridAction>
+            <!--
+           <construirvaloresgridAction>
+               <precondition>
+                  <validator class="EstructuraValidator" method="ValidarValorTablaGet" error="EC04"/>
+              </precondition>
+                  <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+           <construirvaloresgridAction>
+          -->
+            <construircamposgridopAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="Construircamposgridop" error="EC10"/>
+                </precondition>
+                <param name="idtabla" type="numerosletras" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idestructura" type="numerosletras" not_null="true" null_error="EC01" type_error="EC02"/>
+            </construircamposgridopAction>
+            <buscarhijosagrupAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="Buscarhijosagrup" error="EC10"/>
+                </precondition>
+                <param name="node" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </buscarhijosagrupAction>
+            <modificarvaloresAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarModificarvalores" error="EC04"/>
+                </precondition>
+                <param name="idfila" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <!--<param name="denominacion" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <!--<param name="abreviatura" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="codigo" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="fechai" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="fechaf" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="idnivelestr" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="iddpa" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="nom_organo" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </modificarvaloresAction>
+            <buscarcomposicionAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidaBuscarcomposicion" error="EC04"/>
+                </precondition>
+                <param name="idestructura" type="numerosletras" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="node" type="numerosletras" not_null="true" null_error="EC01" type_error="EC10"/>
+            </buscarcomposicionAction>
+            <insertarcargocivilAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidaInsertarCargocivil" error="EC04"/>
+                </precondition>
+                <param name="idop" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idcategcivil" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idcargociv" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idsalario" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idgrupocomplejidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idescalasalarial" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idclasificacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idtipocifra" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="ctp" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="ctg" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fechai" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="fechaf" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </insertarcargocivilAction>
+            <modificarcargocivilAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidaModificarCargocivil" error="EC04"/>
+                </precondition>
+                <param name="idcargo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idcategcivil" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idcargociv" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idsalario" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idgrupocomplejidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idescalasalarial" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idclasificacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idtipocifra" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="ctp" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="ctg" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fechai" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="fechaf" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+            </modificarcargocivilAction>
+            <buscarsalarioporgrupoescalaAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="Validabuscarsalarioporgrupoescala" error="EC10"/>
+                </precondition>
+                <param name="idgrupocomplejidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idescalasalarial" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </buscarsalarioporgrupoescalaAction>
+            <mostrarcargosAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="Validarmostrarcargos" error="EC10"/>
+                </precondition>
+                <param name="idop" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="limit" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="start" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </mostrarcargosAction>
+            <mostrardatoscargoAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="Validarmostrardatoscargo" error="EC10"/>
+                </precondition>
+                <param name="idcargo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </mostrardatoscargoAction>
+            <insertarcargomilitarAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarInsertarCargomilitar" error="EC04"/>
+                </precondition>
+                <param name="idop" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="estado" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="salario" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idgradomilit" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idcargomilitar" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idtipocifra" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="ctp" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="ctg" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fechaini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="fechafin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="tienemando" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </insertarcargomilitarAction>
+            <modificarcargomilitarAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarModificarCargomilitar" error="EC04"/>
+                </precondition>
+                <param name="idcargo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idespecialidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="orden" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="estado" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="salario" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idgradomilit" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idcargomilitar" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idtipocifra" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="ctp" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="ctg" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="fechaini" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="fechafin" type="fecha" not_null="true" null_error="EC01" type_error="EC03"/>
+                <param name="tienemando" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </modificarcargomilitarAction>
+            <eliminarcargoAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarEliminarCargomilitar" error="EC04"/>
+                </precondition>
+                <param name="idcargo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </eliminarcargoAction>
+            <eliminarestructuraagrupacionAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarAgrupacionLogica" error="EC04"/>
+                </precondition>
+                <param name="idagrupacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idestructura" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </eliminarestructuraagrupacionAction>
+            <insertarestructuraagrupacionAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarAgrupacionLogica" error="EC04"/>
+                </precondition>
+                <param name="idagrupacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idestructura" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </insertarestructuraagrupacionAction>
+            <insertartecnicaAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarInsertarTecnica" error="EC04"/>
+                </precondition>
+                <param name="idcargo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idtecnica" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="cantidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+                <param name="ctg" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </insertartecnicaAction>
+            <eliminartecnicaAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarEliminarTecnica" error="EC04"/>
+                </precondition>
+                <param name="idcargo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idtecnica" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </eliminartecnicaAction>
+            <modificartecnicaAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarModificarTecnica" error="EC04"/>
+                </precondition>
+                <param name="idcargo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idtecnica" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="cantidad" type="enterospos" not_null="true" null_error="EC01" type_error="EC02"/>
+            </modificartecnicaAction>
+            <mostrarestructuraagrupacionAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarMostraragrupacion" error="EC10"/>
+                </precondition>
+                <param name="idagrupacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </mostrarestructuraagrupacionAction>
+            <mostrartecnicaAction>
+                <precondition>
+                    <validator class="EstructuraValidator" method="ValidarMostratecnica" error="EC10"/>
+                </precondition>
+                <param name="idestructura" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </mostrartecnicaAction>
+        </EstructuraController>
+        <EavController>
+            <insertarTablasAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validarinsertatablas" error="EC22"/>
+                </precondition>
+                <param name="nombre" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+            </insertarTablasAction>
+            <modificarTablasAction>
+                <precondition>
+                    <validator class="EavValidator" method="ValidarmodificarTabla" error="EC22"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="nombre" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+            </modificarTablasAction>
+            <eliminartablaAction>
+                <precondition>
+                    <validator class="EavValidator" method="ValidareliminarTabla" error="EC05"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </eliminartablaAction>
+            <insertarcamposAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validarinsertarcampos" error="EC22"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <!--<param name="nombre" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="tipo" type="letras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="tipocampo" type="letras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="longitud" type="enterospos" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="nombre_mostrar" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="descripcion" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>
+            </insertarcamposAction>
+            <eliminarcamposAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validareliminarcampos" error="EC10"/>
+                </precondition>
+                <param name="idcampo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </eliminarcamposAction>
+            <mostrarcamposAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validarmostrarcampos" error="EC10"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </mostrarcamposAction>
+            <modificarcamposAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validarmodificarcampos" error="EC22"/>
+                </precondition>
+                <param name="idcampo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <!-- <param name="nombre" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+                <param name="tipo" type="letras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="tipocampo" type="letras" not_null="true" null_error="EC01" type_error="EC04"/>
+                <param name="longitud" type="enterospos" not_null="true" null_error="EC01" type_error="EC04"/>
+                <!-- <param name="descripcion" type="numerosletras" not_null="true" null_error="EC01" type_error="EC04"/>-->
+            </modificarcamposAction>
+            <insertarvalorcomboAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validarinsertarcombo" error="EC10"/>
+                </precondition>
+                <param name="idcombo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idvalor" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </insertarvalorcomboAction>
+            <mostrarvalorcomboAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validareliminarcampos" error="EC10"/>
+                </precondition>
+                <param name="idcampo" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </mostrarvalorcomboAction>
+            <buscarconexionesAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validarbuscarconexion" error="EC22"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </buscarconexionesAction>
+            <insertarconexionesAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validarinsertarconexiones" error="EC22"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idrelacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </insertarconexionesAction>
+            <eliminarconexionesAction>
+                <precondition>
+                    <validator class="EavValidator" method="Validarinsertarconexiones" error="EC22"/>
+                </precondition>
+                <param name="idtabla" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+                <param name="idrelacion" type="enterospos" not_null="true" null_error="EC01" type_error="EC10"/>
+            </eliminarconexionesAction>
+        </EavController>
+    </metadatos>
+    <fac>
+        <GestcarrerasController>
+            <insertarCarrerasAction>
+                <precondition>
+                    <validator class="GestcarrerasValidator" method="validarCarrerasNoRepetidas" error="FAC_CAR_001"/>
+                </precondition>
+            </insertarCarrerasAction>
+            <modificarCarrerasAction>
+                <precondition>
+                    <validator class="GestcarrerasValidator" method="validarCarrerasNoRepetidas" error="FAC_CAR_001"/>
+                </precondition>
+            </modificarCarrerasAction>
+        </GestcarrerasController>
+
+        <GestmencionesController>
+            <modificarMencionAction>
+                <precondition>
+                    <validator class="GestmencionesValidator" method="validarCantMateriasYaAsociadas"
+                               error="FAC_MEN_001"/>
+                </precondition>
+            </modificarMencionAction>
+        </GestmencionesController>
+
+        <GestpensumController>
+            <modificarPensumAction>
+                <precondition>
+                    <validator class="GestpensumValidator" method="validarElimDesPensum"
+                               error="FAC_PEN_001"/>
+                </precondition>
+            </modificarPensumAction>
+            <eliminarPensumAction>
+                <precondition>
+                    <validator class="GestpensumValidator" method="validarElimDesPensum"
+                               error="FAC_PEN_001"/>
+                </precondition>
+            </eliminarPensumAction>
+        </GestpensumController>
+    </fac>
+</validador>

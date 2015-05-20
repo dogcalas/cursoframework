@@ -1,0 +1,13 @@
+{
+addProceso:'Adicionar',
+modProceso:'Modificar',
+eliProceso:'Eliminar',
+Definirconexion:'Definir proceso',
+crearvevento:'Crear evento',
+lbBtnCancelar:'Cancelar',
+lbBtnAplicar:'Aplicar',
+lbBtnAceptar:'Aceptar',
+addevent:'Adicionar',
+modevent:'Modificar',
+delevent:'Eliminar',
+}

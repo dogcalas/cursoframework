@@ -1,0 +1,251 @@
+<html>
+<head>
+<title>Sistema de la Universidad Ecotec</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/imporcss.js"></script>
+<link href="<?php echo $this->dir_ext_ccs; ?>css/ext-all.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="<?php echo $this->dir_ext_ccs; ?>css/desktop.css" rel="stylesheet" type="text/css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->dir_ext_ccs; ?>css/comercial.css" />
+<link rel="stylesheet" href="<?php echo $this->dir_ext_ccs; ?>css/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->dir_ext_ccs; ?>css/presentacion.css" />
+<script type="text/javascript" src="../../views/js/portal/jqueryArtister.js"></script>
+<script type="text/javascript" src="../../views/js/portal/script.js"></script>
+<link rel="stylesheet" type="text/css" href="../../views/css/portal/jquery.notice.css" />
+
+
+ <style type="text/css">
+.art-post .layout-item-0 { padding-right: 10px;padding-left: 10px; }
+ .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+ .ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+ .panelOpts{position:fixed;right:5px;height:30px;border:1px solid rgba(120,120,120,0.5);z-index:1;background:rgba(255,255,255,0.5);padding:10px;padding-top:5px;padding-bottom:5px;}
+	.itemsPanel{float:right;margin-right:5px;}
+	.itemsPanel img:hover{position:relative;width:40px;}
+	.enmarcar{float:right;margin-bottom:5px;width:30px;height:30px;background-image:url(../../views/images/portal/max.png);background-size:100% 100%;}
+	.enmarcar:hover{background-image:url(../../views/images/portal/max-hover.png);}
+ </style>
+</head>
+<body id="idbodyPortal">
+
+<div id="cargandoconfiguracion" align="center">
+	<img align="center" width="50px" src="<?php echo $this->dir_ext_ccs;?>images/entornos/cargando.gif"/>
+	<br>Cargando la configuraci&oacute;n del sistema...</div>
+
+<div id="present"></div>	
+<input type="hidden" id="dir_ext_css" name="dir_extjs" value="<?php echo $this->dir_ext_ccs;?>" />
+
+<script type="text/javascript" src="<?php echo $this->dir_extjs; ?>js/ext-all-4.2.1.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/BugFixed.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/ucid-all.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/ucid-win-iframe.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/StartMenu.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/TaskBar.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/Module.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/Desktop.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/App.js"></script>
+<!--  <script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/FitAllLayout.js"></script>-->
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/ShortcutModel.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/Wallpaper.js"></script>
+
+
+
+<script type="text/javascript" src="../../views/js/portal/Componentes.js"></script>
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/workflownotifications.js"></script>
+<script type="text/javascript" src="../../views/js/portal/Componentes.MessageBus.js"></script>
+<script type="text/javascript" src="../../views/js/portal/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../../views/js/portal/jquery.notice.js"></script>
+<script type="text/javascript" src="../../views/js/portal/strophe.min.js"></script>
+<script type="text/javascript" src="../../views/js/portal/WorkflowFormControls.js"></script>
+
+<script type="text/javascript" src="<?php echo $this->dir_ucid; ?>js/4.2/TabWindow.js"></script>
+
+
+
+<script type="text/javascript" src="../../views/js/portal/portal.js"></script>
+<script type="text/javascript" src="../../views/js/portal/cambiarpassword.js"></script>
+
+<div id="bodyComercial" >
+
+<div id="art-page-background-glare-wrapper">
+    <div id="art-page-background-glare"></div>
+</div>
+<div id="art-main">
+    <div class="cleared reset-box"></div>
+    <div class="art-header">
+        <div class="art-header-position">
+            <div class="art-header-wrapper">
+                <div class="cleared reset-box"></div>
+                <div class="art-header-inner">
+                <div class="art-headerobject"></div>
+                <div class="art-logo">
+                                 <h1 class="art-logo-name"><a href="#">Saue</a></h1>
+                                                 <h2 class="art-logo-text">Marco de Trabajo</h2>
+                                </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="cleared reset-box"></div>
+<div class="art-bar art-nav">
+<div class="art-nav-outer">
+<div class="art-nav-wrapper">
+<div class="art-nav-inner">
+	<ul class="art-hmenu" id="barra-inicial" >
+		<li>
+			<a href="#" class="active">Inicio</a>
+			<ul id="sistemas">
+				
+			</ul>
+		</li>	
+		
+	</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cleared reset-box"></div>
+<div class="art-box art-sheet">
+        <div class="art-box-body art-sheet-body">
+            <div class="art-layout-wrapper">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-sidebar1">
+<div class="art-box art-block">
+    <div class="art-box-body art-block-body">
+                <div class="art-bar art-blockheader">
+                    <h3 class="t">Perfil de usuario</h3>
+                    
+                </div>
+                <div class="art-box art-blockcontent">
+                    <div class="art-box-body art-blockcontent-body">
+              
+                 <div style="">
+                   
+                    
+                    <span><div style="background:url(../../views/images/portal/user.png) no-repeat;display:block;width:100%;height:30px;background-position:center;background-size:30px 30px;"></div><span style="color: white;margin: 0px;display:block;text-align:center;" id="nombreP">[NOT FOUND]</span></span>
+                      
+                       
+                    <span><div style="background:url(../../views/images/portal/theme.png) no-repeat;display:block;width:100%;height:30px;background-position:center;background-size:30px 30px;"></div><span style="color: white;margin:0px;display:block;text-align:center;" id="nombreT">[NOT FOUND]</span></span>
+                   
+                  
+                </div>    
+               
+                   
+                                		<div class="cleared"></div>
+                    </div>
+                </div>
+		<div class="cleared"></div>
+    </div>
+</div>
+<div class="art-box art-block">
+    <div class="art-box-body art-block-body">
+                <div class="art-bar art-blockheader">
+                    <h3 class="t">Archivos</h3>
+                </div>
+                <div class="art-box art-blockcontent">
+                    <div class="art-box-body art-blockcontent-body">
+                <div>
+			<div>contenido de una bloque, informacion o de cualquier indole</div>
+</div>                
+                                		<div class="cleared"></div>
+                    </div>
+                </div>
+		<div class="cleared"></div>
+    </div>
+</div>
+
+                          <div class="cleared"></div>
+                        </div>
+                        <div class="art-layout-cell art-content">
+<div class="art-box art-post">
+    <div class="art-box-body art-post-body">
+<div class="art-post-inner art-article">
+                                <h2 id="indice-pagina" class="art-postheader" style="float:left;">Inicio</h2>
+                                <span role="enmarcar" class="enmarcar"></span>                                
+                                                <div class="art-postcontent">
+		
+              
+                <div class="contenido" id="conte">
+                <iframe id="fg"  class="ventana">
+                    
+                </iframe>
+                 <div class="sobreContenido">
+					 <img id="carg" class="cargando" src="../../views/images/portal/loading.gif" width="40">
+			   </div>
+			      
+            </div>
+              
+               
+            
+
+                </div>
+                <div class="cleared"></div>
+                </div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+                          <div class="cleared"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+            
+    		<div class="cleared"></div>
+        </div>
+    </div>
+
+    <div class="art-footer">
+        <div class="art-footer-body">
+            <div class="art-footer-center">
+                <div class="art-footer-wrapper">
+                    <div class="art-footer-text">
+                        <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+                        <p><a href="#">Link1</a> | <a href="#">Link2</a> | <a href="#">Link3</a></p>
+
+<p>Copyright © 2014. All Rights Reserved.</p>
+                        <div class="cleared"></div>
+                        <p class="art-page-footer"><a href="#" target="_blank">Website Template Sauxe </a> created with Sauxe editor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+        </div>
+    </div>
+    <div class="cleared"></div>
+</div>
+
+<script language='javascript' type='text/javascript'>
+var arriba;
+function subir() {
+if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+window.scrollBy(0, -15);
+arriba = setTimeout('subir()', 10);
+}
+else clearTimeout(arriba);
+}
+</script>
+
+
+<div id='topscp'><a href='#SUBIR'><span/></a></div>
+<script type='text/javascript'>
+jQuery.noConflict();
+jQuery(document).ready(function() {
+jQuery("#topscp").hide();
+jQuery(function () {
+jQuery(window).scroll(function () {
+if (jQuery(this).scrollTop() > 100) {
+jQuery('#topscp').fadeIn();
+} else {
+jQuery('#topscp').fadeOut();}});
+jQuery('#topscp a').click(function () {
+jQuery('body,html').animate({
+scrollTop: 0}, 800);
+return false;});});});
+</script>
+</div>
+<div id="center" ></div>
+</body>
+</html>

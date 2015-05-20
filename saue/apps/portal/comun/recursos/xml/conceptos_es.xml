@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<menu>
+	<MenuItem id="200" name="Administracion" src="caso_estudio/index.php/estudiantes/gestionarestudiantes" />
+	<MenuItem id="201" name="Procesos"		 src="caso_estudio/index.php/estudiantes/gestionarestudiantes" />
+	<MenuItem id="202" name="Ayuda"			 src="caso_estudio/index.php/estudiantes/gestionarestudiantes" />
+	<MenuItem id="203" name="Recuperaciones" src="caso_estudio/index.php/estudiantes/gestionarestudiantes" />
+	<MenuItem id="204" name="Salir"			 src="caso_estudio/index.php/estudiantes/gestionarestudiantes" />
+	<MenuItem id="205" name="Herramientas"	 src="caso_estudio/index.php/estudiantes/gestionarestudiantes" />
+</menu>

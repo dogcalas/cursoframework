@@ -1,0 +1,204 @@
+
+html, body {
+	/*fondo*/background:url(../../images/index/estruc-cinta.png) repeat left top;
+    font: normal 12px Tahoma, Geneva, sans-serif;
+	margin: 0;
+	background-attachment: fixed;
+	padding: 0;
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+   background-size:100% 100%;
+  
+}
+body {
+	overflow-y: auto;
+}
+.entry-up{
+	margin-right: 8px;
+	display:inline-block;
+
+	padding:5px;
+	text-align:center;
+	
+    box-sizing: content-box;
+    content: "";
+    height: 100%;
+    
+    
+   background: none !important;
+   
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 60px;
+    margin: 6px;
+    position: relative;
+    text-align: center;
+    width: 65px;
+    z-index: 1;
+	
+}
+.entry-up i{
+
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  
+  vertical-align: text-top;
+  background: url(img/up.png) !important;
+  
+  background-repeat: no-repeat !important;
+  background-position: -61px -5px !important;
+}
+.entry-up:hover i{
+
+  background-position: -5px -5px !important;
+}
+.entry-up:hover{
+
+  background: #1F72DC !important;
+}
+
+.entry-item{
+margin-top:5px;
+margin-left:15px;
+display:inline-block;
+
+padding:10px;
+text-align:center;
+border-radius: 50%;
+    box-sizing: content-box;
+    content: "";
+    height: 100%;
+    
+    position: absolute;
+    
+   background: none repeat scroll 0 0 #1F72DC;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 65px;
+    margin: 6px;
+    position: relative;
+    text-align: center;
+    width: 63px;
+    z-index: 1;
+}
+.entry-item:hover{
+
+   background: #1F72DC !important;
+	color:white;
+	
+
+}
+.entry-item-container{
+	border-radius: 50%;
+    box-sizing: content-box;
+    content: "";
+    height: 100%;
+    
+    position: absolute;
+    
+	
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+    margin: 6px;
+    position: relative;
+    text-align: center;
+    width: 97px;
+}
+.entry-item-container:hover{
+	 border-radius: 50%;
+    box-sizing: content-box;
+    content: "";
+    height: 100%;
+    
+    position: absolute;
+    
+	border: 5px solid #2BCA0A;
+	margin:1px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+   
+    position: relative;
+    text-align: center;
+    width: 97px;
+    z-index: 1;
+    top: -7px;
+    transform: scale(0.8);
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+}
+.entry-item img{
+	width: 70px;
+	height: 70px;
+}
+.entry-item-token{
+	display: inline-block;
+	
+	margin-right:15px;
+}
+
+
+.entry-item-container-select > .entry-item-container{
+	
+    
+	border-radius: 50%;
+    box-sizing: content-box;
+    content: "";
+    height: 100%;
+    
+    position: absolute;
+    
+	border: 5px solid #3ED3EB;
+	margin:1px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+   
+    position: relative;
+    text-align: center;
+    width: 97px;
+    z-index: 1;
+    top: -7px;
+    transform: scale(0.8);
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+	
+}
+
+.entry-item-container-select > .entry-item-container:hover{
+	
+    
+	border-radius: 50%;
+    box-sizing: content-box;
+    content: "";
+    height: 100%;
+    
+    position: absolute;
+    
+	border: 5px solid #2BCA0A;
+	margin:1px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    height: 100px;
+   
+    position: relative;
+    text-align: center;
+    width: 97px;
+    z-index: 1;
+    top: -7px;
+    transform: scale(0.8);
+    transition: transform 0.2s ease 0s, opacity 0.2s ease 0s;
+	
+}
