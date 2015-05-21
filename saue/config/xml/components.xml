@@ -5,4 +5,4 @@
     <cmp1001 id="1001" text="Traza" leaf="1" path="/traza" component="1" abrev="tza"/>
     <cmp10001 id="10001" text="Herramientas" leaf="" path="/herramientas" component="" abrev="herr"/>
     <cmp30280 id="30280" text="saue" leaf="1" path="/saue" component="" abrev="saue"/>
-<cmp30282 id="30282" text="roles" leaf="1" path="/roles" component="" abrev="roles"/><cmp30286 id="30286" text="Directorio" leaf="1" path="/dir" component="1" abrev="dir"/></component_package>
+<cmp30282 id="30282" text="roles" leaf="1" path="/roles" component="" abrev="roles"/><cmp30286 id="30286" text="Directorio" leaf="1" path="/dir" component="1" abrev="dir"/><cmp30287 id="30287" text="Persona" leaf="1" path="\PER" component="1" abrev="PER"/></component_package>

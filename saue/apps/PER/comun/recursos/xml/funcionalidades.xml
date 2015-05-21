@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<package_component>
+  <cmp30287 id="30287" text="Persona" leaf="1" component="1" path="\PER"><rq300486 den="Gestionar personas" desc="" parent="30287" fecha="21/05/2015 16:58:31" abrev="gestpersona"/><rq300487 den="Gestionar cargos" desc="" parent="30287" fecha="21/05/2015 16:58:57" abrev="gestcargos"/></cmp30287>
+</package_component>

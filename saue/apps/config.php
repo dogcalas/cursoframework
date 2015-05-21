@@ -135,3 +135,4 @@ $config['module']['Curso'] = $dir_abs_mt . 'apps/curso/';
         $config['module']['Alumno']=$dir_abs_mt . 'apps/esudiantes/';
 
         $config['module']['Directorio']=$dir_abs_mt . 'apps/dir/';
+        $config['module']['Persona']=$dir_abs_mt . 'apps\PER/';
